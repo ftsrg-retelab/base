@@ -6,6 +6,6 @@ public interface TrainUser {
 
 	boolean getAlarmFlag();
 
-	void overrideJoystickPosition(int joystickPosition);
+	Void overrideJoystickPosition(int joystickPosition);
 
 }
