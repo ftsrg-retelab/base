@@ -11,5 +11,7 @@ dependencies {
   
   compile group: 'com.typesafe.akka', name: "akka-actor_$scalaVersion", version: akkaVersion
   compile group: 'com.typesafe.akka', name: "akka-remote_$scalaVersion", version: akkaVersion
+  compile group: 'com.typesafe.akka', name: "akka-cluster_$scalaVersion", version: akkaVersion
+  compile group: 'com.typesafe.akka', name: "akka-cluster-metrics_$scalaVersion", version: akkaVersion
   testCompile group: 'junit', name: 'junit', version: junitVersion
 }
