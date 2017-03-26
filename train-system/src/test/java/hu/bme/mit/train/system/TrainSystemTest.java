@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,18 +11,24 @@ import hu.bme.mit.train.interfaces.TrainUser;
 
 public class TrainSystemTest {
 
+	TrainSystem system;
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
 
 	@Before
 	public void before() {
-		TrainSystem system = new TrainSystem();
+		system = new TrainSystem();
 		controller = system.getController();
 		sensor = system.getSensor();
 		user = system.getUser();
 
 		sensor.overrideSpeedLimit(50);
+	}
+
+	@After
+	public void after() throws Exception {
+		system.close();
 	}
 
 	@Test

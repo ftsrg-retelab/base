@@ -1,6 +1,9 @@
 package hu.bme.mit.train.system;
 
+import java.util.concurrent.TimeUnit;
+
 import akka.actor.ActorSystem;
+import akka.actor.Terminated;
 import akka.actor.TypedActor;
 import akka.actor.TypedProps;
 import hu.bme.mit.train.controller.TrainControllerImpl;
@@ -9,8 +12,11 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
+import scala.concurrent.Await;
+import scala.concurrent.Future;
+import scala.concurrent.duration.Duration;
 
-public class TrainSystem {
+public class TrainSystem implements AutoCloseable {
 
 	private ActorSystem system = ActorSystem.create("Main");
 
@@ -33,6 +39,12 @@ public class TrainSystem {
 
 	public TrainUser getUser() {
 		return user;
+	}
+
+	@Override
+	public void close() throws Exception {
+		Future<Terminated> terminated = system.terminate();
+		Await.result(terminated, Duration.create(5, TimeUnit.SECONDS));
 	}
 
 }

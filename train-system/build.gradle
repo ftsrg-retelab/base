@@ -10,5 +10,6 @@ dependencies {
   compile project(':train-user')
   
   compile group: 'com.typesafe.akka', name: "akka-actor_$scalaVersion", version: akkaVersion
+  compile group: 'com.typesafe.akka', name: "akka-remote_$scalaVersion", version: akkaVersion
   testCompile group: 'junit', name: 'junit', version: junitVersion
 }
