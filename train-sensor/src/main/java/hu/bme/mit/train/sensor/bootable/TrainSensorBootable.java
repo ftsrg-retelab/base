@@ -17,12 +17,12 @@ import scala.concurrent.duration.Duration;
 
 public class TrainSensorBootable implements Bootable {
 
-	final ActorSystem system = ActorSystem.create("TrainController");
+	final ActorSystem system = ActorSystem.create("Train");
 
 	@Override
 	public void startup() {
 		final ActorSelection selection = system
-				.actorSelection("akka.tcp://TrainController@127.0.0.1:2553/user/controller");
+				.actorSelection("akka.tcp://Train@127.0.0.1:2553/user/controller");
 		final Future<ActorRef> resolveOne = selection.resolveOne(Duration.create(5, TimeUnit.SECONDS));
 		final ActorRef actorRef;
 		try {
@@ -35,7 +35,7 @@ public class TrainSensorBootable implements Bootable {
 				actorRef);
 
 		final TrainSensor sensor = TypedActor.get(system)
-				.typedActorOf(new TypedProps<TrainSensor>(TrainSensor.class, () -> new TrainSensorImpl(controller)));
+				.typedActorOf(new TypedProps<TrainSensor>(TrainSensor.class, () -> new TrainSensorImpl(controller)), "sensor");
 	}
 
 	@Override

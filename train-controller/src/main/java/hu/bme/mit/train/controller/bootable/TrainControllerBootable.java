@@ -9,7 +9,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerBootable implements Bootable {
 
-	final ActorSystem system = ActorSystem.create("TrainController");
+	final ActorSystem system = ActorSystem.create("Train");
 
 	@Override
 	public void startup() {
