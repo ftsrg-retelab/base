@@ -1,4 +1,4 @@
-package hu.bme.mit.train.controller.bootable;
+package hu.bme.mit.train.bootable;
 
 import akka.actor.ActorSystem;
 import akka.actor.TypedActor;

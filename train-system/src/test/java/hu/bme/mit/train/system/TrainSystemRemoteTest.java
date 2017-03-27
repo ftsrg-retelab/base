@@ -22,7 +22,7 @@ import scala.concurrent.duration.Duration;
 
 public class TrainSystemRemoteTest {
 
-	final ActorSystem actorSystem = ActorSystem.create("Train");
+	final ActorSystem actorSystem = ActorSystem.create("TrainClient");
 
 	TrainController controller;
 	TrainSensor sensor;
@@ -42,17 +42,17 @@ public class TrainSystemRemoteTest {
 
 	@Before
 	public void before() {
-		final ActorRef actorRef = lookupActor("127.0.0.1", 2553, "controller");
+		final ActorRef actorRef = lookupActor(System.getenv("TRAIN_CONTROLLER_IP"), 2553, "controller");
 		controller = TypedActor.get(actorSystem).typedActorOf(new TypedProps<TrainController>(TrainController.class), actorRef);
-		final ActorRef actorRefSensor = lookupActor("127.0.0.1", 2554, "sensor");
+		final ActorRef actorRefSensor = lookupActor(System.getenv("TRAIN_SENSOR_IP"), 2554, "sensor");
 		sensor = TypedActor.get(actorSystem).typedActorOf(new TypedProps<TrainSensor>(TrainSensor.class), actorRefSensor);
-		final ActorRef actorRefUser = lookupActor("127.0.0.1", 2555, "user");
+		final ActorRef actorRefUser = lookupActor(System.getenv("TRAIN_USER_IP"), 2555, "user");
 		user = TypedActor.get(actorSystem).typedActorOf(new TypedProps<TrainUser>(TrainUser.class), actorRefUser);
 	}
 
 	@After
 	public void after() throws Exception {
-		Future<Terminated> terminated = actorSystem.terminate();
+		final Future<Terminated> terminated = actorSystem.terminate();
 		Await.result(terminated, Duration.create(5, TimeUnit.SECONDS));
 	}
 
@@ -80,6 +80,5 @@ public class TrainSystemRemoteTest {
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
-
 
 }

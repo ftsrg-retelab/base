@@ -1,4 +1,4 @@
-package hu.bme.mit.train.sensor.bootable;
+package hu.bme.mit.train.bootable;
 
 import java.util.concurrent.TimeUnit;
 
