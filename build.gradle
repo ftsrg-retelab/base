@@ -1,3 +1,9 @@
+ext {
+	akkaVersion = '2.4.17'
+	scalaVersion = '2.11'
+	junitVersion = '4.12'
+}
+
 subprojects {
   apply plugin: 'java'
 

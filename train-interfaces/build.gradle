@@ -1,2 +1,4 @@
 dependencies {
+	compile group: 'com.typesafe.akka', name: "akka-remote_$scalaVersion", version: akkaVersion
+	compile group: 'com.typesafe.akka', name: "akka-kernel_$scalaVersion", version: akkaVersion
 }
