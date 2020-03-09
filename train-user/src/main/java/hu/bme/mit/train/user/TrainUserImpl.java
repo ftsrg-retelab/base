@@ -9,11 +9,13 @@ public class TrainUserImpl implements TrainUser {
 	private int joystickPosition;
 
 	public TrainUserImpl(TrainController controller) {
+		//Set controller
 		this.controller = controller;
 	}
 
 	@Override
 	public boolean getAlarmFlag() {
+		//Return false
 		return false;
 	}
 
