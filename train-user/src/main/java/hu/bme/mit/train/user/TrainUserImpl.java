@@ -2,6 +2,7 @@ package hu.bme.mit.train.user;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
+import com.google.guava;
 
 public class TrainUserImpl implements TrainUser {
 
