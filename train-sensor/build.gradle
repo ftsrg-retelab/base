@@ -3,5 +3,6 @@ dependencies {
     compile project(':train-user')
 
     compile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
     compile 'org.mockito:mockito-core:2.7.16'
 }
