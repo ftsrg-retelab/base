@@ -46,3 +46,12 @@ The figure below illustrates this behavior using an example.
 1. As the joystick remains at a positive value, the reference speed is incremented again.
 1. However, it reaches the speed limit so in the next step it is not incremented even though the joystick still has a positive value.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
+
+## Exercise one
+1. Cloned repository to local development environment.
+    1. Created a folder from terminal.
+    2. Executed git clone command.
+1. Added these lines via TextEdit.
+1. And then commited changes to remote repository.
+    1. First commited to local repo.
+    2. Then pushed to remote.
