@@ -3,3 +3,4 @@ install: skip
 
 script:
  - ./gradlew build
+ - ./gradlew test
