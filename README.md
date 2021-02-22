@@ -52,9 +52,9 @@ The figure below illustrates this behavior using an example.
 The project currently accepts no contributions. It is advised to fork your own version of the project in case you want to additional features developed.
 
 ## Contact
-For questions about the project feel free to send an e-mail to the following addresses [^1]
+For questions about the project feel free to send an e-mail to the following addresses [1]
 * madeup@nonexistent.com
 * void@existence.com
 * remotework@home.com
 
-[^1]: These addresses are all made up, please do not try to send an e-mail.
+[1]: These addresses are all made up, please do not try to send an e-mail.
