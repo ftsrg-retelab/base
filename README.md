@@ -52,5 +52,10 @@ The figure below illustrates this behavior using an example.
 ![asd!](/image.jpg "asdf")
 
 some **bold text thingy**
-<span style="color:blue"> This text is blue.</span>
-<span style="letter-spacing: 3px"> This text is blue.</span>
+<em>italic thingy</em>
+
+> #### ezzz
+>
+> megez
+>
+> END
