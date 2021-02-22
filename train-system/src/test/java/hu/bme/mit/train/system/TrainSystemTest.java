@@ -46,7 +46,7 @@ public class TrainSystemTest {
 	public void OverrideSpeedLimitToNegative_SetsSpeedLimitToZero(){
 		sensor.overrideSpeedLimit(-5);
 		Assert.assertEquals(0, controller.getSpeedLimit());
-		Assert.assertNotEquals(-5, controller.getSpeedLimit());
+		Assert.assertNotEquals(-5, controller.getSpeedLimit())
 	}
 
 	@Test
