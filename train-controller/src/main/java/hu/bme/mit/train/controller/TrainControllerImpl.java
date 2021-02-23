@@ -7,6 +7,8 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private int counter=0;
+	
 
 	@Override
 	public void followSpeed() {
@@ -25,7 +27,13 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public int getReferenceSpeed() {
+		counter++;
 		return referenceSpeed;
+	}
+	
+	public int getCounter()
+	{
+		return counter;
 	}
 
 	@Override
