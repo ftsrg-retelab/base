@@ -1,3 +1,4 @@
+ez nem helyes szintatktikájú Java kódsor
 package hu.bme.mit.train.sensor;
 
 import hu.bme.mit.train.interfaces.TrainController;
