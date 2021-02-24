@@ -18,6 +18,11 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	@Override
+	public boolean newFeature() {
+		return true;
+	}
+
+	@Override
 	public int getJoystickPosition() {
 		return joystickPosition;
 	}
