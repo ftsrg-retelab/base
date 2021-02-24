@@ -49,6 +49,10 @@ The figure below illustrates this behavior using an example.
 
 
 #These lines were added by the men himself @Bence56
+
 ##Practicing ssh git cli things and Markup syntax
+
 *Makes it italic you look*
+
 __Even bold if you want__
+
