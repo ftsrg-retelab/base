@@ -39,6 +39,8 @@ public class TrainSystemTest {
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
+
+		Assert.assertTrue(controller.newFeature());
 	}
 
 	@Test
