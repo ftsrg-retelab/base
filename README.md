@@ -48,9 +48,9 @@ The figure below illustrates this behavior using an example.
 5. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
 
 
-#These lines were added by the men himself @Bence56
+# These lines were added by the men himself @Bence56
 
-##Practicing ssh git cli things and Markup syntax
+## Practicing ssh git cli things and Markup syntax
 
 *Makes it italic you look*
 
