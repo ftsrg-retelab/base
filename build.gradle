@@ -4,4 +4,9 @@ subprojects {
   repositories {
     jcenter()
   }
+
+  dependencies{
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '30.1-jre'
+  }
 }
