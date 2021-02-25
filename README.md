@@ -56,4 +56,4 @@ The figure below illustrates this behavior using an example.
 
 __Even bold if you want__
 
-I make some changes to this file just so the pull request might work
+I make some editing to this line for this the merge conflict excercise no. 4.2. after that im commiting. 
