@@ -1,6 +1,6 @@
 package hu.bme.mit.train.tachograph;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.Assert;
 
 public class TrainTachographTest {
