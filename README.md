@@ -56,3 +56,4 @@ The figure below illustrates this behavior using an example.
 
 __Even bold if you want__
 
+Its branch b and i didnt communicate w my collegue so it will be a merge conflict
