@@ -56,4 +56,8 @@ The figure below illustrates this behavior using an example.
 
 __Even bold if you want__
 
+
 I make some editing to this line for this the merge conflict excercise no. 4.2. after that im commiting. 
+Its branch b and i didnt communicate w my collegue so it will be a merge conflict
+
+I saved both lines, now I can pull it to my IDEA and debug it. I like more information better then less information.
