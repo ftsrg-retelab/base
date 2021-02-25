@@ -2,7 +2,6 @@ dependencies {
   compile project(':train-controller')
   compile project(':train-sensor')
   compile project(':train-user')
-
-  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
-  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+  
+  compile group: 'junit', name: 'junit', version: '4.12'
 }
