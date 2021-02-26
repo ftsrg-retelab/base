@@ -15,7 +15,7 @@ public class TachographTest {
     @Test
     public void TableIsEmpty(){
         tg.add(3, 23);
-        Assert.assertEquals(false, tg.isEmpty());
+        Assert.assertEquals(true, tg.isEmpty());
     }
 
 }
