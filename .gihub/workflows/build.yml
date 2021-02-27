@@ -1,0 +1,12 @@
+name: Build and test train
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Build
+        run: ./gradlew build
+      - name: Test
+        run: ./gradlew test
