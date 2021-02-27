@@ -15,6 +15,7 @@ public class TrainTachograph {
     }
 
     public Table<Date, Integer, Integer> readTable(){
+
         return tachograph;
     }
 }
