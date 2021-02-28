@@ -8,13 +8,13 @@ __This is a sample application for the verification laboratory.__
 2. * The project can be built using [Gradle](https://gradle.org/).
 2. * [JUnit](http://junit.org/junit4/) is used for tests.
 
--Clone the repository and execute Gradle to build the application:
+- Clone the repository and execute Gradle to build the application:
 
 ```
 ./gradlew build
 ```
 
-To compile and run tests also execute:
+- To compile and run tests also execute:
 
 ```
 ./gradlew test
