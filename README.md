@@ -1,6 +1,6 @@
 # Új README.md :)
 ## Alcím
-[itt egy link](www.x.com)
+[itt egy link](http://x.com/)
 - [x] elkészített
 - [ ] csinálandó
  
