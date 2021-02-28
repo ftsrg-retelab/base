@@ -2,7 +2,7 @@
 Train Speed Controller Readme file-ja
 ## használati útmutató
 
-[weboldal] (TrainSpeedController.com)
+[weboldal] (www.TrainSpeedController.com)
 ### felépítés
  * szenzor
  * kontroller
