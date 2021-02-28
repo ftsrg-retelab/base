@@ -1,3 +1,9 @@
+# Új README.md :)
+## Alcím
+[itt egy link](x.com)
+- [x] elkészített
+- [ ] csinálandó
+ 
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
