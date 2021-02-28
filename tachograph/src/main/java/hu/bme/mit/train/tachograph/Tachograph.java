@@ -7,7 +7,6 @@ import com.google.common.collect.TreeBasedTable;
 import java.time.LocalTime;
 
 public class Tachograph {
-    private int counter = 0;
     Table<LocalTime, Integer, Integer> tachoTable
             = TreeBasedTable.create();
 
