@@ -3,10 +3,11 @@ package hu.bme.mit.train.user;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
 /*import org.junit.Test;
-import static org.junit.Assert.*;*/
+import static org.junit.Assert.*;
 
-/*public class Testing {
-	@Test public void testalarm {
+public class Testing {
+	@Test 
+	public void testalarm {
 		assertFalse(getAlarmflag());
 	}
 }*/
