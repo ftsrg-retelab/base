@@ -2,19 +2,26 @@
 package hu.bme.mit.train.controller;
 
 
-import com.google.common.collect.Table;
 
-import static org.junit.Assert.assertFalse;
-
-import java.sql.Time;
-
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertSame;
+import static org.mockito.Mockito.*;
 
 
 
+    
 public class TachographTest{
 	Tachograph test;
+	
+	@Before
+    public void before() {
+    	
+        // TODO Add initializations
+    }
+
 	 @Test
 	    public void ThisIsAnExampleTest() {
 		 Time time=new Time(0);
