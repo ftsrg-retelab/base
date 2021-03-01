@@ -2,6 +2,13 @@
 
 This is a sample application for the verification laboratory.
 
+## How to clone the repository
+
+**https**
+```
+git clone https://github.com/patrick-nanys/base.git
+```
+
 ## Getting started
 
 * The application is implemented in Java.
