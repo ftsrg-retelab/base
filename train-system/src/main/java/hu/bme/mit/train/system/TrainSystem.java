@@ -8,7 +8,7 @@ import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
 public class TrainSystem {
-	// Fixing the issue
+	// Fixing the issue, adding more comment to approve pull request
 	private TrainController controller = new TrainControllerImpl();
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
