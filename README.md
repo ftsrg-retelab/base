@@ -8,16 +8,17 @@ This is a sample application for the verification laboratory.
 * The project can be built using [Gradle](https://gradle.org/).
 * [JUnit](http://junit.org/junit4/) is used for tests.
 
-## These are the things  I've added or changed in the README
+These are the things  I've added or changed in the README
 -----------------------------------------------------
-## Cloning the repository
-**Clone the repository whith the following command**
+### Cloning the repository
+**I have cloned the repository whith the following command:**
+```
     git clone https://github.com/tiborkott/base
-
-## Executing the application
+```
+### Executing the application
 **Execute Gradle to build the application:**
 ```
-    ./gradlew build*
+    ./gradlew build
 ```
 
 **To compile and run tests also execute:**
