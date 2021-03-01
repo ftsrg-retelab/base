@@ -5,11 +5,11 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import org.junot.Test;
 import static.org.junit.Assert.*;
 
-public class Test {
+/*public class Test {
 	@Test public void testalarm {
 		assertEquals(false, getAlarmflag());
 	}
-}
+}*/
 
 public class TrainUserImpl implements TrainUser {
 
