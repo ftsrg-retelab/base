@@ -1,4 +1,4 @@
-package hu.bme.mit.train.system;
+package hu.bme.mit.train.tachograph;
 
 import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.interfaces.TrainController;
