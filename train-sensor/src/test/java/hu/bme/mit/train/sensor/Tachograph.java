@@ -21,4 +21,8 @@ public class Tachograph{
 		table.put(currenttime, 3, (double) 50);
 		table.put(currenttime, 4, (double) 40);
 	}
+	
+	public Table<Date,Integer,Double> gettable(){
+		return table;
+	}
 }

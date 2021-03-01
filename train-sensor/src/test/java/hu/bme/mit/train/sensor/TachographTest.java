@@ -30,8 +30,9 @@ public class TachographTest{
 	 @Test
 	    public void ThisIsAnExampleTest() {
 		 Date time=new Date(0);
-		 Table<Date,Integer,Double> table=test.table;
-	    	test= new Tachograph(time,2, 45.0);
+		 test= new Tachograph(time,2, 45.0);
+		 Table<Date,Integer,Double> table=test.gettable();
+	    	
 	    	assertFalse(table.isEmpty());
 	    }
 	
