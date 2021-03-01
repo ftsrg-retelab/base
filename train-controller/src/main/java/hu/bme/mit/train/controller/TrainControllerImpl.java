@@ -23,6 +23,7 @@ public class TrainControllerImpl implements TrainController {
 		enforceSpeedLimit();
 	}
 
+	// There is the new function
 	public int getStep() {
 		return step;
 	}
