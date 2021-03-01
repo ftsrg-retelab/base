@@ -4,7 +4,7 @@ This is a sample application for the verification laboratory
 
 ## Getting started
 
-* The application is implemented in Java.
+* The application is implemented in Java
 * The project can be built using [Gradle](https://gradle.org/).
 * [JUnit](http://junit.org/junit4/) is used for tests.
 
