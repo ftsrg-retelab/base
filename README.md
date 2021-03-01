@@ -8,7 +8,7 @@ This is a sample application for the verification laboratory.
 * The project can be built using [Gradle](https://gradle.org/).
 * [JUnit](http://junit.org/junit4/) is used for tests.
 
-## These are the __things__  I've added or changed in the __README__##
+## These are the things  I've added or changed in the README
 -----------------------------------------------------
 ## Cloning the repository
 **Clone the repository whith the following command**
