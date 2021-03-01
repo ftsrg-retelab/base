@@ -1,8 +1,11 @@
 
 package hu.bme.mit.train.controller;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import com.google.common.collect.Table;
+
+import static org.junit.Assert.assertFalse;
+
 import java.sql.Time;
 
 import org.junit.Test;
