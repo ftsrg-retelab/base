@@ -1,5 +1,5 @@
 
-package hu.bme.mit.train.controller;
+package hu.bme.mit.train.sensor;
 
 import java.sql.Time;
 
