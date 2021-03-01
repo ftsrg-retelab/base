@@ -2,6 +2,14 @@ package hu.bme.mit.train.user;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
+import org.junot.Test;
+import static.org.junit.Assert.*;
+
+public class Test {
+	@Test public void testalarm {
+		assertEquals(false, getAlarmflag());
+	}
+}
 
 public class TrainUserImpl implements TrainUser {
 
