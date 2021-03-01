@@ -51,6 +51,8 @@ The figure below illustrates this behavior using an example.
 
 1. My name is Erik
 1. **BME**
+<<<<<<< HEAD
 1. _Hi RETE!_
 
 branch-A edit 
+
