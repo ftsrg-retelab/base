@@ -2,4 +2,5 @@ language: java
 install: ant deps
 jdk:
   - openjdk8
-ant test
+script:
+  - ant test
