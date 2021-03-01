@@ -1,3 +1,7 @@
+#2.2-es feladat
+*3 kulonbozo stilust* _kell hasznalni_
+>ennyi remelem eleg
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
