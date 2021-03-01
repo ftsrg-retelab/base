@@ -15,7 +15,7 @@ public class TrainUserImpl implements TrainUser {
 	@Override
 	public boolean getAlarmFlag() {
 
-		System.out.println("alarm false")
+		System.out.println("alarm false");
 
 		return false;
 	}
