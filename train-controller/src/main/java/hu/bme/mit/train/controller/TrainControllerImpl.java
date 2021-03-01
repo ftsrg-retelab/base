@@ -25,7 +25,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public int getReferenceSpeed() {
-		System.out.println("Hello World");
+		System.out.println("Hello Europe");
 		return referenceSpeed;
 	}
 
