@@ -9,10 +9,10 @@ import com.google.common.collect.Table;
 
 
 public class Tachograph{
-	Date currenttime;
-	int joystickposition;
-	double refspeed;
-	Table<Date,Integer,Double> table;
+	public Date currenttime;
+	public int joystickposition;
+	public double refspeed;
+	public Table<Date,Integer,Double> table;
 	public Tachograph(Date curr, int pos, double ref){
 		currenttime=curr;
 		joystickposition=pos;
