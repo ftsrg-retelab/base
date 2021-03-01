@@ -26,8 +26,13 @@ public class TrainSensorImpl implements TrainSensor {
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
 	}
-	
+
+	/*
+	* @acces public
+	* @desc get int mph
+	* */
 	public int getMph(){
+		System.out.println("This is the speed in mph: " + mph);
 		return mph;
 	}
 
