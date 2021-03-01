@@ -4,6 +4,7 @@ package hu.bme.mit.train.sensor;
 import java.sql.Date;
 import java.sql.Time;
 
+import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.ImmutableTable;
 import com.google.common.collect.Table;
 
@@ -17,7 +18,8 @@ public class Tachograph{
 		currenttime=curr;
 		joystickposition=pos;
 		refspeed=ref;
-		table=ImmutableTable.<Date,Integer,Double>builder().put(curr,pos,ref).build();
+		table=HashBasedTable.create();
+		table.put(curr, pos, ref);
 		table.put(currenttime, 3, (double) 50);
 		table.put(currenttime, 4, (double) 40);
 	}
