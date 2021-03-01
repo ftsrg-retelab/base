@@ -3,10 +3,11 @@ subprojects {
 
   repositories {
     jcenter()
+    mavenCentral()
   }
   dependencies {
     
     testImplementation 'junit:junit:4.12'
-    implementations group: 'com.google.guava', name: 'guava', version: '30.1-jre'
+    compile group: 'com.google.guava', name: 'guava', version: '30.1-jre'
 }
 }
