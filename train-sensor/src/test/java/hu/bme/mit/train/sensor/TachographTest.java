@@ -10,7 +10,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 
-
+import java.sql.Date;
 import java.sql.Time;
 
 
@@ -27,7 +27,7 @@ public class TachographTest{
 
 	 @Test
 	    public void ThisIsAnExampleTest() {
-		 Time time=new Time(0);
+		 Date time=new Date(0);
 	    	test= new Tachograph(time,2, 45.0);
 	    	assertFalse(test.table.isEmpty());
 	    }
