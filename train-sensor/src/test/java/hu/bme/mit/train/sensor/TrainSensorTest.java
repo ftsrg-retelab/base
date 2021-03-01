@@ -19,6 +19,6 @@ public class TrainSensorTest {
     @Test
     public void ThisIsAnExampleTestStub() {
         TrainSensorImpl sensor = new TrainSensorImpl(null, null);
-        assert sensor.getSpeedLimit() == 10;
+        assert sensor.getSpeedLimit() == 5;
     }
 }
