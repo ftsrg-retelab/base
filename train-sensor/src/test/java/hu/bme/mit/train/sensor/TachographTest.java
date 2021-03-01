@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.google.common.collect.Table;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 
@@ -28,8 +30,9 @@ public class TachographTest{
 	 @Test
 	    public void ThisIsAnExampleTest() {
 		 Date time=new Date(0);
+		 Table<Date,Integer,Double> table=test.table;
 	    	test= new Tachograph(time,2, 45.0);
-	    	assertFalse(test.table.isEmpty());
+	    	assertFalse(table.isEmpty());
 	    }
 	
 
