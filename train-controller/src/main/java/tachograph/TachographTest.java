@@ -3,7 +3,7 @@ package tachograph;
 
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-
+import com.google.common.collect.Table;
 import java.sql.Time;
 
 import org.junit.Test;
