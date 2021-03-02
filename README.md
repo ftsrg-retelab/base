@@ -2,7 +2,7 @@
 
 *EDITED BY FARKAS KONRAD
 *G1E12B
-
+*README.md version B
 This is a sample application for the verification laboratory.
 
 ## Getting started
