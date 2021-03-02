@@ -2,6 +2,13 @@
 
 This is a sample application for the verification laboratory.
 
+# Megjegyzés
+
+- Hosszas várakozás után az operációs rendszer friss
+- A cloud néha vicceskedik
+``` > Let's work
+```
+
 ## Getting started
 
 * The application is implemented in Java.
