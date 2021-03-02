@@ -49,7 +49,7 @@ The figure below illustrates this behavior using an example.
 
 #Megjegyzések
 
- ~~Ez egy áthúzott szöveg~~
+ ~~branch-A szerkesztes~~
  
  [Link a repohoz](https://github.com/DaFeee/base)
  
