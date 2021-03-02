@@ -2,7 +2,7 @@
 
 *EDITED BY FARKAS KONRAD
 *G1E12B
-
+*A version
 This is a sample application for the verification laboratory.
 
 ## Getting started
