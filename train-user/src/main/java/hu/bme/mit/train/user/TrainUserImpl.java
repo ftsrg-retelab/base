@@ -8,7 +8,6 @@ public class TrainUserImpl implements TrainUser {
 	private int joystickPosition;
 
 	public TrainUserImpl(TrainController controller) {
-		System.out.println("Hello Trainuser");
 		this.controller = controller;
 	}
 
