@@ -2,9 +2,13 @@
 
 *EDITED BY FARKAS KONRAD
 *G1E12B
+<<<<<<< HEAD
 *A version
-This is a sample application for the verification laboratory.
+=======
 
+>>>>>>> B
+This is a sample application for the verification laboratory.
+* B version
 ## Getting started
 
 * The application is implemented in Java.
