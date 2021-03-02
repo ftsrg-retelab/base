@@ -7,14 +7,12 @@ This is a sample application for the verification laboratory.
 * The application is implemented in Java.
 * The project can be built using [Gradle](https://gradle.org/).
 * [JUnit](http://junit.org/junit4/) is used for tests.
+___
+###Clone the repository and execute Gradle to build the application:###
 
-Clone the repository and execute Gradle to build the application:
+``` ./gradlew build ```
 
-```
-./gradlew build
-```
-
-To compile and run tests also execute:
+__To compile and run tests also execute:__
 
 ```
 ./gradlew test
