@@ -22,23 +22,23 @@ public class TrainSystemTest {
 		sensor = system.getSensor();
 		user = system.getUser();
 
-		sensor.overrideSpeedLimit(50);
+		sensor.overrideSpeedLimit(60);
 	}
 	
 	@Test
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
-		sensor.overrideSpeedLimit(10);
+		sensor.overrideSpeedLimit(20);
 
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 		
-		user.overrideJoystickPosition(5);
+		user.overrideJoystickPosition(10);
 
 		controller.followSpeed();
-		Assert.assertEquals(5, controller.getReferenceSpeed());
-		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 		controller.followSpeed();
-		Assert.assertEquals(10, controller.getReferenceSpeed());
+		Assert.assertEquals(20, controller.getReferenceSpeed());
+		controller.followSpeed();
+		Assert.assertEquals(20, controller.getReferenceSpeed());
 	}
 
 	@Test
