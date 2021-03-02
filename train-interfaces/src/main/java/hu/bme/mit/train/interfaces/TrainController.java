@@ -10,4 +10,8 @@ public interface TrainController {
 
 	void setJoystickPosition(int joystickPosition);
 
+	boolean toggleLights();
+
+	boolean getLights();
+
 }
