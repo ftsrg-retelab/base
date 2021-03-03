@@ -8,7 +8,7 @@ This is a sample application for the verification laboratory.
 - Néha a cloud nem működik rendesen
 > Let's work
 
-## Getting started
+## Getting started for the first time
 
 * The application is implemented in Java.
 * The project can be built using [Gradle](https://gradle.org/).
