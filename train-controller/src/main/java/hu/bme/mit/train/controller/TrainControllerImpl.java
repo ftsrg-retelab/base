@@ -4,6 +4,8 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 
+
+
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
@@ -30,6 +32,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setSpeedLimit(int speedLimit) {
+		System.out.println("New speed limit is: ", speedLimit);
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 		
