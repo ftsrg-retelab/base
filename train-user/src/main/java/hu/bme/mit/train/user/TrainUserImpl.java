@@ -12,7 +12,7 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 	}
 
-	@Override
+    @Override
 	public boolean getAlarmFlag() {
 		return false;
 	}
