@@ -38,7 +38,7 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(20, controller.getReferenceSpeed());
 		controller.followSpeed();
-		Assert.assertEquals(20, controller.getReferenceSpeed());
+		Assert.assertEquals(30, controller.getReferenceSpeed());
 	}
 
 	@Test
