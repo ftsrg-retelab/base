@@ -1,8 +1,1 @@
 language: java
-install: skip
-
-os: linux
-jdk: oraclejdk8
-
-script:
-  - ./gradlew test 
