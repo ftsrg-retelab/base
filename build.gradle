@@ -4,4 +4,7 @@ subprojects {
   repositories {
     jcenter()
   }
+  depencecies {
+    implementation 'com.google.guava:guava:23.0'  
+  }
 }
