@@ -26,10 +26,6 @@ public class TrainSystemTest {
 	}
 
 	@Test
-	public void FailingTest(){
-		Assert.assertEquals(1, 0);
-	}
-	@Test
 	public void PassingTest(){
 		Assert.assertEquals(1, 1);
 		sensor.overrideSpeedLimit(10);
