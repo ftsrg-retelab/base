@@ -1,0 +1,11 @@
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile project(':train-controller')
+  compile project(':train-sensor')
+  compile project(':train-user')
+
+  compile group: 'com.google.guava', name: 'guava', version: '30.1-jre'
+}
