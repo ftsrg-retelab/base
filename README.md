@@ -54,7 +54,7 @@ Priorities:
 	- Use case
 	- Activity
 	- State Machine
-1. Create prototype
+1. Create prototyp
 
 
 
