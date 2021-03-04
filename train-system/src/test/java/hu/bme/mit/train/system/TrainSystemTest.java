@@ -50,5 +50,17 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
-	
+	@Test
+	public void TestSensorSetSpeedMechanism() {
+		controller.setSpeedLimit(10);
+
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+
+		sensor.overrideSpeedLimit(8);
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+
+		Assert.assertEquals(8, controller.getReferenceSpeed());
+	}
 }
