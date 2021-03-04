@@ -13,7 +13,6 @@ public class TrainSystem {
 	private TrainController controller = new TrainControllerImpl();
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
-	private LocalDateTime now = LocalDateTime.now();
 
 	public TrainController getController() {
 		return controller;
