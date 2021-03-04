@@ -2,6 +2,15 @@
 
 This is a sample application for the verification laboratory.
 
+## Introduction
+
+This part will serve as a _very useful_ and _much needed_ introduction to this readme file.
+In the following, you will be able to read about:
+* Getting started
+* Overview, which includes:
+	* Structure
+	* Behavior
+
 ## Getting started
 
 * The application is implemented in Java.
