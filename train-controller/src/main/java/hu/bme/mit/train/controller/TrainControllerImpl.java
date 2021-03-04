@@ -38,7 +38,7 @@ public class TrainControllerImpl implements TrainController {
 	private void enforceSpeedLimit() {
 		if (referenceSpeed > speedLimit) {
 
-			Console.WriteLine("Speed limit had to be enforced.");
+			System.out.println("Speed limit had to be enforced.");
 
 			referenceSpeed = speedLimit;
 		}
