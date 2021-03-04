@@ -7,7 +7,6 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-this line will cause trouble
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
@@ -22,6 +21,16 @@ this line will cause trouble
 
 		enforceSpeedLimit();
 	}
+
+	public void setReferenceSpeed(int _referenceSpeed) {
+		referenceSpeed = _referenceSpeed;
+	}
+
+	public void setStep(int _step)
+	{
+		step = _step;
+	}
+
 
 	@Override
 	public int getReferenceSpeed() {
