@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class TrainTachographTest {
 
@@ -14,6 +14,6 @@ public class TrainTachographTest {
 
     @Test
     public void containsElements() {
-        assertTrue(tt.getTable().isEmpty());
+        assertFalse(tt.getTable().isEmpty());
     }
 }
