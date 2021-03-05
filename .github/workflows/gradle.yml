@@ -26,5 +26,8 @@ jobs:
       run: ./gradlew build
    
   test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
     - name: Test with Gradle
       run: ./gradlew test
