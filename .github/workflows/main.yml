@@ -28,7 +28,12 @@ jobs:
       # Building the project
       - name: Build with Gradle
         run: ./gradlew build
-        
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
       # Testing the project
       - name: Test with Gradle
         run: ./gradlew test
