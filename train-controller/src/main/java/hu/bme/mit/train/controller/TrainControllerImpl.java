@@ -33,6 +33,7 @@ public class TrainControllerImpl implements TrainController {
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 
+	}
 
 	private void enforceSpeedLimit() {
 		if (referenceSpeed > speedLimit) {
