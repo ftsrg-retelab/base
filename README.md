@@ -53,7 +53,7 @@ The figure below illustrates this behavior using an example.
 1. - [x] ez egy kipipált item.
 2. Egy táblázat
 Szoveg1 | Szoveg2
---------| ------
+------ | ------
 első cella | második cella
 
 
