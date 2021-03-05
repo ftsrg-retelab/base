@@ -6,7 +6,7 @@ This is a repository serves as a template for the BME Systems Engineering
 laboratory's assignment, called Version Control Systems, Build Automation and
 Continuous Integration.
 
-* if you are about to hire me, and just stumbled into this repo for the purpose of making sure of my programing skills, please check out my other projects*
+*if you are about to hire me, and just stumbled into this repo for the purpose of making sure of my programing skills, please check out my other projects*
  
 During this assignment we are ought to gain a strong foundation of:
 * **Version Control**  
