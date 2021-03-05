@@ -13,5 +13,8 @@ public class Tachograph {
     public void record(Date time, Integer joyStickPosition, Integer referenceSpeed){
         TachoLog.put(time, joyStickPosition, referenceSpeed);
     }
+    public boolean isEmpty(){
+        return TachoLog.isEmpty();
+    }
 
 }
