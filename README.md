@@ -50,11 +50,10 @@ The figure below illustrates this behavior using an example.
 
 2.2 feladat: kiegészítés új markdown syntax-al.
 
-1. - [x] ez egy kipipált item.
-2. Egy táblázat
+[x] ez egy kipipált item.
+Egy táblázat
 Szoveg1 | Szoveg2
 ------ | ------
-első cella | második cella
+elso cella | masodik cella
 
-
-3. emoji:  :grinning:   :smiley:  :laughing: :rofl:
+emoji:  :grinning:   :smiley:  :laughing: :rofl:
