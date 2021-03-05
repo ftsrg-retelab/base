@@ -1,6 +1,24 @@
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
+## Information about the repository
+
+This is a repository serves as a template for the BME Systems Engineering 
+laboratory's assignment, called Version Control Systems, Build Automation and
+Continuous Integration.
+
+* if you are about to hire me, and just stumbled into this repo for the purpose of making sure of my programing skills, please check out my other projects*
+ 
+During this assignment we are ought to gain a strong foundation of:
+* **Version Control**  
+* Building automation
+* Continous Integration with  [Travis](https://travis-ci.org/)
+
+Eventually, in order to keep myself motivated in the course of the next couple of hours,
+here is an overused motivational quote:
+
+> Wege entstehen dadurch, dass man sie geht.. (*Franz Kafka*)
+
+~~This is a sample application for the verification laboratory.~~
 
 ## Getting started
 
