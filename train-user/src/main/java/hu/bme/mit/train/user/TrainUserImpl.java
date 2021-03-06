@@ -7,6 +7,7 @@ public class TrainUserImpl implements TrainUser {
 
 	private TrainController controller;
 	private int joystickPosition;
+	private int joystickMoveCount;
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
@@ -26,6 +27,12 @@ public class TrainUserImpl implements TrainUser {
 	public void overrideJoystickPosition(int joystickPosition) {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
+		joystickMoveCount++;
 	}
+
+	public int getJoystickMoveCount() {
+		return joystickMoveCount;
+	}
+
 
 }
