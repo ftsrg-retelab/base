@@ -49,7 +49,11 @@ The figure below illustrates this behavior using an example.
 
 ### Example notes
 
-* This is a bullet point and this will create a conflict
+<<<<<<< HEAD
+* This is a bullet point and this will NOT create a conflict
+=======
+* This is a bullet point and this will NOT create a conflict
+>>>>>>> branch-B
 * This is also a bullet point, but this word is **bold**
 * This is the third bullet point
 
