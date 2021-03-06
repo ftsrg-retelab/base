@@ -49,7 +49,8 @@ The figure below illustrates this behavior using an example.
 
 ### Example notes
 
-* This is a bulletpoint
-* This is also a bulletpoint, but this word is **bold**
+* This is a bullet point
+* This is also a bullet point, but this word is **bold**
+* This is the third bullet point
 
-_And this is italic_
+_And this text is italic._
