@@ -1,3 +1,18 @@
+# This repository is a fork of the FTSRG's sample repository.
+
+List:
+ - first
+ - second
+ - third
+
+`This is an inline code sample`
+
+```kotlin
+fun main() {
+    println("Hello FTSRG!")
+}
+```
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
