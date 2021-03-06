@@ -103,7 +103,7 @@ public class TrainSystemTest {
     public void checkGuavaTable() {
         int countOfGuava = system.getGuavaTable().size();
         Assert.assertTrue(countOfGuava > 0);
-        //Assert.assertEquals(1, countOfGuava);
+
     }
 
 }
