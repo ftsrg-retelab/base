@@ -49,7 +49,7 @@ The figure below illustrates this behavior using an example.
 
 ### Example notes
 
-* This is a bullet point
+* This is a bullet point and this will NOT create a conflict
 * This is also a bullet point, but this word is **bold**
 * This is the third bullet point
 
