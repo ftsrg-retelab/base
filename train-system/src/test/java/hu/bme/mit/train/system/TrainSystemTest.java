@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import hu.bme.mit.train.tachograph.TrainTachograph;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -75,9 +76,6 @@ public class TrainSystemTest {
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
 		Assert.assertTrue(!tachograph.getTachoTable().isEmpty());
-
-
-
 	}
 
 

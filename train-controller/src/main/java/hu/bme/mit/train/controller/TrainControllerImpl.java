@@ -1,8 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
-import hu.bme.mit.train.tachograph.TrainTachograph;
-
+import hu.bme.mit.train.tachograph.*;
 
 import java.time.LocalDateTime;
 
