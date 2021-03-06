@@ -1,13 +1,11 @@
 package hu.bme.mit.train.system;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
-import hu.bme.mit.train.system.TrainSystem;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TrainSystemTest {
 
@@ -15,7 +13,7 @@ public class TrainSystemTest {
 	TrainSensor sensor;
 	TrainUser user;
 	
-	@Before
+	@BeforeEach
 	public void before() {
 		TrainSystem system = new TrainSystem();
 		controller = system.getController();
@@ -29,16 +27,16 @@ public class TrainSystemTest {
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
 		sensor.overrideSpeedLimit(10);
 
-		Assert.assertEquals(0, controller.getReferenceSpeed());
+		Assertions.assertEquals(0, controller.getReferenceSpeed());
 		
 		user.overrideJoystickPosition(5);
 
 		controller.followSpeed();
-		Assert.assertEquals(5, controller.getReferenceSpeed());
+		Assertions.assertEquals(5, controller.getReferenceSpeed());
 		controller.followSpeed();
-		Assert.assertEquals(10, controller.getReferenceSpeed());
+		Assertions.assertEquals(10, controller.getReferenceSpeed());
 		controller.followSpeed();
-		Assert.assertEquals(10, controller.getReferenceSpeed());
+		Assertions.assertEquals(10, controller.getReferenceSpeed());
 	}
 
 	@Test
@@ -47,7 +45,7 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
-		Assert.assertEquals(0, controller.getReferenceSpeed());
+		Assertions.assertEquals(0, controller.getReferenceSpeed());
 	}
 
 	

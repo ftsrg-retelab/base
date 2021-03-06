@@ -1,13 +1,11 @@
 package hu.bme.mit.train.sensor;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TrainSensorTest {
 
-    @Before
+    @BeforeEach
     public void before() {
         // TODO Add initializations
     }
