@@ -1,2 +1,0 @@
-This is a change for the created issue.
-Merge conflict here, HELLO.
