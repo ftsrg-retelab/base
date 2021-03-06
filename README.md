@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Új README.md :) branch-A
-=======
-# Új README.md :) branch-B
->>>>>>> branch-B
 ## Alcím
 [itt egy link](http://x.com/)
 - [x] elkészített
