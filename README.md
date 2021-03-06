@@ -52,4 +52,4 @@ The figure below illustrates this behavior using an example.
 [BME MIT](https://www.mit.bme.hu/)
 ***This is the first laboratory excercise of the subject.***
 
-branch A change
+branch AB change
