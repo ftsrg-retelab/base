@@ -50,6 +50,6 @@ The figure below illustrates this behavior using an example.
 ### Example notes
 
 * This is a bulletpoint
-* This is also a bulletpoint, but this word is *bold*
+* This is also a bulletpoint, but this word is **bold**
 
 _And this is italic_
