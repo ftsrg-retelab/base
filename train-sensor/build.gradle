@@ -1,5 +1,6 @@
 dependencies {
     compile project(':train-interfaces')
+    compile project(':train-controller')
     compile project(':train-user')
 
     compile group: 'junit', name: 'junit', version: '4.12'
