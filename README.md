@@ -1,4 +1,4 @@
-# Train *Speed* **Controller**
+# Trrrrrrain *Speed* **Controller**
 
 >This is a sample application for the verification laboratory.
 ___
