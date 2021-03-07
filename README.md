@@ -49,6 +49,6 @@ The figure below illustrates this behavior using an example.
 
 # Ez a __2.2-es__ feladat
 
-### _Ez egy döntött szöveg_
+### _Ez egy módosítás a B branchnek__
 
 ###### A Repository klónozásához add ki a 'git clone git@github.com:robicsekb/base.git' parancsot
