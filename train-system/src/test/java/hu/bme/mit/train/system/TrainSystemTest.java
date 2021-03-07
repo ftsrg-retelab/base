@@ -9,43 +9,43 @@ import org.junit.Test;
 
 public class TrainSystemTest {
 
-    TrainController controller;
-    TrainSensor sensor;
-    TrainUser user;
+    TrainController mController;
+    TrainSensor mSensor;
+    TrainUser mUser;
 
     @Before
     public void before() {
         TrainSystem system = new TrainSystem();
-        controller = system.getController();
-        sensor = system.getSensor();
-        user = system.getUser();
+        mController = system.getController();
+        mSensor = system.getSensor();
+        mUser = system.getUser();
 
-        sensor.overrideSpeedLimit(50);
+        mSensor.overrideSpeedLimit(50);
     }
 
     @Test
     public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
-        sensor.overrideSpeedLimit(10);
+        mSensor.overrideSpeedLimit(10);
 
-        Assert.assertEquals(0, controller.getReferenceSpeed());
+        Assert.assertEquals(0, mController.getReferenceSpeed());
 
-        user.overrideJoystickPosition(5);
+        mUser.overrideJoystickPosition(5);
 
-        controller.followSpeed();
-        Assert.assertEquals(5, controller.getReferenceSpeed());
-        controller.followSpeed();
-        Assert.assertEquals(10, controller.getReferenceSpeed());
-        controller.followSpeed();
-        Assert.assertEquals(10, controller.getReferenceSpeed());
+        mController.followSpeed();
+        Assert.assertEquals(5, mController.getReferenceSpeed());
+        mController.followSpeed();
+        Assert.assertEquals(10, mController.getReferenceSpeed());
+        mController.followSpeed();
+        Assert.assertEquals(10, mController.getReferenceSpeed());
     }
 
     @Test
     public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
-        user.overrideJoystickPosition(4);
-        controller.followSpeed();
-        user.overrideJoystickPosition(-5);
-        controller.followSpeed();
-        Assert.assertEquals(0, controller.getReferenceSpeed());
+        mUser.overrideJoystickPosition(4);
+        mController.followSpeed();
+        muser.overrideJoystickPosition(-5);
+        mController.followSpeed();
+        Assert.assertEquals(0, mController.getReferenceSpeed());
     }
 
 
