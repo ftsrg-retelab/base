@@ -1,6 +1,10 @@
-#This is a big text.
-## This is a smaller text.
-### This is the least text.
+#This is a small text.
+## This is a big text.
+### This is a middle text.
+
+*This text is italic*
+* Item a
+* Item b
 
 
 # Train Speed Controller
