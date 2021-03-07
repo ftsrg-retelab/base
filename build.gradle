@@ -4,6 +4,10 @@ subprojects {
   repositories {
     jcenter()
     mavenCentral()
+    google()
   }
 
+  dependencies {
+    implementation 'com.google.guava:guava-gwt:30.1-jre'
+  }
 }
