@@ -13,12 +13,16 @@ import org.junit.Test;
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
+	
+	TrainController controller;
+	TrainUser user;
+	TrainSensor sensor;
 
     @Before
     public void before() {
-    	TrainController controller = new TrainControllerImpl();
-    	TrainUser user = new TrainUserImpl(controller);
-    	TrainSensor sensor = new TrainSensorImpl(controller, user);
+    	controller = new TrainControllerImpl();
+    	user = new TrainUserImpl(controller);
+    	sensor = new TrainSensorImpl(controller, user);
     }
 
     @Test
