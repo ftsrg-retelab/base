@@ -51,9 +51,9 @@ The figure below illustrates this behavior using an example.
 # MIT1 Labor using Markdown syntax
 
 ## This is an unordered list:
-*MIT
-*AUT
-*IIT
+* MIT
+* AUT
+* IIT
 ## This is an ordered list:
 1. MIT
 1. AUT
