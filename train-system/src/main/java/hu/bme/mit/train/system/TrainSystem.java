@@ -7,6 +7,8 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
+import java.util.Scanner;
+
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
@@ -23,6 +25,24 @@ public class TrainSystem {
 
 	public TrainUser getUser() {
 		return user;
+	}
+
+	static void main(String[] args){
+
+		System.out.println("Train Speed Controller");
+		TrainSystem ts = new TrainSystem();
+
+		while (true){
+			Scanner scanner = new Scanner(System.in);
+			int option = scanner.nextInt();
+			if (option == -1)
+				break;
+			ts.getUser().overrideJoystickPosition(option);
+			System.out.println(ts.getController().getReferenceSpeed());
+			scanner.close();
+		}
+
+
 	}
 
 }
