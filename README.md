@@ -2,6 +2,10 @@
 
 This is a sample application for the verification laboratory.
 
+## Bugfix    
+
+fixed bug
+
 ## Prologue  
   
 *LOREM ipsum*  
