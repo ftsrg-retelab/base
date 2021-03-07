@@ -1,6 +1,12 @@
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
+## Prologue
+
+*LOREM ipsum* 
+ki fogja ezt olvasni?
+**AKI A FÉLKÖVÉRET ÉSZREVESZI**
+---
 
 ## Getting started
 
