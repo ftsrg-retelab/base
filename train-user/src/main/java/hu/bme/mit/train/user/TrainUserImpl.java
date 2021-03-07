@@ -27,5 +27,4 @@ public class TrainUserImpl implements TrainUser {
         this.mJoystickPosition = joystickPosition;
         mController.setJoystickPosition(joystickPosition);
     }
-
 }
