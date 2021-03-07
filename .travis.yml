@@ -1,6 +1,7 @@
 language: java
 
 script:   
- - ./gradlew.build
- - ./gradlew.test
+- ./gradlew build
+- ./gradlew test
+
 
