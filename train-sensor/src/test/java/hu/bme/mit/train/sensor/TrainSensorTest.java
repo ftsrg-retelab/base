@@ -12,7 +12,7 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 
 public class TrainSensorTest {
 
-    //branch demo
+
     TrainSensor sensor;
     TrainController tc;
 
