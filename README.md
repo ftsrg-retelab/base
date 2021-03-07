@@ -1,4 +1,4 @@
-# Trrrrrrain *Speed* **Controller**
+# Trrrrrrain *Speed* **Controlllllllller**
 
 >This is a sample application for the verification laboratory.
 ___
