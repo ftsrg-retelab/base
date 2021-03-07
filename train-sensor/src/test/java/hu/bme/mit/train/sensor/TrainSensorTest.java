@@ -1,5 +1,9 @@
 package hu.bme.mit.train.sensor;
 
+import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainUser;
+import hu.bme.mit.train.interfaces.TrainSensor;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,11 +13,14 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        // TODO Add initializations
+    	TrainController controller = new TrainControllerImpl();
+    	TrainUser user = new TrainUserImpl(controller);
+    	TrainSensor sensor = new TrainSensorImpl(controller, user);
     }
 
     @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+    public void overrideSpeedLimitTest() {
+        sensor.overrideSpeedLimit(15);
+        Assert.assertEquals(15, sensor.getSpeedLimit());
     }
 }
