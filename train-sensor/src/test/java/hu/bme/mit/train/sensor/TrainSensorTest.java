@@ -27,7 +27,8 @@ public class TrainSensorTest {
 
     @Test
     public void overrideSpeedLimitTest() {
-        sensor.overrideSpeedLimit(20);
-        Assert.assertEquals(20, sensor.getSpeedLimit());
+        sensor.overrideSpeedLimit(10);
+        Assert.assertEquals(10, sensor.getSpeedLimit());
+ 
     }
 }
