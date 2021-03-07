@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 
 public class TrainTachograph {
-	private Table<LocalDateTime, Integer, Integer> tachograph;
+	private final Table<LocalDateTime, Integer, Integer> tachograph;
 
 	public TrainTachograph() {
 		tachograph = ImmutableTable.<LocalDateTime, Integer, Integer>builder()
@@ -18,7 +18,7 @@ public class TrainTachograph {
 		return this;
 	}
 
-	public void addRecord(Integer pos, Integer speed){
+	public void addRecord(int pos, int speed){
 		LocalDateTime now = LocalDateTime.now();
 		tachograph.put(now, pos, speed);
 	}
