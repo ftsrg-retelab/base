@@ -11,57 +11,57 @@ import hu.bme.mit.train.system.TrainSystem;
 
 public class TrainSystemTest {
 
-	TrainController controller;
-	TrainSensor sensor;
-	TrainUser user;
-	
-	@Before
-	public void before() {
-		TrainSystem system = new TrainSystem();
-		controller = system.getController();
-		sensor = system.getSensor();
-		user = system.getUser();
+    TrainController controller;
+    TrainSensor sensor;
+    TrainUser user;
 
-		sensor.overrideSpeedLimit(50);
-	}
-	
-	@Test
-	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
-		sensor.overrideSpeedLimit(10);
+    @Before
+    public void before() {
+        TrainSystem system = new TrainSystem();
+        controller = system.getController();
+        sensor = system.getSensor();
+        user = system.getUser();
 
-		Assert.assertEquals(0, controller.getReferenceSpeed());
-		
-		user.overrideJoystickPosition(5);
+        sensor.overrideSpeedLimit(50);
+    }
 
-		controller.followSpeed();
-		Assert.assertEquals(5, controller.getReferenceSpeed());
-		controller.followSpeed();
-		Assert.assertEquals(10, controller.getReferenceSpeed());
-		controller.followSpeed();
-		Assert.assertEquals(10, controller.getReferenceSpeed());
-	}
+    @Test
+    public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
+        sensor.overrideSpeedLimit(10);
 
-	@Test
-	public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
-		user.overrideJoystickPosition(4);
-		controller.followSpeed();
-		user.overrideJoystickPosition(-5);
-		controller.followSpeed();
-		Assert.assertEquals(0, controller.getReferenceSpeed());
-	}
+        Assert.assertEquals(0, controller.getReferenceSpeed());
 
-	@Test
-	public void OverridingSpeedLimit_DecreasesReferenceSpeed() {
-		sensor.overrideSpeedLimit(10);
-		Assert.assertEquals(0, controller.getReferenceSpeed());
+        user.overrideJoystickPosition(5);
 
-		user.overrideJoystickPosition(10);
+        controller.followSpeed();
+        Assert.assertEquals(5, controller.getReferenceSpeed());
+        controller.followSpeed();
+        Assert.assertEquals(10, controller.getReferenceSpeed());
+        controller.followSpeed();
+        Assert.assertEquals(10, controller.getReferenceSpeed());
+    }
 
-		controller.followSpeed();
-		Assert.assertEquals(10, controller.getReferenceSpeed());
-		sensor.overrideSpeedLimit(5);
-		controller.followSpeed();
-		Assert.assertEquals(5, controller.getReferenceSpeed());
-	}
-	
+    @Test
+    public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
+        user.overrideJoystickPosition(4);
+        controller.followSpeed();
+        user.overrideJoystickPosition(-5);
+        controller.followSpeed();
+        Assert.assertEquals(0, controller.getReferenceSpeed());
+    }
+
+    @Test
+    public void OverridingSpeedLimit_DecreasesReferenceSpeed() {
+        sensor.overrideSpeedLimit(10);
+        Assert.assertEquals(0, controller.getReferenceSpeed());
+
+        user.overrideJoystickPosition(10);
+
+        controller.followSpeed();
+        Assert.assertEquals(10, controller.getReferenceSpeed());
+        sensor.overrideSpeedLimit(5);
+        controller.followSpeed();
+        Assert.assertEquals(5, controller.getReferenceSpeed());
+    }
+
 }
