@@ -7,11 +7,10 @@ import java.time.format.DateTimeFormatter;
 
 
 public class TrainTachograph {
-	private final Table<LocalDateTime, Integer, Integer> tachograph;
+	private Table<LocalDateTime, Integer, Integer> tachograph;
 
 	public TrainTachograph() {
-		tachograph = ImmutableTable.<LocalDateTime, Integer, Integer>builder()
-				.build();
+		tachograph = HashBasedTable.create();
 	}
 
 	public TrainTachograph getTrainTachograph(){
