@@ -1,17 +1,21 @@
 package hu.bme.mit.train.sensor;
 
+import hu.bme.mit.train.interfaces.TrainController;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class TrainSensorTest {
 
+    private TrainSensorImpl mSensor;
+
     @Before
     public void before() {
-        // TODO Add initializations
+        mSensor = new TrainSensorImpl(null, null);
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+        Assert.assertEquals(5, mSensor.getSpeedLimit());
     }
 }
