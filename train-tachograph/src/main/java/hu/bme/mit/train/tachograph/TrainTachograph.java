@@ -20,4 +20,8 @@ public class TrainTachograph {
         table = HashBasedTable.create();
         table.put(java.time.LocalTime.now(), user.getJoystickPosition(), controller.getReferenceSpeed());
     }
+
+    public boolean TableIsEmpty(){
+        return table.isEmpty();
+    }
 }
