@@ -4,9 +4,9 @@ This is a sample application for the verification laboratory.
 
 ---
 
-**Here is some jibberish text that prves that I can use CLI text editing tools.**
+**Here is some jibberish text that proves that I can use CLI text editing tools.**
 
-`monospace loL`
+`monospace LOL`
 
 ### I can add new headers too!
 
