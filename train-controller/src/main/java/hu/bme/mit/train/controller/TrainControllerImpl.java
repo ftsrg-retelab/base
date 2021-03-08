@@ -6,7 +6,13 @@ public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
-	private int speedLimit = 0;
+	private static int speedLimit;
+
+	public boolean isAlarm() {
+		return alarm;
+	}
+
+	private boolean alarm = false;
 
 	@Override
 	public void followSpeed() {
@@ -38,12 +44,19 @@ public class TrainControllerImpl implements TrainController {
 	private void enforceSpeedLimit() {
 		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
+			raiseAlarm();
 		}
 	}
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		if (joystickPosition > 0 && referenceSpeed == speedLimit){
+			raiseAlarm();
+		}
+		this.step = joystickPosition;
 	}
 
+	private void raiseAlarm(){
+		alarm = true;
+	};
 }
