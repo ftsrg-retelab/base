@@ -49,6 +49,19 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
+	
+	@Test
+	public void CheckJostickAndSpeedLimitInitializationCheck() {
+		TrainSystem _system = new TrainSystem();
+		TrainController _controller = _system.getController();
+		TrainUser _user = _system.getUser();
+		
+		_controller.followSpeed();
+		Assert.assertEquals(0, _controller.getReferenceSpeed());
+		_user.overrideJoystickPosition(10);
+		_controller.followSpeed();
+		Assert.assertEquals(0, _controller.getReferenceSpeed());
+	}
 
 	
 }
