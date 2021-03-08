@@ -1,7 +1,7 @@
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
-dded a conflicting line.
+Added a conflicting line.
 
 ---
 
