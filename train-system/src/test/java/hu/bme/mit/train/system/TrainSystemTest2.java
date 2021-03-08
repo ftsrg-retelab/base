@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,5 +42,11 @@ public class TrainSystemTest2 {
         user.overrideJoystickPosition(0);
         controller.followSpeed();
         Assert.assertEquals(10, controller.getReferenceSpeed());
+    }
+
+    @After
+    public void after(){
+        user.overrideJoystickPosition(-100);
+        controller.followSpeed();
     }
 }
