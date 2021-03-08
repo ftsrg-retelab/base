@@ -16,6 +16,7 @@ public class TachoGraphTest {
     @Test
     public void elementTest() {
         Assert.assertTrue(tachoGraph.isEmpty());
+
     }
 
 }
