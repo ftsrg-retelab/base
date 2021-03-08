@@ -1,3 +1,17 @@
+### This is just an __example__ **README** file for the lab. ###
+_Now I am using Vim again, which text editor seems a bit confusing 
+but useful at first glance._
+
+During the lab, I will extend my knowledge about:
+1. version control systems
+	* Git
+1. automatic build
+	* Gradle
+1. continuous integration
+
+#### This word is ~~crossed out~~. ####
+> 'Here is a quote.'
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
