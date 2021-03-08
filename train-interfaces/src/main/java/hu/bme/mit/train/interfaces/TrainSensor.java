@@ -6,4 +6,6 @@ public interface TrainSensor {
 
 	void overrideSpeedLimit(int speedLimit);
 
+	boolean isDoorOpen();
+
 }
