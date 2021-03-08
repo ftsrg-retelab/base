@@ -7,19 +7,21 @@ import static org.mockito.Mockito.*;
 
 public class TrainTachographTest {
 
+    TrainTachograph tachograph = new TrainTachographImpl();
+
     @Before
     public void before() {
-        TachographTable.putTachographTable(0, 10);
-        TachographTable.putTachographTable(1, 15);
-        TachographTable.putTachographTable(1, 20);
+        tachograph.putTachographTable(0, 10);
+        tachograph.putTachographTable(1, 15);
+        tachograph.putTachographTable(1, 20);
     }
 
     @Test
     public void TachographTest() {
-        Assert.assertTrue(!TachographTable.isEmpty());
-        Assert.assertTrue(TachographTable.containsValue(10));
-        Assert.assertTrue(TachographTable.containsValue(20));
-        Assert.assertTrue(TachographTable.containsColumn(1));
-        Assert.assertTrue(TachographTable.containsColumn(0));
+        Assert.assertTrue(!tachograph.isEmpty());
+        Assert.assertTrue(tachograph.containsValue(10));
+        Assert.assertTrue(tachograph.containsValue(20));
+        Assert.assertTrue(tachograph.containsColumn(1));
+        Assert.assertTrue(tachograph.containsColumn(0));
     }
 }
