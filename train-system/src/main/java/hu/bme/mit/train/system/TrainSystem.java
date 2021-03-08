@@ -10,9 +10,10 @@ import hu.bme.mit.train.user.TrainUserImpl;
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
+	private TrainTachograph tachograph = new TrainTachograph();
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
-	private TrainTachograph tachograph = new TrainTachograph();
+
 
 	public TrainTachograph getTachograf() {
 		return tachograph;
