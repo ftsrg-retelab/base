@@ -49,11 +49,5 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
-
-	@Test
-	public void generateBuildError() {
-		Assert.asserTrue(false);
-	}
-
 	
 }
