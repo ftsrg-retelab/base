@@ -19,7 +19,7 @@ public class TrainTachograph {
 	private Table<LocalTime, Integer, Integer> logTable;
 	
 	
-	public Tachograph(){
+	public Tachograph() {
 		controller = new TrainControllerImpl();
 		user = new TrainUserImpl(controller);
 		logTable = HashedBaseTable.create();
