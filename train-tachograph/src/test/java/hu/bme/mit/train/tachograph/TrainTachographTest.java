@@ -7,13 +7,21 @@ import static org.mockito.Mockito.*;
 
 public class TrainTachographTest {
 
+    TrainTachograph tachograph = new TrainTachographImpl();
+
     @Before
     public void before() {
-        // TODO Add initializations
+        tachograph.putTachographTable(0, 10);
+        tachograph.putTachographTable(1, 15);
+        tachograph.putTachographTable(1, 20);
     }
 
     @Test
     public void TachographTest() {
-        // TODO Delete this and add test cases based on the issues
+        Assert.assertTrue(!techograph.isEmpty());
+        Assert.assertTrue(techograph.containsValue(10));
+        Assert.assertTrue(techograph.containsValue(20));
+        Assert.assertTrue(techograph.containsColumn(1));
+        Assert.assertTrue(techograph.containsColumn(0));
     }
 }

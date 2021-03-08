@@ -17,11 +17,6 @@ public class TrainSystem {
 	private TrainUser user = new TrainUserImpl(controller, tachograph);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
-
-	public TrainTachograph getTachograf() {
-		return tachograph;
-	}
-
 	public TrainController getController() {
 		return controller;
 	}

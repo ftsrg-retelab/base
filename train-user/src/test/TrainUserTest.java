@@ -9,6 +9,6 @@ public class TrainUserTest {
     @Test
     public void TestgetAlarmFlag() {
         boolean AlarmFlagT=getAlarmFlag();
-        assertTrue(AlarmFlagT==false);
+        Assert.assertTrue(AlarmFlagT==false);
     }
 }
