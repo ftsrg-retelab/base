@@ -4,13 +4,16 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
+import hu.bme.mit.train.interfaces.TrainTachograph;
+
 
 public class TrainTachographTest {
 
-    TrainTachograph tachograph = new TrainTachographImpl();
+    TrainTachograph tachograph;
 
     @Before
     public void before() {
+        tachograph = new TrainTachographImpl();
         tachograph.putTachographTable(0, 10);
         tachograph.putTachographTable(1, 15);
         tachograph.putTachographTable(1, 20);
