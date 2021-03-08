@@ -23,6 +23,11 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	@Override
+	public void pushEmergencyButton(){
+		controller.setSpeedLimit(0);
+	}
+
+	@Override
 	public void overrideJoystickPosition(int joystickPosition) {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
