@@ -12,7 +12,7 @@ public class TrainTachograph {
 	
 	
 	public TrainTachograph() {
-		logTable = HashedBaseTable.create();
+		logTable = HashBasedTable.create();
 	}
 	
 	public void add(int userJoyStickPos, int controllerRefSpeed) {
