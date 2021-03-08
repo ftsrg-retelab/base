@@ -1,7 +1,9 @@
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
-
+**The README file is edited using 3 different formatting styles.**
+*The editing was done in CLI*
+> The slyles used where bold, italic and blockquotesc
 ## Getting started
 
 * The application is implemented in Java.
