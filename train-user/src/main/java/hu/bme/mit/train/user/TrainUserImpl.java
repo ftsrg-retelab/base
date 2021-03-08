@@ -10,9 +10,11 @@ public class TrainUserImpl implements TrainUser {
 	private TrainController controller;
 	private int joystickPosition;
 	private boolean AlarmFlag=false;
+	private TrainTachograph tachograph;
 
-	public TrainUserImpl(TrainController controller) {
+	public TrainUserImpl(TrainController controller, TrainTachograph tachograph) {
 		this.controller = controller;
+		this.tachograph = tachograph;
 	}
 
 	@Override
