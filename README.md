@@ -2,9 +2,9 @@
 
 This is a sample application for the verification laboratory.
 
-## Bugfix    
+## Bugfix - Issue fixed   
 
-fixed bug
+A bug was here, but it has disappeared.
 
 ## Prologue  
   
