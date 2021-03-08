@@ -21,10 +21,10 @@ public class TrainTachographTest {
 
     @Test
     public void TachographTest() {
-        Assert.assertTrue(!tachograph.isEmpty());
-        Assert.assertTrue(tachograph.containsValue(10));
-        Assert.assertTrue(tachograph.containsValue(20));
-        Assert.assertTrue(tachograph.containsColumn(1));
-        Assert.assertTrue(tachograph.containsColumn(0));
+        Assert.assertTrue(!tachograph.getTachographTable().isEmpty());
+        Assert.assertTrue(tachograph.getTachographTable().containsValue(10));
+        Assert.assertTrue(tachograph.getTachographTable().containsValue(20));
+        Assert.assertTrue(tachograph.getTachographTable().containsColumn(1));
+        Assert.assertTrue(tachograph.getTachographTable().containsColumn(0));
     }
 }
