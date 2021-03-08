@@ -4,7 +4,7 @@ public interface TrainUser {
 
 	int getJoystickPosition();
 
-	boolean getAlarmFlag();
+	int getAlarmFlag();
 
 	void overrideJoystickPosition(int joystickPosition);
 
