@@ -1,4 +1,4 @@
-package hu.bme.mit.train.controller;
+package hu.bme.mit.train.sensor;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
