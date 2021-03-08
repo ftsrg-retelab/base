@@ -5,7 +5,7 @@ plugins {
 version: 'unspecified'
 
 dependencies {
-// https://mvnrepository.com/artifact/com.google.guava/guava
- implementation group: 'com.google.guava', name: 'guava', version: '29.0-jre'
- testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile project(':train-tachograph')
+    implementation group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
