@@ -11,8 +11,8 @@ public class TrainTachographImpl implements TrainTachograph {
 
 	Table<LocalDateTime, Integer, Integer> TachographTable = HashBasedTable.create();
 
-	public void putTachographTable(int joystickPosition, TrainController controller) {
+	public void putTachographTable(int joystickPosition, int referenceSpeed) {
 	LocalDateTime currentTime = LocalDateTime.now();
-	TachographTable.put(currentTime, joystickPosition, controller.getReferenceSpeed());
+	TachographTable.put(currentTime, joystickPosition, referenceSpeed);
 	}
 }
