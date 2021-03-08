@@ -7,6 +7,6 @@ subprojects {
   }
 
   dependencies {
-    compile group:'com.google.guava’ name:'guava' version:'14.0''
+    compile group: 'com.google.guava’ name: 'guava' version: '14.0'
   }
 }
