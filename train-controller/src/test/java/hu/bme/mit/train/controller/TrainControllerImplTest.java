@@ -1,4 +1,4 @@
-package hu.bme.mit.train.sensor;
+package hu.bme.mit.train.controller;
 
 import org.testng.annotations.Test;
 

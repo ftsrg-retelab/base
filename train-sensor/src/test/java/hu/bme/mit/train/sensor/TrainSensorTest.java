@@ -1,5 +1,6 @@
 package hu.bme.mit.train.sensor;
 
+import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
 import org.junit.Assert;
