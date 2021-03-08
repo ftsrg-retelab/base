@@ -1,5 +1,8 @@
+<<<<<<< .merge_file_w5KZNx
+# Car Speed Controller
+=======
 ## Boat Speed Controller
-
+>>>>>>> .merge_file_T0jJby
 
 This is a sample application for the verification laboratory.
 
