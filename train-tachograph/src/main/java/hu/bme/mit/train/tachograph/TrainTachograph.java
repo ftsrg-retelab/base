@@ -19,4 +19,8 @@ public class TrainTachograph {
 		LocalTime time = LocalTime.now();
 		logTable.put(time, userJoyStickPos, controllerRefSpeed);
 	}
+	
+	public boolean isEmpty() {
+		return logTable.isEmpty();
+	}
 }
