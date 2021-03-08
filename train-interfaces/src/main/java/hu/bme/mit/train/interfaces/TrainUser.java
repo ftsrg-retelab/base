@@ -6,6 +6,10 @@ public interface TrainUser {
 
 	boolean getAlarmFlag();
 
+	boolean getEmergencyBrakeState();
+
 	void overrideJoystickPosition(int joystickPosition);
+
+	void switchBrakeState();
 
 }

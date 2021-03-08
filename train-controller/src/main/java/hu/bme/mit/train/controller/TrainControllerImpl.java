@@ -7,6 +7,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private boolean braking = false;
 
 	@Override
 	public void followSpeed() {
@@ -36,7 +37,9 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void enforceSpeedLimit() {
-		if (referenceSpeed > speedLimit) {
+		if (braking) {
+			referenceSpeed = 0;
+		} else if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
 	}
@@ -44,6 +47,12 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+	@Override
+	public void setBrakes(boolean brakeState) {
+		braking = brakeState;
+		enforceSpeedLimit();
 	}
 
 }
