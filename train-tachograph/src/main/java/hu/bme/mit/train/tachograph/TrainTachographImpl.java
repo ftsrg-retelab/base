@@ -11,9 +11,8 @@ public class TrainTachographImpl implements TrainTachograph {
 
 	private Table<LocalDateTime, Integer, Integer> TachographTable = HashBasedTable.create();
 
-	public TrainTachograph getTachographTable()
-	{
-		return TachographTable;
+	public Object getTachographTable() {
+		return this.TachographTable;
 	}
 
 	public void putTachographTable(int joystickPosition, int referenceSpeed) {
