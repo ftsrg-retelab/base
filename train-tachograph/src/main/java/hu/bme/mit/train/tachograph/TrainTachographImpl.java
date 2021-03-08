@@ -7,7 +7,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.interfaces.Tachograph;
 
-public class TrainTachograph {
+public class TrainTachographImpl implements TrainTachograph {
 
 	Table<LocalDateTime, int, int> TachographTable = HashBasedTable.create();
 
