@@ -12,6 +12,7 @@ public class TrainSensorImpl implements TrainSensor {
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
+		
 		this.user = user;
 	}
 
