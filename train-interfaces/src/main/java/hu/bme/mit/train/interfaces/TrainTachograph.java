@@ -2,6 +2,6 @@ package hu.bme.mit.train.interfaces;
 
 public interface TrainTachograph {
 
-	void putTachographTable();
+	void putTachographTable(int joystickPosition, TrainController controller);
 
 }

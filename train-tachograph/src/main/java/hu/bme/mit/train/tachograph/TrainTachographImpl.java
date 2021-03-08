@@ -13,6 +13,6 @@ public class TrainTachographImpl implements TrainTachograph {
 
 	public void putTachographTable(int joystickPosition, TrainController controller) {
 	LocalDateTime currentTime = LocalDateTime.now();
-	TachographTable.put(currentTime, joystickPosition), controller.getReferenceSpeed());
+	TachographTable.put(currentTime, joystickPosition, controller.getReferenceSpeed());
 	}
 }
