@@ -12,7 +12,8 @@ public class TrainSensorImpl implements TrainSensor {
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
-		
+
+		System.out.println("Error 1");
 		this.user = user;
 	}
 
