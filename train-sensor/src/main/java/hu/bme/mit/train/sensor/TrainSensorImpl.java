@@ -4,6 +4,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 
+//Task 3
 public class TrainSensorImpl implements TrainSensor {
 
 	private TrainController controller;
