@@ -9,7 +9,7 @@ import hu.bme.mit.train.interfaces.TrainTachograph;
 
 public class TrainTachographImpl implements TrainTachograph {
 
-	Table<LocalDateTime, int, int> TachographTable = HashBasedTable.create();
+	Table<LocalDateTime, Integer, Integer> TachographTable = HashBasedTable.create();
 
 	public void putTachographTable() {
 	LocalDateTime currentTime = LocalDateTime.now();

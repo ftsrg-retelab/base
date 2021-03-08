@@ -1,6 +1,5 @@
 dependencies {
     compile project(':train-interfaces')
-    compile project(':train-tachograph')
 
     compile group: 'junit', name: 'junit', version: '4.12'
     compile 'org.mockito:mockito-core:2.7.16'
