@@ -1,5 +1,6 @@
 # Train Speed Controller
-editing line in branch-A
+line merged with content from branch-A and branch-B
+
 This is a sample application for the verification laboratory.
 
 ## Bugfix - Issue fixed   
