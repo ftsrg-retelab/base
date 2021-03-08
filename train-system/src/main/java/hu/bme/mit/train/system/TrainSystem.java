@@ -34,8 +34,6 @@ public class TrainSystem {
 			controller.followSpeed();
 			System.out.print("sihuhuuuu ");
 		}
-
-
 	}
 
 }
