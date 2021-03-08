@@ -31,7 +31,7 @@ public class TrainUserImpl implements TrainUser {
 	public void overrideJoystickPosition(int joystickPosition) {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
-		tachograph.putTachographTable();
+		tachograph.putTachographTable(user,controller);
 	}
 
 }
