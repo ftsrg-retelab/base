@@ -12,6 +12,8 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 	}
 
+	public void CoolFeature(){String cooltxt = "lorem ipsum dolore sit amet";}
+
 	@Override
 	public boolean getAlarmFlag() {
 		return false;
