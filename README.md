@@ -2,7 +2,15 @@
 
 This is a sample application for the verification laboratory.
 
-## Getting started
+## Megjegyzés
+
+- Hosszú várakozás után az operációs rendszer frissült
+- Néha a cloud nem működik rendesen
+> Let's work
+
+
+## Getting started with the project for the first time
+
 
 * The application is implemented in Java.
 * The project can be built using [Gradle](https://gradle.org/).
