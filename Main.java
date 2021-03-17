@@ -7,7 +7,7 @@ public class Main{
 
   public static void main(String[] arg){
     TrainSystem system = new TrainSystem();
-    system.getController().setJoystickPosition(0);
+    system.getController().setJoystickPosition(0); 
 
 
     TimerTask task = new TimerTask() {
