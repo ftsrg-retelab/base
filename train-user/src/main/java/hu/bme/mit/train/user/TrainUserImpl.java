@@ -44,7 +44,8 @@ public class TrainUserImpl extends TimerTask implements TrainUser {
 
 	@Override
 	public void run() {
-		//TODO
+		overrideJoystickPosition(getJoystickPosition());
+		controller.followSpeed();
 		
 	}
 
