@@ -26,7 +26,6 @@ public class TrainUserImpl extends TimerTask implements TrainUser {
 	@Override
 	public boolean getAlarmFlag() {
 
-		System.out.println("alarm false");
 
 		return false;
 	}
