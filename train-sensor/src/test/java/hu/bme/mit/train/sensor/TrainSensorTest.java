@@ -41,7 +41,7 @@ public class TrainSensorTest {
         when(mockTrainUserImpl.getAlarmState()).thenReturn(false);
 
         sensor.overrideSpeedLimit(40);
-        verify(mockTrainUserImpl, times(0)).getAlarmState();
+        verify(mockTrainUserImpl, times(1)).setAlarmState(false);
 
 
     }
@@ -60,7 +60,7 @@ public class TrainSensorTest {
     public void SpeedBelowZeroTest() {
         when(mockTrainUserImpl.getAlarmState()).thenReturn(true);
         sensor.overrideSpeedLimit(-1);
-        verify(mockTrainUserImpl, times(0)).getAlarmState();
+        verify(mockTrainUserImpl, times(1)).setAlarmState(true);
     }
 
     @Before
@@ -76,24 +76,33 @@ public class TrainSensorTest {
     @Test
     public void SpeedOver500Test() {
         when(mockTrainUserImpl.getAlarmState()).thenReturn(true);
-        sensor.overrideSpeedLimit(500);
-        verify(mockTrainUserImpl, times(0)).getAlarmState();
+        sensor.overrideSpeedLimit(501);
+        verify(mockTrainUserImpl, times(1)).setAlarmState(true);
     }
 
     @Before
     public void beforeSpeedHalfLowerThenRef() {
         mockTrainUserImpl=mock(TrainUserImpl.class);
-        mockTrainUserImpl.overrideJoystickPosition(50);
+
+
         mockTrainControllerImpl=mock(TrainControllerImpl.class);
         mockTrainControllerImpl.setSpeedLimit(50);
+        mockTrainUserImpl.overrideJoystickPosition(50);
+        mockTrainControllerImpl.setJoystickPosition(50);
         mockTrainControllerImpl.followSpeed();
         sensor=new TrainSensorImpl(mockTrainControllerImpl,mockTrainUserImpl);
     }
 
     @Test
     public void SpeedHalfLowerThenRefTest() {
+        mockTrainControllerImpl.setSpeedLimit(50);
+        mockTrainUserImpl.overrideJoystickPosition(50);
+        mockTrainControllerImpl.setJoystickPosition(50);
+        mockTrainControllerImpl.followSpeed();
         when(mockTrainUserImpl.getAlarmState()).thenReturn(true);
+        //sensor=new TrainSensorImpl(trainControllerImpl,mockTrainUserImpl);
         sensor.overrideSpeedLimit(20);
-        verify(mockTrainUserImpl, times(0)).getAlarmState();
+        verify(mockTrainUserImpl, times(1)).setAlarmState(true);
+
     }
 }
