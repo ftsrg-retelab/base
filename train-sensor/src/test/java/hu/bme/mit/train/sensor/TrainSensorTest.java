@@ -16,7 +16,6 @@ import static org.mockito.Mockito.*;
 public class TrainSensorTest {
 
     TrainUserImpl mockTrainUserImpl;
-    TrainControllerImpl mockTrainControllerImpl;
     TrainSensorImpl sensor;
     TrainControllerImpl trainControllerimpl;
 
@@ -31,7 +30,7 @@ public class TrainSensorTest {
         trainControllerimpl.followSpeed();
 
         sensor=new TrainSensorImpl(trainControllerimpl,mockTrainUserImpl);
-        // TODO Add initializations
+
     }
 
     @Test
