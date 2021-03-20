@@ -48,7 +48,5 @@ public class TrainControllerImpl implements TrainController   {
 		this.step = joystickPosition;		
 	}
 
-	public int getSpeedLimit() {
-		return speedLimit;
-	}
+
 }

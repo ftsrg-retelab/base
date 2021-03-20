@@ -18,17 +18,19 @@ public class TrainSensorTest {
     TrainUserImpl mockTrainUserImpl;
     TrainControllerImpl mockTrainControllerImpl;
     TrainSensorImpl sensor;
+    TrainControllerImpl trainControllerimpl;
 
 
     @Before
-    public void beforeAlarmStateTrue() {
+    public void beforeTests() {
 
         mockTrainUserImpl=mock(TrainUserImpl.class);
-        mockTrainUserImpl.overrideJoystickPosition(50);
-        mockTrainControllerImpl=mock(TrainControllerImpl.class);
-        mockTrainControllerImpl.setSpeedLimit(50);
-        mockTrainControllerImpl.followSpeed();
-        sensor=new TrainSensorImpl(mockTrainControllerImpl,mockTrainUserImpl);
+        trainControllerimpl=new TrainControllerImpl();
+        trainControllerimpl.setSpeedLimit(50);
+        trainControllerimpl.setJoystickPosition(50);
+        trainControllerimpl.followSpeed();
+
+        sensor=new TrainSensorImpl(trainControllerimpl,mockTrainUserImpl);
         // TODO Add initializations
     }
 
@@ -39,22 +41,12 @@ public class TrainSensorTest {
 
         // TODO Delete this and add test cases based on the issues
         when(mockTrainUserImpl.getAlarmState()).thenReturn(false);
-
         sensor.overrideSpeedLimit(40);
         verify(mockTrainUserImpl, times(1)).setAlarmState(false);
 
 
     }
 
-    @Before
-    public void beforeSpeedBelowZero() {
-        mockTrainUserImpl=mock(TrainUserImpl.class);
-        mockTrainUserImpl.overrideJoystickPosition(50);
-        mockTrainControllerImpl=mock(TrainControllerImpl.class);
-        mockTrainControllerImpl.setSpeedLimit(50);
-        mockTrainControllerImpl.followSpeed();
-        sensor=new TrainSensorImpl(mockTrainControllerImpl,mockTrainUserImpl);
-    }
 
     @Test
     public void SpeedBelowZeroTest() {
@@ -63,15 +55,7 @@ public class TrainSensorTest {
         verify(mockTrainUserImpl, times(1)).setAlarmState(true);
     }
 
-    @Before
-    public void beforeSpeedOver500() {
-        mockTrainUserImpl=mock(TrainUserImpl.class);
-        mockTrainUserImpl.overrideJoystickPosition(50);
-        mockTrainControllerImpl=mock(TrainControllerImpl.class);
-        mockTrainControllerImpl.setSpeedLimit(50);
-        mockTrainControllerImpl.followSpeed();
-        sensor=new TrainSensorImpl(mockTrainControllerImpl,mockTrainUserImpl);
-    }
+
 
     @Test
     public void SpeedOver500Test() {
@@ -80,27 +64,11 @@ public class TrainSensorTest {
         verify(mockTrainUserImpl, times(1)).setAlarmState(true);
     }
 
-    @Before
-    public void beforeSpeedHalfLowerThenRef() {
-        mockTrainUserImpl=mock(TrainUserImpl.class);
-
-
-        mockTrainControllerImpl=mock(TrainControllerImpl.class);
-        mockTrainControllerImpl.setSpeedLimit(50);
-        mockTrainUserImpl.overrideJoystickPosition(50);
-        mockTrainControllerImpl.setJoystickPosition(50);
-        mockTrainControllerImpl.followSpeed();
-        sensor=new TrainSensorImpl(mockTrainControllerImpl,mockTrainUserImpl);
-    }
 
     @Test
     public void SpeedHalfLowerThenRefTest() {
-        mockTrainControllerImpl.setSpeedLimit(50);
-        mockTrainUserImpl.overrideJoystickPosition(50);
-        mockTrainControllerImpl.setJoystickPosition(50);
-        mockTrainControllerImpl.followSpeed();
+
         when(mockTrainUserImpl.getAlarmState()).thenReturn(true);
-        //sensor=new TrainSensorImpl(trainControllerImpl,mockTrainUserImpl);
         sensor.overrideSpeedLimit(20);
         verify(mockTrainUserImpl, times(1)).setAlarmState(true);
 
