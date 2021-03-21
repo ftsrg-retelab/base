@@ -49,7 +49,9 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;
 		TimerTask tt = new TimerTask() {
 			@Override
-			public void run() {followSpeed();}
+			public void run() {
+				followSpeed();
+			}
 		};
 		timer.scheduleAtFixedRate(tt, 0, 1000);
 	}
