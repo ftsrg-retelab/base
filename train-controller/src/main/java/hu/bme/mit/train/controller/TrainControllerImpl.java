@@ -19,9 +19,6 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-
-		System.out.println("DEBUG: reference speed set to " + referenceSpeed);
-
 		enforceSpeedLimit();
 	}
 
