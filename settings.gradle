@@ -6,3 +6,5 @@ include ':train-sensor'
 include ':train-system'
 include ':train-user'
 include ':train-tachograph'
+include ':train-runner'
+

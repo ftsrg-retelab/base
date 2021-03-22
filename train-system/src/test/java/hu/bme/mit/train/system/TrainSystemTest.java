@@ -1,14 +1,14 @@
 package hu.bme.mit.train.system;
 
-import hu.bme.mit.train.interfaces.TrainTachograph;
+import hu.bme.mit.train.interfaces.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import hu.bme.mit.train.interfaces.TrainController;
-import hu.bme.mit.train.interfaces.TrainSensor;
-import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+
+import java.util.Date;
+import java.util.Timer;
 
 public class TrainSystemTest {
 
@@ -16,6 +16,7 @@ public class TrainSystemTest {
 	TrainSensor sensor;
 	TrainUser user;
 	TrainTachograph tachograph;
+	TrainRunner runner;
 	
 	@Before
 	public void before() {
@@ -24,6 +25,7 @@ public class TrainSystemTest {
 		sensor = system.getSensor();
 		user = system.getUser();
 		tachograph = system.getTachograph();
+		runner = system.getRunner();
 
 		sensor.overrideSpeedLimit(50);
 	}
@@ -84,5 +86,56 @@ public class TrainSystemTest {
 		Assert.assertEquals(tachograph.getData(), 3);
 	}
 
-	
+	@Test
+	public void TestRunner() throws InterruptedException{
+		Assert.assertEquals(0,controller.getReferenceSpeed());
+		user.overrideJoystickPosition(1);
+		runner.schedule(1000);
+		Thread.sleep(2000);
+		Assert.assertEquals(2, controller.getReferenceSpeed());
+		Thread.sleep(2000);
+		Assert.assertEquals(4, controller.getReferenceSpeed());
+
+	}
+
+	@Test
+	public void TestExpectedBehaviour() throws InterruptedException{
+		//t0
+		Assert.assertEquals(0,controller.getReferenceSpeed());
+		Assert.assertEquals(0, user.getJoystickPosition());
+
+
+		// t1-t3
+		user.overrideJoystickPosition(1);
+		controller.setSpeedLimit(2);
+		runner.schedule(1000);
+		Thread.sleep(1000);
+		Assert.assertEquals(1, controller.getReferenceSpeed());
+		Thread.sleep(1000);
+		Assert.assertEquals(2, controller.getReferenceSpeed());
+		Thread.sleep(1000);
+		Assert.assertEquals(2, controller.getReferenceSpeed());
+
+		// t4-t5
+		user.overrideJoystickPosition(0);
+		Thread.sleep(1000);
+		Assert.assertEquals(2, controller.getReferenceSpeed());
+		Thread.sleep(1000);
+		Assert.assertEquals(2, controller.getReferenceSpeed());
+
+		// t6
+		user.overrideJoystickPosition(-1);
+		Thread.sleep(1000);
+		Assert.assertEquals(1, controller.getReferenceSpeed());
+
+		// t7
+		user.overrideJoystickPosition(0);
+		Thread.sleep(1000);
+		Assert.assertEquals(1, controller.getReferenceSpeed());
+
+		// t8
+		Thread.sleep(1000);
+		Assert.assertEquals(1, controller.getReferenceSpeed());
+
+	}
 }
