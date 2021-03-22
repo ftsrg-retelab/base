@@ -11,11 +11,11 @@ public class TrainTachograph {
         tachograph = HashBasedTable.create();
     }
 
-    public void AddToTachograph(Integer joystickPosition, Integer referenceSpeed){
+    public void addToTachograph(Integer joystickPosition, Integer referenceSpeed){
         tachograph.put(new Date(), joystickPosition, referenceSpeed);
     }
 
-    public Table<Date, Integer, Integer> GetFromTachograph(){
+    public Table<Date, Integer, Integer> getFromTachograph(){
         return tachograph;
     }
 }

@@ -7,10 +7,10 @@ public class TrainTachographTest {
     @Test
     public void TestIfCollectionHasSomeElements(){
         TrainTachograph tachograph = new TrainTachograph();
-        tachograph.AddToTachograph(3, 5);
-        tachograph.AddToTachograph(4, 50000);
-        tachograph.AddToTachograph(50000, 5);
+        tachograph.addToTachograph(3, 5);
+        tachograph.addToTachograph(4, 50000);
+        tachograph.addToTachograph(50000, 5);
 
-        Assert.assertNotNull(tachograph.GetFromTachograph());
+        Assert.assertNotNull(tachograph.getFromTachograph());
     }
 }
