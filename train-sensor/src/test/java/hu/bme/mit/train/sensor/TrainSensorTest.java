@@ -29,4 +29,36 @@ public class TrainSensorTest {
         sensor.overrideSpeedLimit(33);
         Assert.assertEquals(33, sensor.getSpeedLimit());
     }
+
+    @Test
+    public void TestOverrideSpeedLimitAbsoluteMarginForNull() {
+        sensor.overrideSpeedLimit(0);
+        Assert.assertFalse(user.getAlarmState());
+    }
+
+    @Test
+    public void TestOverrideSpeedLimitAbsoluteMarginForTrue() {
+        sensor.overrideSpeedLimit(501);
+        Assert.assertTrue(user.getAlarmState());
+    }
+
+    @Test
+    public void TestOverrideSpeedLimitRelativeMarginForTrue() {
+        controller.setSpeedLimit(150);
+        user.overrideJoystickPosition(150);
+        controller.followSpeed();
+
+        sensor.overrideSpeedLimit(50);
+        Assert.assertTrue(user.getAlarmState());
+    }
+
+    @Test
+    public void TestOverrideSpeedLimitRelativeMarginForFalse() {
+        controller.setSpeedLimit(150);
+        user.overrideJoystickPosition(150);
+        controller.followSpeed();
+
+        sensor.overrideSpeedLimit(100);
+        Assert.assertFalse(user.getAlarmState());
+    }
 }
