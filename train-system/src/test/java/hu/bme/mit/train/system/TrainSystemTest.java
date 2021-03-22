@@ -9,6 +9,10 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
 
+import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class TrainSystemTest {
 
 	TrainController controller;
@@ -55,6 +59,25 @@ public class TrainSystemTest {
 		int testSpeedLimit = 333;
 		sensor.overrideSpeedLimit(testSpeedLimit);
 		Assert.assertEquals(sensor.getSpeedLimit(), testSpeedLimit);
+	}
+
+	@Test
+	public void TestExpectedBehaviour() {
+		TimerTask timerTask = new TimerTask() {
+			@Override
+			public void run() {
+				/*System.out.println("Joystick position?");
+				Scanner scanner = new Scanner(System.in);
+				int joystickPosition = scanner.nextInt();*/
+				int joystickPosition = 5;
+				user.overrideJoystickPosition(joystickPosition);
+				controller.followSpeed();
+				Assert.assertEquals(5, controller.getReferenceSpeed());
+			}
+		};
+		long delay = 1000L;
+		Timer timer = new Timer("Timer");
+		timer.schedule(timerTask, delay);
 	}
 	
 }
