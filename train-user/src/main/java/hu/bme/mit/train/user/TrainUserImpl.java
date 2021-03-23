@@ -9,7 +9,7 @@ public class TrainUserImpl implements TrainUser {
 
 	private TrainController controller;
 	private int joystickPosition;
-	private boolean AlarmFlag=false;
+	private boolean alarmflag = false;
 	private TrainTachograph tachograph;
 
 	public TrainUserImpl(TrainController controller, TrainTachograph tachograph) {
@@ -19,7 +19,7 @@ public class TrainUserImpl implements TrainUser {
 
 	@Override
 	public boolean getAlarmFlag() {
-		return AlarmFlag;
+		return alarmflag;
 	}
 
 	@Override
