@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hu.bme.mit.train.tachograph.TachographTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-23T17:11:57" hostname="xubuntu" time="0.038">
+  <properties/>
+  <testcase name="TableIsEmpty" classname="hu.bme.mit.train.tachograph.TachographTest" time="0.038"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
