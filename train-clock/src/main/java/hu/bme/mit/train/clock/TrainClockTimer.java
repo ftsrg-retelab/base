@@ -2,14 +2,12 @@ package hu.bme.mit.train.clock;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 public class TrainClockTimer extends Thread {
 
     private final TrainController controller;
     public TrainClockTimer(TrainController controller) {this.controller = controller; this.start();}
 
+    @Override
     public void run() {
         System.out.println("Thread started----");
         while (true){
