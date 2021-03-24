@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import hu.bme.mit.train.clock.TrainClockTimer;
 import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
@@ -11,7 +12,8 @@ import hu.bme.mit.train.tachograph.TrainTachograph;
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
-	private TrainUser user = new TrainUserImpl(controller);
+	private TrainClockTimer timer = new TrainClockTimer(controller);
+	private TrainUser user = new TrainUserImpl(controller, timer);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 	private TrainTachograph tachograph = TrainTachograph.getInstance();
 
@@ -28,5 +30,7 @@ public class TrainSystem {
 	public TrainUser getUser() {
 		return user;
 	}
+
+	public TrainClockTimer getTimer(){return timer;}
 
 }
