@@ -47,6 +47,7 @@ public class TrainControllerImpl implements TrainController {
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;
 		dashboard.setPosition(joystickPosition);
+		followSpeed(); //This call makes the difference.
 	}
 
 }
