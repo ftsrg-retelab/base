@@ -12,6 +12,9 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	private TrainTachograph tachograph = TrainTachograph.getInstance();
 
+
+	/// The function was already implemented in the original MIT1 lab and thus in my solution as well.
+	/// The test run perfectly fine, following the readme.md
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
