@@ -1,27 +1,22 @@
 package hu.bme.mit.train.sensor;
 
-import hu.bme.mit.train.clock.TrainClockTimer;
-import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
-import hu.bme.mit.train.tachograph.TrainTachograph;
-import hu.bme.mit.train.user.TrainUserImpl;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.mockito.Mockito;
 
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
 
-    TrainController mockedTrainController;
-    TrainSensor sensor;
-    TrainUser mockedTrainUser;
-    TrainTachograph tachograph;
+     TrainController mockedTrainController;
+     TrainSensor sensor;
+     TrainUser mockedTrainUser;
 
-    @Before
+    @BeforeEach
     public void before() {
         mockedTrainController = mock(TrainController.class);
         mockedTrainUser = mock(TrainUser.class);
@@ -29,19 +24,21 @@ public class TrainSensorTest {
     }
 
     @Test
+    @DisplayName("Setting a negative value")
     public void GoingUnderAbsoluteLimit() {
         sensor.overrideSpeedLimit(-50);
         Mockito.verify(mockedTrainUser, times(1)).setAlarmState(true);
-
     }
 
     @Test
+    @DisplayName("Setting a value over 500")
     public void GoingOverAbsoluteLimit() {
-        sensor.overrideSpeedLimit(501);
+        sensor.overrideSpeedLimit(9001);
         Mockito.verify(mockedTrainUser, times(1)).setAlarmState(true);
     }
 
     @Test
+    @DisplayName("Setting the limit to less than half")
     public void SetLimitToLessThanHalf() {
         sensor.overrideSpeedLimit(500);
         when(mockedTrainController.getReferenceSpeed()).thenReturn(400);
@@ -49,6 +46,7 @@ public class TrainSensorTest {
     }
 
     @Test
+    @DisplayName("No alarm triggered")
     public void AlarmDoesNotTrigger() {
         sensor.overrideSpeedLimit(500);
         sensor.overrideSpeedLimit(0);
