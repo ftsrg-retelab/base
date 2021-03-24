@@ -1,12 +1,17 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.tachograph.*;
+
+import java.time.LocalDateTime;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private TrainTachograph tachograph = TrainTachograph.getInstance();
+
 
 	@Override
 	public void followSpeed() {
@@ -21,10 +26,14 @@ public class TrainControllerImpl implements TrainController {
 		}
 
 		enforceSpeedLimit();
+		tachograph.AddEntry(LocalDateTime.now(), step, referenceSpeed);
+
 	}
 
 	@Override
 	public int getReferenceSpeed() {
+
+		System.out.println(referenceSpeed);
 		return referenceSpeed;
 	}
 

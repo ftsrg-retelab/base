@@ -1,4 +1,5 @@
 dependencies {
+  compile project(':train-clock')
   compile project(':train-controller')
   compile project(':train-sensor')
   compile project(':train-user')
