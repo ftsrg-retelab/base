@@ -50,7 +50,7 @@ public class TrainSensorTest {
     public void AlarmDoesNotTrigger() {
         sensor.overrideSpeedLimit(500);
         sensor.overrideSpeedLimit(0);
-        when(mockedTrainController.getReferenceSpeed()).thenReturn(300);
+        when(mockedTrainController.getReferenceSpeed()).thenReturn(200);
         sensor.overrideSpeedLimit(100);
         Mockito.verify(mockedTrainUser, never()).setAlarmState(true);
     }
