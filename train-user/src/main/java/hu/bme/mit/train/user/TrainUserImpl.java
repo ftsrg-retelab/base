@@ -33,7 +33,7 @@ public class TrainUserImpl implements TrainUser {
 		controllerTimer.cancel();
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
-		controllerTimer.scheduleAtFixedRate(timerTask, 0, 1000);
+		controllerTimer.scheduleAtFixedRate(timerTask, 0, 500);
 
 
 
