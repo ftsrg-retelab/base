@@ -4,14 +4,12 @@ import hu.bme.mit.train.clock.TrainClockTimer;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
 
-import java.util.Timer;
-
 public class TrainUserImpl implements TrainUser {
 
 	private final TrainClockTimer timerTask;
 	private TrainController controller;
 	private int joystickPosition;
-	Timer controllerTimer = new Timer("Timer");
+	private boolean alarmState;
 
 	public TrainUserImpl(TrainController controller, TrainClockTimer timerTask) {
 		this.controller = controller;
@@ -21,6 +19,16 @@ public class TrainUserImpl implements TrainUser {
 	@Override
 	public boolean getAlarmFlag() {
 		return false;
+	}
+
+	@Override
+	public boolean getAlarmState() {
+		return alarmState;
+	}
+
+	@Override
+	public void setAlarmState(Boolean alarmState) {
+		this.alarmState = alarmState;
 	}
 
 	@Override
@@ -35,8 +43,8 @@ public class TrainUserImpl implements TrainUser {
 		controller.setJoystickPosition(joystickPosition);
 		System.out.println("Changing joystick to: "+ joystickPosition);
 		timerTask.interrupt();
-		//controller.followSpeed();
-
 	}
+
+
 
 }
