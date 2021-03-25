@@ -51,9 +51,9 @@ public class TrainSensorTest {
     }
 
     @Test
-    public void isAlarmTrue(){
+    public void isAlarmFalseAt500(){
         sensor.overrideSpeedLimit(500);
-        when(user.getAlarmState()).thenReturn(true);
+        verify(user,times(0)).setAlarmState(false);
     }
 
 
