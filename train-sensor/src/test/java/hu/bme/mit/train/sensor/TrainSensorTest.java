@@ -2,6 +2,7 @@ package hu.bme.mit.train.sensor;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
+import hu.bme.mit.train.interfaces.TrainUser;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -37,7 +38,7 @@ public class TrainSensorTest {
             }
         };
 
-        sensor=new TrainSensorImpl(controller);
+        sensor=new TrainSensorImpl(controller ,null);
     }
 
     @Test
