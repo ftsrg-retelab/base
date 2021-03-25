@@ -1,12 +1,17 @@
-subprojects {
-  apply plugin: 'java'
+plugins {
+    id "org.sonarqube" version "2.6.2" apply false
+}
+subprojects { subproject ->
+    apply plugin: 'java'
+    apply plugin: 'org.sonarqube'
+    apply plugin: 'jacoco'
 
-  repositories {
-    jcenter()
-  }
+    repositories {
+        jcenter()
+    }
 
-  dependencies {
-    implementation group: 'com.google.guava', name: 'guava', version: '30.1-jre'
+    dependencies {
+        implementation group: 'com.google.guava', name: 'guava', version: '30.1-jre'
 
-  }
+    }
 }

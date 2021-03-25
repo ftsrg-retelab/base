@@ -12,6 +12,18 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 	}
 
+	private boolean alarmState;
+
+	@Override
+	public boolean getAlarmState() {
+		return alarmState;
+	}
+
+	@Override
+	public void setAlarmState(boolean alarmState) {
+		this.alarmState = alarmState;
+	}
+
 	@Override
 	public boolean getAlarmFlag() {
 		return false;
