@@ -16,7 +16,7 @@ public class TrainSensorTest {
     public void before() {
 
         TrainControllerImpl tc = new TrainControllerImpl();
-        tsi = new TrainSensorImpl(tc);
+        tsi = new TrainSensorImpl(tc, new TrainUserImpl(tc));
     }
 
     @Test
