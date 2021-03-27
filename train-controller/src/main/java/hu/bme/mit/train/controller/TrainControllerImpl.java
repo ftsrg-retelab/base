@@ -2,7 +2,11 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
-public class TrainControllerImpl implements TrainController {
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class TrainControllerImpl implements TrainController
+{
 
 	private int step = 0;
 	private int referenceSpeed = 0;
@@ -31,6 +35,12 @@ public class TrainControllerImpl implements TrainController {
 		step = _step;
 	}
 
+	public TrainControllerImpl()
+	{
+		TimerTick timerTick = new TimerTick(this);
+		Timer timer = new Timer();
+		timer.schedule(timerTick, 1000, 1000);
+	}
 
 	@Override
 	public int getReferenceSpeed() {
