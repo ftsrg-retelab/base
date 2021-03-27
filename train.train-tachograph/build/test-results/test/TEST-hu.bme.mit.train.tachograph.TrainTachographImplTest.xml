@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hu.bme.mit.train.tachograph.TrainTachographImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-04T20:45:07" hostname="DESKTOP-2HMD3AN" time="0.081">
+  <properties/>
+  <testcase name="insertValue()" classname="hu.bme.mit.train.tachograph.TrainTachographImplTest" time="0.081"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
