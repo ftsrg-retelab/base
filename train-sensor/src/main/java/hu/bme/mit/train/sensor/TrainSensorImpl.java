@@ -31,5 +31,3 @@ public class TrainSensorImpl implements TrainSensor {
 		else user.setAlarmState(false);
 		}
 	}
-
-}
