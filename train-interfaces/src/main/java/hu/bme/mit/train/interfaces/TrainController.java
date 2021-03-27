@@ -1,6 +1,5 @@
 package hu.bme.mit.train.interfaces;
 
-import java.util.TimerTask;
 
 public interface TrainController  {
 
