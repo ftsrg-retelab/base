@@ -22,8 +22,6 @@ public class TrainControllerImpl implements TrainController {
 			}
 		};
 
-		int unusedVar = 1;
-
 		timer.scheduleAtFixedRate(updateRefSpeedTask, 0, 1);
 	}
 
