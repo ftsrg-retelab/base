@@ -39,7 +39,7 @@ public class TrainControllerImpl implements TrainController
 	{
 		TimerTick timerTick = new TimerTick(this);
 		Timer timer = new Timer();
-		timer.schedule(timerTick, 50, 1000);
+		timer.schedule(timerTick, 30, 1000);
 	}
 
 	@Override
