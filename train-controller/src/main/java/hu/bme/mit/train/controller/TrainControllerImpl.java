@@ -3,7 +3,6 @@ package hu.bme.mit.train.controller;
 import hu.bme.mit.train.interfaces.TrainController;
 
 import java.util.Timer;
-import java.util.TimerTask;
 
 public class TrainControllerImpl implements TrainController
 {
@@ -26,13 +25,13 @@ public class TrainControllerImpl implements TrainController
 		enforceSpeedLimit();
 	}
 
-	public void setReferenceSpeed(int _referenceSpeed) {
-		referenceSpeed = _referenceSpeed;
+	public void setReferenceSpeed(int r) {
+		referenceSpeed = r;
 	}
 
-	public void setStep(int _step)
+	public void setStep(int s)
 	{
-		step = _step;
+		step = s;
 	}
 
 	public TrainControllerImpl()
