@@ -3,6 +3,7 @@ plugins {
 }
 
 subprojects { subproject ->
+  apply plugin: 'org.sonarqube'
   apply plugin: 'java'
 
   repositories {
