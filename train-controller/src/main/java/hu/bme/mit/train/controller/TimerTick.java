@@ -5,11 +5,11 @@ import hu.bme.mit.train.interfaces.TrainController;
 import java.util.TimerTask;
 
 public class TimerTick extends TimerTask {
-    private TrainController controller;
-    TimerTick(TrainController _controller)
+    private final TrainController controller;
+    TimerTick(TrainController c)
     {
         super();
-        controller = _controller;
+        controller = c;
     }
 
     @Override
