@@ -12,7 +12,7 @@ import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
 
-    //TrainSensorImpl trainSensor;
+    TrainSensorImpl trainSensor;
 
     private TrainUser mockUser;
     private TrainController mockController;
@@ -20,9 +20,9 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        /*TrainController controller = new TrainControllerImpl();
+        TrainController controller = new TrainControllerImpl();
         TrainUser user = new TrainUserImpl(controller);
-        trainSensor = new TrainSensorImpl(controller, user);*/
+        trainSensor = new TrainSensorImpl(controller, user);
 
         mockUser = mock(TrainUser.class);
         mockController = mock(TrainController.class);
@@ -30,12 +30,11 @@ public class TrainSensorTest {
         when(mockController.getReferenceSpeed()).thenReturn(200);
     }
 
-    //Previous laboratory excercise
-    /*@Test
+    @Test
     public void OverrideSpeedLimit_SetSpeedLimitToNegative() {
         trainSensor.overrideSpeedLimit(-1);
         Assert.assertEquals(-1, trainSensor.getSpeedLimit());
-    }*/
+    }
 
     @Test
     public void OverrideSpeedLimitMoreThenFiveHundred() {
