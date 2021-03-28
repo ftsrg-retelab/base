@@ -10,7 +10,7 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
-	private Timer timer;
+	private final Timer timer;
 
 	private class TimeFlow extends TimerTask {
 		public void run() {
