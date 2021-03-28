@@ -25,7 +25,6 @@ public class TrainSensorTest {
         when(tc.getReferenceSpeed()).thenReturn(50);
     }
 
-
     @Test
     public void overrideSpeedLimit_lessThan0SpeedLimit_triggerAlarm(){
         ts.overrideSpeedLimit(-5);
