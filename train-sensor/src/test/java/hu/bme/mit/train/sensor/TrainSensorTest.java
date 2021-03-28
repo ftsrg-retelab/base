@@ -12,7 +12,6 @@ import static org.mockito.Mockito.*;
 
 
 public class TrainSensorTest {
-
      TrainSensor ts;
      TrainUser tu;
      TrainController tc;
