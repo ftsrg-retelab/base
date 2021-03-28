@@ -9,6 +9,8 @@ import hu.bme.mit.train.tachograph.TrainTachograph;
 import hu.bme.mit.train.user.TrainUserImpl;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class TrainSystem {
 
@@ -16,6 +18,7 @@ public class TrainSystem {
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 	private TrainTachograph tachograph = new TrainTachograph();
+	private final AtomicBoolean running = new AtomicBoolean(false);
 
 	public TrainController getController() {
 		return controller;
@@ -31,10 +34,24 @@ public class TrainSystem {
 
 	public TrainTachograph getTachograph() { return tachograph;}
 
+	Thread periodicReferenceSpeedCheck = 	new Thread(() -> {
+		running.set(true);
+		while(running.get()) {
+			this.getController().followSpeed();
+			try {
+					TimeUnit.MILLISECONDS.sleep(100);
+			} catch (InterruptedException e) {
+					e.printStackTrace();
+			}
+		}
+	});
+
 	static void main(String[] args){
 
 		System.out.println("Train Speed Controller");
 		TrainSystem ts = new TrainSystem();
+
+		ts.periodicReferenceSpeedCheck.start();
 
 		while (true){
 			Scanner scanner = new Scanner(System.in);
@@ -42,9 +59,12 @@ public class TrainSystem {
 			if (option == -1)
 				break;
 			ts.getUser().overrideJoystickPosition(option);
+
 			System.out.println(ts.getController().getReferenceSpeed());
 			scanner.close();
 		}
+
+		ts.running.set(false);
 
 
 	}
