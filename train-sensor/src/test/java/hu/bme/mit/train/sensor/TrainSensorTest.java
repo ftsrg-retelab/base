@@ -55,5 +55,6 @@ public class TrainSensorTest {
         Assert.assertEquals(ts.getSpeedLimit(), 40);
         when(tu.getAlarmState()).thenReturn(true);
         verify(tu,times(0)).setAlarmState(true);
+
     }
 }
