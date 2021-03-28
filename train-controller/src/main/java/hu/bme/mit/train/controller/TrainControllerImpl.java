@@ -14,7 +14,7 @@ public class TrainControllerImpl implements TrainController {
 
 	private class TimeFlow extends TimerTask {
 		public void run() {
-			referenceSpeed += step;
+			followSpeed();
 		}
 	}
 
