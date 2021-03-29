@@ -9,20 +9,20 @@ import hu.bme.mit.train.user.TrainUserImpl;
 
 public class TrainSystem {
 
-    private TrainController mController = new TrainControllerImpl();
-    private TrainUser mUser = new TrainUserImpl(mController);
-    private TrainSensor mSensor = new TrainSensorImpl(mController, mUser);
+    private TrainController controller = new TrainControllerImpl();
+    private TrainUser user = new TrainUserImpl(controller);
+    private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
     public TrainController getController() {
-        return mController;
+        return controller;
     }
 
     public TrainSensor getSensor() {
-        return mSensor;
+        return sensor;
     }
 
     public TrainUser getUser() {
-        return mUser;
+        return user;
     }
 
 }
