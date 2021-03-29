@@ -58,4 +58,10 @@ public class TrainSensorTest {
         verify(User, times(1)).setAlarmState(false);
 
     }
+    @Test
+    public void testgetMargin()
+    {
+        TS.overrideSpeedLimit(200);
+        Assert.assertEquals(200,TS.getSpeedLimit());
+    }
 }
