@@ -30,11 +30,11 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 	}
-	@Override
+
 	public boolean getAlarmState() {
 		return alarmState;
 	}
-	@Override
+
 	public void setAlarmState(boolean alarmState) {
 		this.alarmState = alarmState;
 	}

@@ -9,13 +9,13 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
     private Thread thread;
 
-    public TraiinControllerImpl() {
+    public TrainControllerImpl() {
         thread = new Thread() {
-            pulic void run() {
+           @Override public void run() {
                 thread.run();
                 try {
                     followSpeed();
-                } catch (InterruptedException exc) {
+                } catch (Exception exc) {
                     exc.printStackTrace();
                 }
             }
