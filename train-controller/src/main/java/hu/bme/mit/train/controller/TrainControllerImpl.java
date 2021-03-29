@@ -19,7 +19,7 @@ public class TrainControllerImpl implements TrainController {
 				followSpeed();
 			}
 		};
-		timer.scheduleAtFixedRate(tt, 0, 100);
+		timer.scheduleAtFixedRate(tt, 500, 100);
 	}
 	@Override
 	public void followSpeed() {
