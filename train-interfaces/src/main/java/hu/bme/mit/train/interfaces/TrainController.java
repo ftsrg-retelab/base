@@ -1,6 +1,6 @@
 package hu.bme.mit.train.interfaces;
 
-public interface TrainController {
+public interface TrainController{
 
 	void followSpeed();
 

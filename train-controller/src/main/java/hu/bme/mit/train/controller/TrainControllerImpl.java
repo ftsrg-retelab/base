@@ -2,11 +2,29 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private static int speedLimit;
+	private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+	final ScheduledFuture<?> speedFollowerHandle;
+
+	public TrainControllerImpl() {
+		final Runnable speedFollower = () -> {
+			System.out.print("run");
+			followSpeed();
+		};
+
+		speedFollowerHandle = scheduler.scheduleAtFixedRate(speedFollower, 0, 10, TimeUnit.MILLISECONDS );
+	}
 
 	public boolean isAlarm() {
 		return alarm;
@@ -36,7 +54,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setSpeedLimit(int speedLimit) {
-		this.speedLimit = speedLimit;
+		TrainControllerImpl.speedLimit = speedLimit;
 		enforceSpeedLimit();
 		
 	}
@@ -58,5 +76,5 @@ public class TrainControllerImpl implements TrainController {
 
 	private void raiseAlarm(){
 		alarm = true;
-	};
+	}
 }

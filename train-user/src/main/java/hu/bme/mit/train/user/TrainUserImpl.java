@@ -8,6 +8,7 @@ public class TrainUserImpl implements TrainUser {
 	private TrainController controller;
 	private int joystickPosition;
 
+
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
 	}
