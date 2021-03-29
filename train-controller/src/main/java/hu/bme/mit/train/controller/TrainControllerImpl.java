@@ -12,7 +12,6 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	Timer timer = new Timer();
 	int secondsPast = 0;
-
 	TimerTask  task = new TimerTask() {
 		public void run() {
 			followSpeed();
