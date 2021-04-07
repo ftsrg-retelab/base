@@ -1,3 +1,12 @@
+#This is a small text.
+## This is a big text.
+### This is a middle text.
+
+*This text is italic*
+* Item a
+* Item b
+
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
