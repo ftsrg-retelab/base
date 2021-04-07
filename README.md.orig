@@ -50,7 +50,7 @@ The figure below illustrates this behavior using an example.
 ### Example notes
 
 <<<<<<< HEAD
-* This is a bullet point and this will NOT create a conflict
+* This is a bullet point and this will create a conflict
 =======
 * This is a bullet point and this will NOT create a conflict
 >>>>>>> branch-B
