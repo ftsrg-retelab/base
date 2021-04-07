@@ -1,0 +1,4 @@
+nguage: java
+script:
+        - ./gradlew build
+        - ./gradlew test
