@@ -53,9 +53,9 @@ The figure below illustrates this behavior using an example.
 
 - [x] New feature 1
 - [ ] New feature 2
-- [ ] New feature 3 [^1]
+- [ ] New feature 3 [1]
 
-[^1]: this will be super huge!!
+[1]: "this will be super huge!!"
 
 
 
