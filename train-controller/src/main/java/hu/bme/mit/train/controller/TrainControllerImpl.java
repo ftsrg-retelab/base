@@ -14,6 +14,7 @@ public class TrainControllerImpl implements TrainController {
 			t.start();
 			try{
 				followSpeed();
+
 				Thread.sleep(1000);
 
 			} catch (InterruptedException e) {
@@ -21,7 +22,6 @@ public class TrainControllerImpl implements TrainController {
 			}
 		});
 	}
-
 
 	@Override
 	public void followSpeed() {
