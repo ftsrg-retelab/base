@@ -11,7 +11,7 @@ public class TrainControllerImpl implements TrainController {
 
 	public TrainControllerImpl(){
 		t = new Thread(() -> {
-			t.run();
+			t.start();
 			try{
 				followSpeed();
 				Thread.sleep(1000);
