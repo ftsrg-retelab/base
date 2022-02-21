@@ -7,6 +7,7 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
+
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
