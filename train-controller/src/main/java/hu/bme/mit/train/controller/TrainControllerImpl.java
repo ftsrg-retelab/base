@@ -50,6 +50,7 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public boolean isEmergencyBrakeEngaged()
 	{
+		asdfghjkl
 		return emergencyBrakeEngaged;
 	}
 
