@@ -9,6 +9,8 @@ The course teaches:
  - CI/CD (Github actions)
 :scream:
 
+This is an important line!!
+
 ## Getting started
 
 * The application is implemented in Java.
