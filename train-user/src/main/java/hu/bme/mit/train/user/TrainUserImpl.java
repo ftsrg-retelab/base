@@ -30,6 +30,7 @@ public class TrainUserImpl implements TrainUser {
 		controller.setJoystickPosition(joystickPosition);
 	}
 
-	public valami hiba () [];
+
+
 
 }
