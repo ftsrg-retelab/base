@@ -9,6 +9,7 @@ public class TrainSensorImpl implements TrainSensor {
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
+	private boolean alarmState;
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
@@ -22,6 +23,10 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public void overrideSpeedLimit(int speedLimit) {
+		int half = controller.getReferenceSpeed()/2;
+		if(speedLimit<500 || speedLimit>0 || (speedLimit<half)) {
+			user.setAlarmState(true);
+		}
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
 	}

@@ -50,5 +50,10 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
-	
+	@Test
+	public void JUnitTestForExerciseFive(){
+		int num = 10;
+		num+=10;
+		Assert.assertEquals(20,num);
+	}
 }

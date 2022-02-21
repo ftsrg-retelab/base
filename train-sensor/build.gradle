@@ -4,4 +4,7 @@ dependencies {
 
     compile group: 'junit', name: 'junit', version: '4.12'
     compile 'org.mockito:mockito-core:2.7.16'
+    compile "org.mockito:mockito-core:2.+"
+
+    compile group: 'com.google.guava', name: 'guava', version: '14.0'
 }
