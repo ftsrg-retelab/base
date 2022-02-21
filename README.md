@@ -1,3 +1,7 @@
+# MIT meres1
+
+Made by Klaudia Eszter Bakonyi and Virag Baski
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
