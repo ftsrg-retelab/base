@@ -22,6 +22,7 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public void overrideSpeedLimit(int speedLimit) {
+		//This is where the feature is implemented
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
 	}
