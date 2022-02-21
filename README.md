@@ -1,6 +1,13 @@
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
+This is a sample git project for a university course.
+For more information go to [ftsrg](ftsrg.mit.bme.hu)
+The course teaches:
+ - basic git usage
+ - git flow
+ - github
+ - CI/CD (Github actions)
+:scream:
 
 ## Getting started
 

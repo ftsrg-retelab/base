@@ -1,7 +1,8 @@
 dependencies {
-  compile project(':train-controller')
-  compile project(':train-sensor')
-  compile project(':train-user')
-  
-  compile group: 'junit', name: 'junit', version: '4.12'
+  implementation project(':train-controller')
+  implementation project(':train-sensor')
+  implementation project(':train-user')
+  implementation project(':train-interfaces')
+
+  implementation group: 'junit', name: 'junit', version: '4.12'
 }
