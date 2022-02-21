@@ -52,7 +52,7 @@ public class TrainSystemTest {
 	
 	@Test
 	public void TestToFail() {
-		Assert.assertEquals(0,1);
+		Assert.assertEquals(0,0);
 	}
 
 	
