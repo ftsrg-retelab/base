@@ -1,5 +1,5 @@
 # Train Speed Controller
-
+Szeretnék ide egy helyesebb szöveget felvenni.
 This is a sample application for the verification laboratory.
 
 ## Getting started
