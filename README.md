@@ -1,5 +1,9 @@
 # Train Speed Controller
 
+# Uj cimsor hozzaadva
+
+Rete *labor* **MIT1**
+
 This is a sample application for the verification laboratory.
 
 ## Getting started
