@@ -4,6 +4,6 @@ public interface TrainSensor {
 
 	int getSpeedLimit();
 
-	void overrideSpeedLimit(int speedLimit);
+	void overrideSpeedLimit(int speedLimit, int minimumSpeed);
 
 }
