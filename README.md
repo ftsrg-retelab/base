@@ -1,6 +1,10 @@
 # Train Speed Controller
 
+<<<<<<< .merge_file_t8znIW
 Branch-A
+=======
+Branch-B
+>>>>>>> .merge_file_SpelA0
 
 ## Getting started
 
