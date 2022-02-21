@@ -2,6 +2,7 @@ dependencies {
   implementation project(':train-controller')
   implementation project(':train-sensor')
   implementation project(':train-user')
+  implementation project(':train-interfaces')
 
   implementation group: 'junit', name: 'junit', version: '4.12'
 }
