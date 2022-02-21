@@ -8,7 +8,20 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private int minimumSpeed = 0;
+	private Tachometer tachometer;
 
+	public TrainControllerImpl(){
+		super();
+		tachometer = new Tachometer();
+	}
+
+	public Tachometer getTachometer() {
+		return tachometer;
+	}
+
+	@Override
+	public boolean isTachometerEmpty() { return tachometer.isEmpty(); }
+	
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
@@ -22,6 +35,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 
 		enforceSpeedLimit();
+		tachometer.addDataToTachometer(step, referenceSpeed);
 	}
 
 	@Override
