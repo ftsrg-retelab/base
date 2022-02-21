@@ -7,7 +7,7 @@ The course teaches:
  - git flow
  - github
  - CI/CD (Github actions)
-
+:scream:
 
 ## Getting started
 
