@@ -52,3 +52,5 @@ The figure below illustrates this behavior using an example.
 ~~This was mistaken text~~
 
 > Text that is a quote
+
+New line added.
