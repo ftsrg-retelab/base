@@ -1,6 +1,6 @@
 # MIT meres1
 
-Made by Klaudia Eszter Bakonyi and Virag Baski
+Made by Klaudia Eszter Bakonyi and Virag Baski branch-b
 
 # Train Speed Controller
 
