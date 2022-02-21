@@ -51,9 +51,14 @@ public class TrainSystemTest {
 	}
 	
 	@Test
-	public void TestToFail() {
+	public void Test1() {
 		Assert.assertEquals(0,0);
 	}
 
-	
+	@Test
+	public void TachometerTest(){
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+		Assert.assertFalse(controller.isTachometerEmpty());
+	}
 }
