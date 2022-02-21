@@ -2,6 +2,12 @@
 
 This is a sample application for the verification laboratory.
 
+##This is an example of Markdown Syntax
+
+###This Lab is exciting, did you know?
+
+*No, I mean, really.
+
 ## Getting started
 
 * The application is implemented in Java.
