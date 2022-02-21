@@ -49,3 +49,5 @@ The figure below illustrates this behavior using an example.
 
 ## Hegedus' Addition
 * Check out [Link](github.com/damenija7/base.git) for more information
+
+Changes on Branch A
