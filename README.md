@@ -1,4 +1,4 @@
-﻿# Train Speed Controller
+﻿# Train Advanced Controller
 
 *This is a sample application for the verification laboratory.*
 
