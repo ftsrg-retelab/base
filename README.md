@@ -2,11 +2,11 @@
 
 This is a sample application for the verification laboratory.
 
-##This is an example of Markdown Syntax
+## This is an example of Markdown Syntax
 
-###This Lab is exciting, did you know?
+### This Lab is exciting, did you know?
 
-*No, I mean, really.
+* No, I mean, really.
 
 ## Getting started
 
