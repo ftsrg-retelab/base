@@ -11,6 +11,6 @@ public class TachographTest {
         tachograph.addToTachograph(4, 50000);
         tachograph.addToTachograph(50000, 5);
 
-        Assert.assertNotNull(tachograph.getFromTachograph());
+        Assert.assertFalse(tachograph.isEmpty());
     }
 }

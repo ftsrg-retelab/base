@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hu.bme.mit.train.tachograph.TachographTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-21T15:06:11" hostname="razer" time="0.011">
+<testsuite name="hu.bme.mit.train.tachograph.TachographTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-21T15:16:10" hostname="razer" time="0.008">
   <properties/>
-  <testcase name="TestNotEmpty" classname="hu.bme.mit.train.tachograph.TachographTest" time="0.011"/>
+  <testcase name="TestNotEmpty" classname="hu.bme.mit.train.tachograph.TachographTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

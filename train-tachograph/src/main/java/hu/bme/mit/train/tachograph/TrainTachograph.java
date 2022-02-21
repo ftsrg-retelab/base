@@ -14,7 +14,7 @@ public class TrainTachograph {
         tachograph.put(System.currentTimeMillis(), joystickPosition, referenceSpeed);
     }
 
-    public Table<Long, Integer, Integer> getFromTachograph(){
-        return tachograph;
+    public boolean isEmpty(){
+        return tachograph.isEmpty();
     }
 }
