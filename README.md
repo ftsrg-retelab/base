@@ -1,3 +1,5 @@
+# this is a test comment for exercise 2.2
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
