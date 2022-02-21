@@ -52,6 +52,6 @@ public class TrainSystemTest {
 
 	@Test
 	public void MyTest() {
-		Assert.assertEquals(40, sensor.getSpeedLimit());
+		Assert.assertEquals(30, sensor.getSpeedLimit());
 	}
 }
