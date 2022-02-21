@@ -53,4 +53,4 @@ The figure below illustrates this behavior using an example.
 
 > Text that is a quote
 
-New line added.
+New line edited.
