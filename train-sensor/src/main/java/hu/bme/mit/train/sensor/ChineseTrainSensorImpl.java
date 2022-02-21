@@ -10,7 +10,7 @@ public class ChineseTrainSensorImpl implements TrainSensor {
 	private TrainUser user;
 	private int speedLimit = 5;
 
-	public TrainSensorImpl(TrainController controller, TrainUser user) {
+	public ChineseTrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
 		this.user = user;
 	}
