@@ -25,7 +25,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public int getReferenceSpeed() {
-		return 200;
+		return referenceSpeed;
 	}
 
 	@Override
