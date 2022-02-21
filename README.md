@@ -1,6 +1,10 @@
 # MIT meres1
 
+<<<<<<< HEAD
 Made by Klaudia Eszter Bakonyi and Virag Baski branch-a
+=======
+Made by Klaudia Eszter Bakonyi and Virag Baski branch-b
+>>>>>>> origin/branch-b
 
 # Train Speed Controller
 
