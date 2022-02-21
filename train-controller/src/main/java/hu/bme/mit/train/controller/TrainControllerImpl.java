@@ -13,11 +13,11 @@ public class TrainControllerImpl implements TrainController {
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
-		    if(referenceSpeed+step > 0) {
-                referenceSpeed += step;
-            } else {
-		        referenceSpeed = 0;
-            }
+			if(referenceSpeed+step > 0) {
+				referenceSpeed += step;
+			} else {
+				referenceSpeed = 0;
+			}
 		}
 
 		enforceSpeedLimit();
@@ -36,6 +36,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void enforceSpeedLimit() {
+		System.out.println("Attempted to exceed the speed limit of" + speedLimit + "km/h by " + (referenceSpeed - speedLimit) + "km/h");
 		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
