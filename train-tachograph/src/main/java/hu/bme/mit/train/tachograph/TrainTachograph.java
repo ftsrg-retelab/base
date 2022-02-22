@@ -2,6 +2,7 @@ package hu.bme.mit.train.tachograph;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.RowSortedTable;
 import com.google.common.collect.Table;
+import com.google.common.collect.Tables;
 import hu.bme.mit.train.controller.*;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
@@ -20,6 +21,10 @@ public class TrainTachograph {
     }
 
     public Table<Date, Integer, Integer> getRecordTable() {
-        return recordTable;
+        return Tables.unmodifiableTable(recordTable);
+    }
+
+    public void record() {
+        recordTable.put(new Date(), trainUser.getJoystickPosition(), trainController.getReferenceSpeed());
     }
 }
