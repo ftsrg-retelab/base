@@ -46,4 +46,13 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	@Override
+	public void doubleSpeed() {
+		int tmp = referenceSpeed * 2;
+		if (tmp < referenceSpeed)
+			referenceSpeed *= 2;
+		else
+			referenceSpeed = speedLimit;
+	}
+
 }
