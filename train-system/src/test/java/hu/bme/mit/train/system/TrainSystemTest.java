@@ -22,12 +22,12 @@ public class TrainSystemTest {
 		sensor = system.getSensor();
 		user = system.getUser();
 
-		sensor.overrideSpeedLimit(50);
+		sensor.overrideSpeedLimit(50,0);
 	}
 	
 	@Test
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
-		sensor.overrideSpeedLimit(10);
+		sensor.overrideSpeedLimit(10,0);
 
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 		
@@ -49,6 +49,16 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
-
 	
+	@Test
+	public void Test1() {
+		Assert.assertEquals(0,0);
+	}
+
+	@Test
+	public void TachometerTest(){
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+		Assert.assertFalse(controller.isTachometerEmpty());
+	}
 }
