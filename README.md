@@ -11,6 +11,9 @@ The exercises demonstrate:
 |---------|---------|
 | git clone | It creates a local working copy of the repositors |
 
+> From here it is the original project description.
+# Project description
+
 ## Getting started
 
 * The application is implemented in Java.
