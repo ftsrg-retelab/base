@@ -1,4 +1,4 @@
-# Train Speed Controller
+# University project
 
 This is a University sample application, for practicing GIT operations.
 For more information visit [BME FTSRG](https://ftsrg.mit.bme.hu/)
@@ -11,8 +11,11 @@ The exercises demonstrate:
 |---------|---------|
 | git clone | It creates a local working copy of the repositors |
 
+
 > From here it is the original project description.
-# Project description
+
+# Train Speed Controller
+
 
 ## Getting started
 
