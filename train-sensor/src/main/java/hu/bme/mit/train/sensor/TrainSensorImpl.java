@@ -6,9 +6,9 @@ import hu.bme.mit.train.interfaces.TrainUser;
 
 public class TrainSensorImpl implements TrainSensor {
 
-	private TrainController controller
+	private TrainController controller;
 	private TrainUser user;
-	private int speedLimit = 6;
+	static public int speedLimit = 6;
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
