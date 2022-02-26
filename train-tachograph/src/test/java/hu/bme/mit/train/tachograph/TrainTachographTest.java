@@ -18,4 +18,5 @@ public class TrainTachographTest {
         trainTachograph.record();
         Assert.assertFalse(trainTachograph.getRecordTable().isEmpty());
     }
+
 }
