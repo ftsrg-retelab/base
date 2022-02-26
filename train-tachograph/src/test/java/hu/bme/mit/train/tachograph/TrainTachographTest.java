@@ -6,7 +6,6 @@ import org.junit.Test;
 
 
 public class TrainTachographTest {
-
     TrainTachograph trainTachograph;
 
     @Before
