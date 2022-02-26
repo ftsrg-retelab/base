@@ -6,12 +6,14 @@ import org.junit.Test;
 
 
 public class TrainTachographTest {
+
     TrainTachograph trainTachograph;
 
     @Before
     public void before() {
         trainTachograph = new TrainTachograph();
     }
+
 
     @Test
     public void CheckCollectionIsNotEmpty() {
