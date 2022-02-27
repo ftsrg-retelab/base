@@ -5,10 +5,12 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
+import hu.bme.mit.train.interfaces.TrainController;
+
 public class TrainControllerTest {
 
     @Test
     public void Test() {
-        TrainControllerImpl = new TrainControllerImpl();
+        TrainController traincontroller = new TrainController();
     }
 }
