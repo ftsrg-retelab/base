@@ -1,7 +1,14 @@
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
 
+| __required updates:__ |
+| --------------------- |
+| authors               |
+| illustration          |
+
+
+This is a sample application for the verification laboratory.
+_date: 2022.02.28._
 ## Getting started
 
 * The application is implemented in Java.
