@@ -9,8 +9,8 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerTest {
 
-    @Test
-    public void Test() {
+    @Before
+    public void TestController() {
         TrainController traincontroller = new TrainController();
     }
 }
