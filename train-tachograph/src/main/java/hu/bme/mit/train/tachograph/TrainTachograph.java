@@ -11,6 +11,7 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.user.TrainUserImpl;
 
 public class TrainTachograph {
+
     private TrainController trainController;
     private TrainUser trainUser;
     private Table<Date, Integer, Integer> recordTable = HashBasedTable.create();
