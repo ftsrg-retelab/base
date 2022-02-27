@@ -1,7 +1,7 @@
 package hu.bme.mit.train.tachograf;
 
 import hu.bme.mit.train.controller.TrainControllerImpl;
-import hu.bme.mit.train.user.TrainUser;
+import hu.bme.mit.train.interfaces.TrainUser;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
