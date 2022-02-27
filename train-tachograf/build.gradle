@@ -1,6 +1,7 @@
 dependencies {
-    compile project(':train-tachograf')
-    // https://mvnrepository.com/artifact/com.google.guava/guava
+    compile project(':train-controller')
+    compile project(':train-user')
+    
 	implementation group: 'com.google.guava', name: 'guava', version: '31.0.1-jre'
 	compile group: 'junit', name: 'junit', version: '4.12'
 }
