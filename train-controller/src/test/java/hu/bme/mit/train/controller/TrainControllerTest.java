@@ -8,7 +8,7 @@ import hu.bme.mit.train.controller.TrainControllerImpl;
 
 public class TrainControllerTest {
 
-    @Before
+    @Test
     public void TestController() {
         TrainControllerImpl traincontroller = new TrainControllerImpl();
     }
