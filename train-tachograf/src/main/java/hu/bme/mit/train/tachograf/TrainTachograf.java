@@ -17,5 +17,4 @@ public class TrainTachograf {
 	public Table<Date, Integer, Integer> getTachografTable() {
 		return tachografTable;
 	}
-
 }
