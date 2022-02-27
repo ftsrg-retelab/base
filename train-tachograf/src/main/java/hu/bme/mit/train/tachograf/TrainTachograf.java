@@ -10,11 +10,11 @@ public class TrainTachograf {
 
 	private TrainController c = new TrainController();
 	private TainUser u = new TainUser();
-	private Table<Date, Integer, Integer> tachografTable = HashBasedTable.create();
+	private Table<Date, int, int> tachografTable = HashBasedTable.create();
 	
 	tachografTable.put(new Date(), u.getJoystickPosition(), c.getReferenceSpeed());
 	
-	public Table<Date, Integer, Integer> getTachografTable() {
+	public Table<> getTachografTable() {
 		return tachografTable;
 	}
 }
