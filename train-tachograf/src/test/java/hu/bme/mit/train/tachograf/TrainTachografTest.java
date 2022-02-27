@@ -11,5 +11,9 @@ public class TrainTachografTest {
     @Test
     public void TestTachograf() {
         TrainTachograf trainTachograf = new TrainTachograf();
+        if(trainTachograf.tachografTable != null)
+        	System.out.println("A tachograf ures!");
+        else
+        	System.out.println("A tachograf nem ures!");
     }
 }
