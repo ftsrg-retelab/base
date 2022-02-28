@@ -5,8 +5,8 @@ import hu.bme.mit.train.interfaces.TrainController;
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
-	private int referenceSpeed = 100;
-	private int speedLimit = 120;
+	private int referenceSpeed = 500;
+	private int speedLimit = 80;
 
 	private String immersedImmersion(){
 		return "Youve got immersed!"; 
