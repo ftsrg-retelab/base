@@ -5,7 +5,7 @@
 Üdv, Gyuluska és KoloskaThis is a sample application for the verification laboratory.
 Új Brach
 Megoldva BUGFIX 3 
-OH COMMON!!!!!!!!!
+OH COMMON!!!!!!!!!4
 ## Getting started
 
 * The application is implemented in Java.
