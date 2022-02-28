@@ -48,6 +48,6 @@ public class TrainControllerImpl implements TrainController {
 
 
 	public void foo(String asd) {
-		System.out.prinln(asd);
+		System.out.println(asd);
 	}
 }
