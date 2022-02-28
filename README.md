@@ -52,3 +52,5 @@ The figure below illustrates this behavior using an example.
 *	red
 *	green
 *	blue
+
+Plusz módósítás a branch-A-hoz
