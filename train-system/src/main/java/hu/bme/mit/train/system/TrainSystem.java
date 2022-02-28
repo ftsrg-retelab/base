@@ -25,4 +25,7 @@ public class TrainSystem {
 		return user;
 	}
 
+	public float newFeatureFunction(float x) {
+		return x*x;
+	}
 }
