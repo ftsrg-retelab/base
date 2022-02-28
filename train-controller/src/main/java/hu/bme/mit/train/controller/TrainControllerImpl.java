@@ -23,7 +23,7 @@ public class TrainControllerImpl implements TrainController {
 		enforceSpeedLimit();
 	}
 
-	public logSpeed(){
+	public void logSpeed(){
 	}	
 
 	@Override
