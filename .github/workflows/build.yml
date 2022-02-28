@@ -17,3 +17,7 @@ jobs:
       uses: gradle/wrapper-validation-action@v1
       with:
         arguments: build
+    - name: Test with Gradle
+      uses: gradle/gradle-build-action@v1
+      with:
+        arguments: -b ci.gradle package
