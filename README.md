@@ -2,7 +2,9 @@
 
 This is a sample application for the verification laboratory.
 
+
 ...*B conflict format*
+
 **first format**
 
 1. list item1
