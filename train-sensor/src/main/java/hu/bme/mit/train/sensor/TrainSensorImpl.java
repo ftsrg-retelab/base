@@ -20,9 +20,9 @@ public class TrainSensorImpl implements TrainSensor {
 	@Override
 	public int getSpeedLimit() {
 		if(ReteLab > 0){
-			ReteLab = ReteLab + 2; 
-			return speedLimit;
-		}	
+			ReteLab = 20; 
+		}
+		return speedLimit;	
 	}
 
 	@Override
