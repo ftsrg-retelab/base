@@ -4,4 +4,3 @@ public class Counter{
             System.out.print(i);
     }
 }
-}
