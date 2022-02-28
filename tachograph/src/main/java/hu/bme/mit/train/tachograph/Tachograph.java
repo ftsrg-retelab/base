@@ -1,6 +1,6 @@
 package hu.bme.mit.train.tachograph;
 
-import com.google.common.collect; 
+import com.google.common.collect.*; 
 
 public class Tachograph{
 
