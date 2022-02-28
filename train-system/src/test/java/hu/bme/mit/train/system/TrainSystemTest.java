@@ -26,6 +26,12 @@ public class TrainSystemTest {
 	}
 	
 	@Test
+	public void Isitequal()
+		{
+			Assert.assertEquals(10,5+5)     ; 
+		}	
+		
+	@Test
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
 		sensor.overrideSpeedLimit(10);
 
