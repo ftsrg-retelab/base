@@ -1,13 +1,11 @@
 # Train Speed Controller
-
 ## HAHAHA!
 ===================================
 **Belenyúltam ebbe itt!** 
-Üdv, Gyuluska és Koloska
-
-
-This is a sample application for the verification laboratory.
-
+Üdv, Gyuluska és KoloskaThis is a sample application for the verification laboratory.
+Új Brach
+Megoldva BUGFIX 3 
+OH COMMON!!!!!!!!!
 ## Getting started
 
 * The application is implemented in Java.
