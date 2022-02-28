@@ -1,5 +1,6 @@
 rootProject.name = 'train'
 
+include ':tachograph'
 include ':train-controller'
 include ':train-interfaces'
 include ':train-sensor'
