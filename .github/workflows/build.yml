@@ -15,5 +15,7 @@ jobs:
         distribution: 'temurin'
     - name: Build with Gradle
       uses: gradle/wrapper-validation-action@v1
+    - name: Build Action with Gradle
+      uses: gradle/gradle-build-action@v1
       with:
         arguments: build
