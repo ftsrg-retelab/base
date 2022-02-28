@@ -52,4 +52,5 @@ The figure below illustrates this behavior using an example.
 - Juhász Benedek
 - Pólya Mátyás
 
-==2022.02.28==
+**2022.02.28**
+
