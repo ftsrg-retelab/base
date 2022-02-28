@@ -2,6 +2,15 @@
 
 This is a sample application for the verification laboratory.
 
+...*first format*
+**first format**
+
+1. list item1
+2. list item2
+3. list item3
+
+```System.out.println("Hello Retelab1");```
+
 ## Getting started
 
 * The application is implemented in Java.
