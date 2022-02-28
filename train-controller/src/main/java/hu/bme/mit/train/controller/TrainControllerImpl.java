@@ -46,4 +46,8 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	public void foo(String eltero) {
+		if (eltero.equals("Sup bro"))
+			System.out.println("This is indeed a useful function.");
+	}
 }
