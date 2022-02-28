@@ -19,14 +19,6 @@ To compile and run tests also execute:
 ```
 ./gradlew test
 ```
-## Hello World
-
-* Ez egy lista
-* Ez elvileg **felkover**
-* Ez meg *dolt*
-1. szamozott lista..
-2. Teszt...
-
 
 ## Overview
 
