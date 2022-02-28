@@ -34,9 +34,9 @@ public class TrainControllerImpl implements TrainController {
 		enforceSpeedLimit();
 		
 	}
-
+>>>>>> branch-B
 	private void enforceSpeedLimit() {
-		// The speed limit can never be a negative number, so the issue has been solved
+		// The speed limit can never be a negative number, so the issue has never existed
 		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
