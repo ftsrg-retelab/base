@@ -3,8 +3,8 @@
 This is a sample application for the verification laboratory.
 
 ## Hallgatok
-* Liska Zoltan Tamas
-* Jakab Zoltan Istvan
+* Liska Janos Tamas
+* Jakab Janos Istvan
 
 [Moodle](https://edu.vik.bme.hu/) honlapja.
 
