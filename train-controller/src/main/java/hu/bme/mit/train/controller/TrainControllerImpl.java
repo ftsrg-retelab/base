@@ -28,13 +28,18 @@ public class TrainControllerImpl implements TrainController {
 		return referenceSpeed;
 	}
 
+	@Override	
+	public int getSpeedLimit() {
+		return speedLimit; 
+	}  
+
 	@Override
 	public void setSpeedLimit(int speedLimit) {
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 		
 	}
-	
+
 	private void enforceSpeedLimit() {
 		// The speed limit can never be a negative number, so the issue has never existed
 		if (referenceSpeed > speedLimit) {

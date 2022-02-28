@@ -39,6 +39,9 @@ public class TrainSystemTest {
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
+
+		sensor.overrideSpeedLimit(20);
+		Assert.assertEquals(20, controller.getSpeedLimit()); 
 	}
 
 	@Test
