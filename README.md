@@ -1,5 +1,10 @@
 # Train Speed Controller
 
+## A labor keszitoi
++Livi
++Barbi
+***2022.02.18***
+
 This is a sample application for the verification laboratory.
 
 ## Getting started
