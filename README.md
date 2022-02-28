@@ -54,3 +54,5 @@ The figure below illustrates this behavior using an example.
 ### Student
 
 * [Jakosa Emma Kloé](https://github.com/emmakloe)
+
+## New line added to README - merge conflict
