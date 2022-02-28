@@ -14,7 +14,7 @@ public class TrainSystem {
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
 	public TrainController getController() {
-		return controller;
+		return controller
 	}
 
 	public TrainSensor getSensor() {
