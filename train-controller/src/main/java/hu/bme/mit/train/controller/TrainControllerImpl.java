@@ -8,7 +8,7 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
-	private string immersedImmersion(){
+	private String immersedImmersion(){
 		return "Youve got immersed!"; 
 	} 
 
