@@ -46,8 +46,8 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+
 	public void foo(String asd) {
 		System.out.prinln(asd);
 	}
-
 }
