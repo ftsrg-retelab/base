@@ -1,5 +1,11 @@
 # Train Speed Controller
 
+## HAHAHA!
+===================================
+**Belenyúltam ebbe itt!** 
+Üdv, Gyuluska és Koloska
+
+
 This is a sample application for the verification laboratory.
 
 ## Getting started
