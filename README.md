@@ -1,4 +1,8 @@
-# TrainA  Speed Controller
+<<<<<<< HEAD
+# TrainB  Speed Controller
+=======
+# TrainB  Speed Controller
+>>>>>>> branch-B
 
 ## A labor keszitoi
 + Livi
