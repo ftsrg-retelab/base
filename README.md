@@ -49,7 +49,7 @@ The figure below illustrates this behavior using an example.
 
 #### Uj heading
 
-<p>Ez **itt**egy paragraf</p>
+<p>Ez **itt** egy paragraf</p>
 <ol>
   <li> Elso elem a listaban</li>
   <li> Masodik elem a listaban</li>
