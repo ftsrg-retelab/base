@@ -1,4 +1,5 @@
 dependencies {
-    implementation group: 'com.google.guava', name: 'guava', version: '11.0.2'
+    // 1. Use Guava in your implementation only:
+    implementation("com.google.guava:guava:31.0.1-jre")
     compile project(':tachograph')
 }
