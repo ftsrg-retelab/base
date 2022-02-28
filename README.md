@@ -54,7 +54,11 @@ The figure below illustrates this behavior using an example.
 *	blue
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Plusz módósítás a branch-A-hoz
+=======
+Plusz módosítás a branch-B-hez
+>>>>>>> branch-B
 =======
 Plusz módosítás a branch-B-hez
 >>>>>>> branch-B
