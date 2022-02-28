@@ -53,4 +53,4 @@ The figure below illustrates this behavior using an example.
 *	green
 *	blue
 
-Módosítás A-hoz
+Módosítás A-hoz & Módosítás B-hez
