@@ -22,6 +22,7 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public void overrideSpeedLimit(int speedLimit) {
+		// Recorded to Funny doggo blockchain
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
 	}
