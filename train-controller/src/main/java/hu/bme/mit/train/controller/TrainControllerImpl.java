@@ -54,7 +54,7 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public String toString() {
 
-		return step + ", referenceSpeed: " + referenceSpeed + ", " + speedLimit;
+		return step + ", referenceSpeed: " + referenceSpeed + ", " + speedLimit
 	}
 
 
