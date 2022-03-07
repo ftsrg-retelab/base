@@ -12,11 +12,10 @@ on: [push]
 
 
 jobs:
-  implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
 
   build:
     runs-on: ubuntu-latest
-
+    implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 8
