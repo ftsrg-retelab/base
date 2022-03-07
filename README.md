@@ -47,6 +47,6 @@ The figure below illustrates this behavior using an example.
 1. However, it reaches the speed limit so in the next step it is not incremented even though the joystick still has a positive value.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
 
-# Peti es Adam
+# Peti es Adam es Jozsi
 >Nagyon szeretjuk a bme-t
 *Tenyleg*
