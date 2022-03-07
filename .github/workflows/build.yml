@@ -17,6 +17,9 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
       - name: Build wih Gradle
         run: ./gradlew build
+      - run: echo "Tests:"
+      - name: Run tests
+        run: ./gradlew test
 
 
 
