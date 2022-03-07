@@ -2,7 +2,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: ta1120/base
   pull_request:
     branches: [ $default-branch ]
 
