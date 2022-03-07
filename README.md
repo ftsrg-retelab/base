@@ -6,8 +6,7 @@
  $ git init
 ```
 
-This is a sample application for the verification laboratory.
-
+Line we chenge but this time differently
 ## Getting started
 
 * The application is implemented in Java.
