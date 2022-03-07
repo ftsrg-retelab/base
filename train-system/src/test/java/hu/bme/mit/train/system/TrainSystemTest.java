@@ -56,5 +56,12 @@ public class TrainSystemTest {
 		Assert.assertEquals(15, sensor.getSpeedLimit());
 	}
 
+	@Test
+	public void Simple_Test_Tachograph() {
+		TrainSystem system = new TrainSystem();
+		system.WriteToTachometer(0,1,1);	
+		Assert.assertEquals(1, system.tachograph.size());
+	}
+
 	
 }
