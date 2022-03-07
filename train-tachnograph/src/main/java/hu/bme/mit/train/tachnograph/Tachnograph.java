@@ -10,7 +10,7 @@ public class Tachnograph {
         table.put(System.currentTimeMillis(), joystickPosition, referenceSpeed);
     }
 
-    public static Table<Long, Integer, Integer> getTable() {
-        return table;
+    public static boolean hasData() {
+        return !table.isEmpty();
     }
 }
