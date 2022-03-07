@@ -3,14 +3,18 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-https://mvnrepository.com/artifact/com.google.guava/guava
-implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
 
 name: Java CI
 
+
 on: [push]
 
+
+
 jobs:
+
+  implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
+
   build:
     runs-on: ubuntu-latest
 
