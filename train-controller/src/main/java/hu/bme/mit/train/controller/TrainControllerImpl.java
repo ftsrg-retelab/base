@@ -50,4 +50,5 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	// comment A
+	// comment B
 }
