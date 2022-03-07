@@ -2,7 +2,7 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import com.google.guava;
-import com.google.common.collect.HashBasedTable<currentTime,joystickPosition,referenceSpeed>;
+import com.google.common.collect.HashBasedTable;
 
 public class TrainControllerImpl implements TrainController {
 
