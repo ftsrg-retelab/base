@@ -1,3 +1,9 @@
+# Retelab
+
+## Gergo Welker | Weiss Apollo
+
+Retelab - solving tasks
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
