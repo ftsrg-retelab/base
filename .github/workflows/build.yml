@@ -24,3 +24,6 @@ jobs:
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
         with:
           arguments: test
+      - name: Show unittest result
+        run: cat train-system/build/test-results/test/TEST-hu.bme.mit.train.system.TrainSystemTest.xml
+        shell: bash
