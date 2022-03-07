@@ -8,6 +8,11 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
+	public void emergencyBreak() {
+		speedLimit = 0;
+		referenceSpeed = 0; 
+	}
+
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
