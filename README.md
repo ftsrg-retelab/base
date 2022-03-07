@@ -6,12 +6,9 @@
  $ git init
 ```
 
-<<<<<<< HEAD
 Line we always change
 
-=======
 Line we chenge but this time differently
->>>>>>> b
 ## Getting started
 
 * The application is implemented in Java.
