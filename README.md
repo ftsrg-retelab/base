@@ -19,6 +19,12 @@ To compile and run tests also execute:
 ```
 ./gradlew test
 ```
+# **1. Rete Lab.** 2022.03.07
+ - Tass Mihály
+ - Vincze Zsolt
+
+
+
 
 ## Overview
 
