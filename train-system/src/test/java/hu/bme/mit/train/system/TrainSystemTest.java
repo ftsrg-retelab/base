@@ -50,7 +50,7 @@ public class TrainSystemTest {
 		user.overrideJoystickPosition(5);
 
 		controller.followSpeed();
-		Assert.assertEquals(5, controller.getReferenceSpeed());
+		Assert.assertEquals(2, controller.getReferenceSpeed());
 		controller.followSpeed();
 		Assert.assertEquals(2, controller.getReferenceSpeed());
 		controller.followSpeed();
