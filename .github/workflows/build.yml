@@ -40,4 +40,4 @@ jobs:
        with:
         name: Tests
         path: train-system/build/test-results/test/TEST-*.xml
-        reporter: jest-junit
+        reporter: java-junit
