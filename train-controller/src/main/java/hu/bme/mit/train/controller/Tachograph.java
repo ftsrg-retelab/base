@@ -1,6 +1,5 @@
 
 
 class Tachograph{
-    Table<Date, joystickPosition, Integer> table 
-  = HashBasedTable.create();
+    Table<Date, joystickPosition, Integer> table = null;
 }
