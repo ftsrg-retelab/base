@@ -16,8 +16,7 @@ public class TrainUserImpl implements TrainUser {
 	@Override
 	public boolean getAlarmFlag() {
 		alarmState = !alarmState; 
-		String problem;
-		return problem; 
+		return alarmState; 
 	}
 
 	@Override
