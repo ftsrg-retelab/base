@@ -56,6 +56,10 @@ The figure below illustrates this behavior using an example.
 
 3.Feladat
 
+<<<<<<< HEAD
 Branch-A
 
 
+=======
+Branch-B
+>>>>>>> branch-B
