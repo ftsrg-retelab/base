@@ -14,7 +14,7 @@ public class TrainUserImpl implements TrainUser {
 
 	@Override
 	public boolean getAlarmFlag() {
-		return false;
+		return 1;
 	}
 
 	@Override
