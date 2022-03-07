@@ -1,4 +1,3 @@
 dependencies {
     compile project(':train-interfaces')
-    implementation("com.google.guava:guava:31.1-jre")
 }
