@@ -6,7 +6,7 @@ import com.google.common.collect.Table;
 import java.time.LocalDateTime;
 import hu.bme.mit.train.interfaces.Tachograph;
 
-public class Tachograph implements hu.bme.mit.train.interfaces.Tachograph; {
+public class Tachograph implements hu.bme.mit.train.interfaces.Tachograph {
     Table<LocalDateTime, Integer, Integer> mTable = HashBasedTable.create();
 
     public void add(int joystickPos, int speed) {
