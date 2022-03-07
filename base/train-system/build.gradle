@@ -1,0 +1,7 @@
+dependencies {
+  compile project(':train-controller')
+  compile project(':train-sensor')
+  compile project(':train-user')
+  
+  compile group: 'junit', name: 'junit', version: '4.12'
+}
