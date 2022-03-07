@@ -6,7 +6,7 @@
  $ git init
 ```
 
-This is a sample application for the verification laboratory.
+This is a staple application for the verification laboratory.
 
 ## Getting started
 
