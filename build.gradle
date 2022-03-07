@@ -5,8 +5,7 @@ subprojects {
     jcenter()
     mavenCentral()
   }
+  dependencies {
+  implementation 'com.google.guava:guava:31.1-jre'
 }
 
-dependencies {
-  implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
-}
