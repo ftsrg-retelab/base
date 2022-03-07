@@ -18,6 +18,7 @@ public class TrainSystem {
 	}
 
 	public TrainSensor getSensor() {
+		//Pipeline test
 		return trainSensor;
 	}
 
