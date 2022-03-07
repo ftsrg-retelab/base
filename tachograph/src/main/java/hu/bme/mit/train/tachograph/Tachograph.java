@@ -1,3 +1,4 @@
+
 package hu.bme.mit.train.tachograph;
 
 import com.google.common.collect.HashBasedTable;
