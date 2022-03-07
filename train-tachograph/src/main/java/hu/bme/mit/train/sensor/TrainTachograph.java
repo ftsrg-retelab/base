@@ -17,4 +17,7 @@ public class TrainTachograph {
     public boolean isEmpty(){
         return tachograph.isEmpty();
     }
+    public int size(){
+        return tachograph.size(); 
+    } 
 }
