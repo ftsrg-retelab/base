@@ -24,22 +24,20 @@ jobs:
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
         with:
           arguments: build
-      - name: JUnit
-        uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
-        with:
-          arguments: test
+    
   build-test:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
-     - run: npm ci
-     - run: npm test
-     
+     - name: JUnit
+       uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
+       with:
+         arguments: test
      - name: Test Report
        uses: dorny/test-reporter@v1
        if: success() || failure()
        with:
-        name: JEST Tests
-        path: report/jest-*.xml
+        name: Tests
+        path: train-system/build/test-results/test/TEST-*.xml
         reporter: jest-junit
