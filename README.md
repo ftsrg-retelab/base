@@ -31,6 +31,7 @@ The application represents a simple train controller system with the following t
 * User: The user can manipulate the reference speed of the train using a joystick.
 
 ### Behavior
+sor A
 
 Setting the reference speed of the train works in the following way.
 * The user can set the position of a joystick, which can be zero or a positive/negative number.
