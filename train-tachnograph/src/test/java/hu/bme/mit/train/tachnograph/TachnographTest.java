@@ -24,15 +24,24 @@ public class TachnographTest {
 		controller = system.getController();
 		sensor = system.getSensor();
 		user = system.getUser();
-	}
-	
-	@Test
-	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
+
 		sensor.overrideSpeedLimit(50);
 		user.overrideJoystickPosition(5);
 		controller.followSpeed();
 		Tachnograph.addData(user.getJoystickPosition(), controller.getReferenceSpeed());
+		user.overrideJoystickPosition(-5);
+		controller.followSpeed();
+		Tachnograph.addData(user.getJoystickPosition(), controller.getReferenceSpeed());
+	}
+	
+	@Test
+	public void TachnographHasElements() {
         Assert.assertTrue(Tachnograph.hasData());
 	}
+
+    @Test
+    public void GetLastSetReferenceSpeedFromTachnograph() {
+        Assert.assertEquals(0, (int)Tachnograph.getReferenceSpeedSet());
+    }
 	
 }

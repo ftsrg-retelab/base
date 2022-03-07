@@ -18,8 +18,7 @@ jobs:
       - name: Build wih Gradle
         run: ./gradlew build
       - name: Run tests
-        run: echo "Tests:"
-        run: ./gradlew test
+        run: echo "Tests:" && ./gradlew test
 
 
 
