@@ -1,6 +1,6 @@
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
+*This is a sample application for the verification laboratory.*
 
 ## Getting started
 
@@ -11,10 +11,10 @@ This is a sample application for the verification laboratory.
 Clone the repository and execute Gradle to build the application:
 
 ```
-./gradlew build
+> ./gradlew build
 ```
 
-To compile and run tests also execute:
+**To compile and run tests also execute:**
 
 ```
 ./gradlew test
