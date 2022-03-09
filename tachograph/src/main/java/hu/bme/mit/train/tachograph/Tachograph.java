@@ -12,4 +12,5 @@ public class Tachograph {
         tachograph.put(LocalDateTime.now(), joystick, speed);
     }
 
+
 }
