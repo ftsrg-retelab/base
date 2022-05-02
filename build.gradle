@@ -1,13 +1,11 @@
 subprojects { subproject ->
+ plugins {
+    id "org.sonarqube" version "2.6.2" apply false
+  }
+  apply plugin: 'org.sonarqube'
   apply plugin: 'java'
 
   repositories {
     jcenter()
-  }
-  
-  plugins {
-    id "org.sonarqube" version "2.6.2" apply false
-  }
-  
-  apply plugin: 'org.sonarqube'
+  }  
 }
