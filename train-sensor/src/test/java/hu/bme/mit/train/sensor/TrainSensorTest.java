@@ -24,8 +24,7 @@ public class TrainSensorTest {
     @Test
     public void Test1() {
         controller.setSpeedLimit(-1);
-        controller.setSpeedLimit(1);
-        verify(user, times(1)).setAlarmState(true);
+        when(user.getAlarmState()).thenReturn(true);
     }
 
     @Test
