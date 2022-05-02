@@ -13,6 +13,10 @@ public class TrainSystem {
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
+	public TrainSystem() {
+		changeSpeed(); 
+	}
+
 	public TrainController getController() {
 		return controller;
 	}
@@ -25,4 +29,18 @@ public class TrainSystem {
 		return user;
 	}
 
+	public void changeSpeed() {
+		SpeedThread t = new SpeedThread();
+		t.start();
+	}
+
+}
+
+public class SpeedThread extends Thread {
+	public void run() {
+		while (true) {
+			Thread.Sleep(1000);
+			controller.followSpeed();
+		}
+	}
 }
