@@ -76,10 +76,25 @@ public class TrainControllerImpl implements TrainController {
 		}
 	}
 
+	
+    public void run() {
+        long startTime = System.currentTimeMillis();
+        int i = 0;
+        while (true) {
+            
+            try {
+				if(joystickPosition>0)
+					followSpeed();
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;
-		
+		this.step = joystickPosition;		
  	}
 
 }
