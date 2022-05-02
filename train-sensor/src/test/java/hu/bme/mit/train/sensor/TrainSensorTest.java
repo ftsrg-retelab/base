@@ -23,13 +23,13 @@ public class TrainSensorTest {
 
     @Test
     public void Test1() {
-        controller.setSpeedLimit(-1);
+        sensor.overrideSpeedLimit(-1);
         when(user.getAlarmState()).thenReturn(true);
     }
 
     @Test
     public void Test2() {
-        controller.setSpeedLimit(1);
+        sensor.overrideSpeedLimit(1);
         when(user.getAlarmState()).thenReturn(false);
     }
 
@@ -41,7 +41,7 @@ public class TrainSensorTest {
 
     @Test
     public void Test4() {
-        controller.setSpeedLimit(0);
+        sensor.overrideSpeedLimit(0);
         when(user.getAlarmState()).thenReturn(true);
     }
 }
