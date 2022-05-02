@@ -11,8 +11,8 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	
 	public TrainControllerImpl() {
-		Timer a = new Timer();
-		a.schedule(new TimerTask() {
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
 			@Override
 			public void run() {
 				followSpeed();
