@@ -1,6 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.lang.*; 
 
 public class TrainControllerImpl implements TrainController {
 
@@ -9,11 +10,21 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	private int minimumSpeed = 0;
 	private Tachometer tachometer;
+	FollowSpeedThread thread; 
 
 	public TrainControllerImpl(){
 		super();
 		tachometer = new Tachometer();
+		thread = new FollowSpeedThread();
+		thread.start();  
 	}
+
+	private class FollowSpeedThread implements Runnable{
+		public void run(){
+			followSpeed();
+			Thread.sleep(1000); 
+		} 
+	} 
 
 	public Tachometer getTachometer() {
 		return tachometer;
@@ -62,7 +73,8 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
-	}
+		this.step = joystickPosition;
+		
+ 	}
 
 }
