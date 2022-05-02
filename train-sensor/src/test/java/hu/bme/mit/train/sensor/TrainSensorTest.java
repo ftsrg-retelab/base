@@ -45,9 +45,8 @@ public class TrainSensorTest {
 
     @Test
     public void Test4() throws InterruptedException {
-        user.overrideJoystickPosition(10);
-        sleep(10000);
-        sensor.overrideSpeedLimit(0);
+        when(controller.getReferenceSpeed()).thenReturn(20);
+        sensor.overrideSpeedLimit(1);
         verify(user, atLeast(1)).setAlarmState(true);
     }
 
