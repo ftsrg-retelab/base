@@ -1,9 +1,9 @@
-subprojects { subproject ->
- plugins {
+plugins {
     id "org.sonarqube" version "2.6.2" apply false
   }
-  apply plugin: 'org.sonarqube'
+subprojects { subproject ->
   apply plugin: 'java'
+  apply plugin: 'org.sonarqube'
 
   repositories {
     jcenter()
