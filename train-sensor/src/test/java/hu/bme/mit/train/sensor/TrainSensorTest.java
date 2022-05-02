@@ -43,12 +43,19 @@ public class TrainSensorTest {
 
     @Test
     public void Test4() {
+        user.overrideJoystickPosition(10);
         sensor.overrideSpeedLimit(0);
         when(user.getAlarmState()).thenReturn(true);
     }
 
     @Test
     public void Test5() {
+        sensor.overrideSpeedLimit(0);
+        when(user.getAlarmState()).thenReturn(true);
+    }
+
+    @Test
+    public void Test6() {
         sensor.overrideSpeedLimit(0);
         assertEquals(0, sensor.getSpeedLimit());
     }
