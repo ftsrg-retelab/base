@@ -7,8 +7,8 @@ import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
 
-    TrainUser user;
-    TrainController trainController; 
+    private TrainUser user;
+    private TrainController trainController; 
 
     @Before
     public void before() {
