@@ -7,6 +7,7 @@ import hu.bme.mit.train.user.TrainUserImpl;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
@@ -25,6 +26,7 @@ public class TrainSensorTest {
     public void Test1() {
         sensor.overrideSpeedLimit(-1);
         when(user.getAlarmState()).thenReturn(true);
+
     }
 
     @Test
@@ -48,6 +50,6 @@ public class TrainSensorTest {
     @Test
     public void Test5() {
         sensor.overrideSpeedLimit(0);
-        when(sensor.getSpeedLimit()).thenReturn(0);
+        assertEquals(0, sensor.getSpeedLimit());
     }
 }
