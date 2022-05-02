@@ -24,20 +24,6 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 
-	public TrainControllerImpl(){
-		TimerTask task = new TimerTask() {
-			public void run() {
-				followSpeed();
-			}
-		};
-		Timer timer = new Timer();
-
-		long delay = 1000L;
-		timer.schedule(task, delay);
-	}
-
-
-
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
