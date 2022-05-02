@@ -50,7 +50,7 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
-	public void changeReferenceSpeed()
+	public void changeReferenceSpeed(int joystickPosition)
 	{
 		TimerTask task = new TimerTask()
 		{
