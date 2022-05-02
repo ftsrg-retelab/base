@@ -7,6 +7,7 @@ import hu.bme.mit.train.user.TrainUserImpl;
 import org.junit.Before;
 import org.junit.Test;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -44,9 +45,9 @@ public class TrainSensorTest {
     @Test
     public void Test4() throws InterruptedException {
         user.overrideJoystickPosition(10);
-        wait(10000);
+        sleep(10000);
         sensor.overrideSpeedLimit(0);
-        when(user.getAlarmState()).thenReturn(true);
+        verify(user, times(1)).setAlarmState(true);
     }
 
     @Test
