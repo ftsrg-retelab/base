@@ -6,6 +6,7 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
+import hu.bme.mit.train.system.SpeedThread;
 
 public class TrainSystem {
 
@@ -34,13 +35,4 @@ public class TrainSystem {
 		t.start();
 	}
 
-}
-
-public class SpeedThread extends Thread {
-	public void run() {
-		while (true) {
-			Thread.Sleep(1000);
-			controller.followSpeed();
-		}
-	}
 }
