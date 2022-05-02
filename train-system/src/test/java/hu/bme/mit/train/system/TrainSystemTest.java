@@ -50,10 +50,6 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 	
-	@Test
-	public void Test1() {
-		Assert.assertEquals(0,0);
-	}
 
 	@Test
 	public void TachometerTest(){

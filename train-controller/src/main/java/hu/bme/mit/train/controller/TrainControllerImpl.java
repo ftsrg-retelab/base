@@ -19,7 +19,7 @@ public class TrainControllerImpl implements TrainController {
 		thread.start();  
 	}
 
-	private class FollowSpeedThread implements Runnable{
+	private class FollowSpeedThread extends Thread{
 		public void run(){
 			try{
 				followSpeed();
