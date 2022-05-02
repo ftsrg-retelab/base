@@ -1,5 +1,6 @@
 dependencies {
-  compile project(':train-controller')
+  implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    compile project(':train-controller')
   compile project(':train-sensor')
   compile project(':train-user')
   
