@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
@@ -47,6 +48,7 @@ public class TrainSensorTest {
         user.overrideJoystickPosition(10);
         sleep(10000);
         sensor.overrideSpeedLimit(0);
+        assertNotEquals(0, controller.getReferenceSpeed());
         verify(user, times(1)).setAlarmState(true);
     }
 
