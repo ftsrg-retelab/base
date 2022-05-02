@@ -32,5 +32,4 @@ public class TrainUserImpl implements TrainUser {
 
 
 
-
 }

@@ -1,5 +1,5 @@
 dependencies {
-    compile project(':train-controller')
+    //compile project(':train-controller')
     compile project(':train-sensor')
     compile project(':train-user')
     implementation("com.google.guava.guava:30.0.1-jre")

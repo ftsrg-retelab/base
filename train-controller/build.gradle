@@ -1,4 +1,4 @@
 dependencies {
     compile project(':train-interfaces')
-    compile project(':train-tachograph')
+    //compile project(':train-tachograph')
 }
