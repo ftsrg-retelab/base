@@ -31,7 +31,7 @@ public class TrainSystem {
 	}
 
 	public void changeSpeed() {
-		SpeedThread t = new SpeedThread();
+		SpeedThread t = new SpeedThread(controller);
 		t.start();
 	}
 
