@@ -48,6 +48,6 @@ public class TrainSensorTest {
     @Test
     public void Test5() {
         sensor.overrideSpeedLimit(0);
-        when(sensor.getSpeedLimit()).thenReturn(5);
+        when(sensor.getSpeedLimit()).thenReturn(0);
     }
 }
