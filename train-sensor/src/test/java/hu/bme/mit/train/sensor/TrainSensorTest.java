@@ -48,8 +48,7 @@ public class TrainSensorTest {
         user.overrideJoystickPosition(10);
         sleep(10000);
         sensor.overrideSpeedLimit(0);
-        assertNotEquals(0, controller.getReferenceSpeed());
-        verify(user, times(1)).setAlarmState(true);
+        verify(user, atLeast(1)).setAlarmState(true);
     }
 
     @Test
