@@ -44,4 +44,10 @@ public class TrainSensorTest {
         sensor.overrideSpeedLimit(0);
         when(user.getAlarmState()).thenReturn(true);
     }
+
+    @Test
+    public void Test5() {
+        sensor.overrideSpeedLimit(1);
+        when(sensor.getSpeedLimit()).thenReturn(1);
+    }
 }
