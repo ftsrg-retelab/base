@@ -1,13 +1,22 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.Timer; 
+import java.util.TimerTask; 
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private boolean timerRunning = false; 
+	Timer timer = new Timer(); 
+	
+	
+	
 
+
+  
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
@@ -49,7 +58,19 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;
+		if(!timerRunning){
+			TimerTask task = new TimerTask(){
+				public void run(){
+				followSpeed();
+				}				
+			}; 	
+			timer.scheduleAtFixedRate(task, 0, 3000);
+			timerRunning = true; 
+		}else{
+
+		} 
+			 
 	}
 
 }
