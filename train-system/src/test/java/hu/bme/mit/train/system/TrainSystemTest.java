@@ -2,6 +2,7 @@ package hu.bme.mit.train.system;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
+import hu.bme.mit.train.controller.TrainControllerImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -70,5 +71,10 @@ public class TrainSystemTest {
 	@Test
 	public void TableTest() {
 		Assert.assertTrue(tachograph.size() > 3);
+	}
+
+	@Test
+	public void ReferenceTest() {
+
 	}
 }

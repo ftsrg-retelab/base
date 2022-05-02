@@ -1,5 +1,11 @@
-subprojects {
+plugins {
+  id "org.sonarqube" version "2.6.2" apply false
+}
+
+subprojects { subproject ->
   apply plugin: 'java'
+  apply plugin: 'org.sonarqube'
+  apply plugin: 'jacoco'
 
   repositories {
     jcenter()
@@ -8,5 +14,9 @@ subprojects {
 
   dependencies {
     implementation "com.google.guava:guava:31.0.1-jre"
+    testImplementation "org.mockito:mockito-core:3.+"
   }
+
+  compileJava.options.fork = true
+  compileJava.options.forkOptions.executable = 'C:\\Users\\Toncsi\\.jdks\\azul-13.0.11\\bin\\javac.exe'
 }
