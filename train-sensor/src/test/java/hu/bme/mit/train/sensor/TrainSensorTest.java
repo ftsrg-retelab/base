@@ -25,20 +25,20 @@ public class TrainSensorTest {
     @Test
     public void Test1() {
         sensor.overrideSpeedLimit(-1);
-        when(user.getAlarmState()).thenReturn(true);
+        verify(user, times(1)).setAlarmState(true);
 
     }
 
     @Test
     public void Test2() {
         sensor.overrideSpeedLimit(1);
-        when(user.getAlarmState()).thenReturn(false);
+        verify(user, times(0)).setAlarmState(true);
     }
 
     @Test
     public void Test3() {
         controller.setSpeedLimit(501);
-        when(user.getAlarmState()).thenReturn(true);
+        verify(user, times(1)).setAlarmState(true);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class TrainSensorTest {
     @Test
     public void Test5() {
         sensor.overrideSpeedLimit(0);
-        when(user.getAlarmState()).thenReturn(true);
+        verify(user, times(1)).setAlarmState(true);
     }
 
     @Test
