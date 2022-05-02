@@ -12,11 +12,6 @@ public class TrainControllerImpl implements TrainController {
 	private boolean timerRunning = false; 
 	Timer timer = new Timer(); 
 	
-	
-	
-
-
-  
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
@@ -72,5 +67,4 @@ public class TrainControllerImpl implements TrainController {
 		} 
 			 
 	}
-
 }
