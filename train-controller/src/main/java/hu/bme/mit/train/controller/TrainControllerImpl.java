@@ -1,7 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
-import java.lang.*; 
+import java.lang.*;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -21,8 +21,13 @@ public class TrainControllerImpl implements TrainController {
 
 	private class FollowSpeedThread implements Runnable{
 		public void run(){
-			followSpeed();
-			Thread.sleep(1000); 
+			try{
+				followSpeed();
+				Thread.sleep(1000); 
+			}
+			catch (Exception e){
+				e.printStackTrace(); 
+			} 		
 		} 
 	} 
 
