@@ -8,10 +8,14 @@ import static org.mockito.Mockito.*;
 public class TrainSensorTest {
 
     TrainUser user;
+    TrainController trainController; 
 
     @Before
     public void before() {
-        user = new TrainUserImpl();
+        trainController = mock(TrainController.class);  
+        user = mock(TrainUser.class);
+        when(user.getReferenceSpeed()).thenReturn(5);
+        when(trainController.getReferenceSpeed).thenReturn(5);
     }
 
     @Test
