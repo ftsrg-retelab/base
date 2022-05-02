@@ -1,6 +1,21 @@
+# University project
+
+This is a University sample application, for practicing GIT operations.
+For more information visit [BME FTSRG](https://ftsrg.mit.bme.hu/)
+The exercises demonstrate:
+- GIT
+- GitHub
+- GitHub Actions
+
+| Command | Meaning |
+|---------|---------|
+| git clone | It creates a local working copy of the repositors |
+
+
+> From here it is the original project description.
+
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
 
 ## Getting started
 
