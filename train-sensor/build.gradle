@@ -1,7 +1,17 @@
+plugins {
+    id "java"
+}
+
+repositories { mavenCentral() }
+
 dependencies {
+    testImplementation "org.mockito:mockito-core:3.+"
+    testImplementation('junit:junit:4.13')
     compile project(':train-interfaces')
     compile project(':train-user')
 
     compile group: 'junit', name: 'junit', version: '4.12'
     compile 'org.mockito:mockito-core:2.7.16'
+
+
 }

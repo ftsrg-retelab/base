@@ -14,13 +14,15 @@ public class TrainControllerImpl implements TrainController {
 			public void run(){
 				thread.run();
 				try{
-					followSpeed();
-					thread.Sleep(2000);
-				} catch(InterruptedException e){
+					while(true){
+						followSpeed();
+						thread.sleep(2000);
+					}
+				} catch(InterruptedException e){  
 					e.printStackTrace();
 				}
 			}
-		}
+		}; 
 	}
 
 	@Override

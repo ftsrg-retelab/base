@@ -1,26 +1,50 @@
 package hu.bme.mit.train.sensor;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainUser;
+
+
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
+    TrainController mockTC;
+    TrainUser mockTU;
+    TrainSensorImpl trainSensor;   
 
     @Before
     public void before() {
-        // TODO Add initializations
+        mockTC = mock(TrainController.class);
+        mockTU = mock(TrainUser.class);
+        trainSensor = new TrainSensorImpl(mockTC, mockTU);
+        when(mockTC.getReferenceSpeed()).thenReturn(140);
+    } 
+
+    @Test
+    public void AbsulateMarginMax() {
+        trainSensor.overrideSpeedLimit(510);
+        verify(mockTU, times(1)).setAlarmState(true); 
     }
 
     @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+    public void AbsulateMarginMin() {
+        trainSensor.overrideSpeedLimit(-10);
+        verify(mockTU, times(1)).setAlarmState(true); 
     }
 
     @Test
-    public void TestSpeed(){
-        assertEquals(6, TrainSensorImpl.speedLimit);
+    public void Between() {
+        trainSensor.overrideSpeedLimit(220);
+        verify(mockTU, times(0)).setAlarmState(false); 
     }
+
+    @Test
+    public void RealMargin() {
+        trainSensor.overrideSpeedLimit(4);
+        verify(mockTU, times(1)).setAlarmState(true); 
+    }
+    
+
 }
