@@ -23,6 +23,18 @@ public class TrainControllerImpl implements TrainController {
 		enforceSpeedLimit();
 	}
 
+	public void controlTrain()
+        {
+                Timer timer = new Timer();
+                timer.scheduleAtFixedRate(new TimerTask() {
+                        @Override
+                        public void run() {
+                                followSpeed();
+                        }
+                }, 2000, 1000);
+        }
+	
+
 	@Override
 	public int getReferenceSpeed() {
 		return referenceSpeed;
