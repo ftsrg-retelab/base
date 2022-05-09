@@ -9,7 +9,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-	boolean timerStarted = false; 
+	private boolean timerStarted = false; 
 	Timer timer = new Timer();
 	TimerTask task = new TimerTask() {
 		public void run() {
@@ -64,5 +64,4 @@ public class TrainControllerImpl implements TrainController {
 			timerStarted = true; 
 		} 
 	}
-
 }
