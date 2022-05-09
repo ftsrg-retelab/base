@@ -28,7 +28,7 @@ public class TrainControllerImpl implements TrainController {
 		thread.start();
 	}
 
-	public void threadForSpeedSet(){
+	public void threadForSpeedSet() throws InterruptedException{
 		while(active){
 			followSpeed();
 			Thread.sleep(1000);
