@@ -14,17 +14,22 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void followSpeed() {
-		if (referenceSpeed < 0) {
-			referenceSpeed = 0;
-		} else {
-		    if(referenceSpeed+step > 0) {
-                referenceSpeed += step;
-            } else {
-		        referenceSpeed = 0;
-            }
-		}
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override public void run {
+				if (referenceSpeed < 0) {
+					referenceSpeed = 0;
+				} else {
+					if(referenceSpeed+step > 0) {
+						referenceSpeed += step;
+					} else {
+						referenceSpeed = 0;
+					}
+				}
+			}
 
-		enforceSpeedLimit();
+			enforceSpeedLimit();
+		} , 0, 5000);
 	}
 
 	@Override
