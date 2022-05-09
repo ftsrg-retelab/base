@@ -12,7 +12,7 @@ public class TrainControllerImpl implements TrainController {
 	private Thread thread;
 	private boolean active = true;
 
-	private TrainControllerImpl(){
+	public TrainControllerImpl(){
 		thread = new Thread( new Runnable() {
 			@Override
 			public void run(){
