@@ -1,6 +1,8 @@
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
+jegyzőkönyv:
+https://docs.google.com/document/d/1fJXaysQ4vog0AZ_PXq04yAk8rVnn5U8WRmgMa_yMfv4/edit?usp=sharing
 
 
 ## Getting started
