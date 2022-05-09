@@ -23,7 +23,11 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-
+		
+		while (true){
+			followSpeed();
+		} 
+		
 		enforceSpeedLimit();
 	}
 
