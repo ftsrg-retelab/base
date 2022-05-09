@@ -16,7 +16,13 @@ public class TrainControllerImpl implements TrainController {
 		thread = new Thread( new Runnable() {
 			@Override
 			public void run(){
-				threadForSpeedSet();
+				try {
+					threadForSpeedSet();
+				}
+				catch(InterruptedException e) {
+					System.out.println("Interrupted");
+				}
+
 			}
 		});
 		thread.start();
