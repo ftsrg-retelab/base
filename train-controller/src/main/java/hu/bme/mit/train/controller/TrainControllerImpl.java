@@ -25,6 +25,7 @@ public class TrainControllerImpl implements TrainController {
 	public void threadForSpeedSet(){
 		while(active){
 			followSpeed();
+			Thread.sleep(1000);
 		}
 	}
 
