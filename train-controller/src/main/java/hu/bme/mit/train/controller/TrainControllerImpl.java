@@ -15,10 +15,10 @@ public class TrainControllerImpl implements TrainController {
 	private TrainControllerImpl(){
 		thread = new Thread( new Runnable() {
 			@Override
-			public void run({
+			public void run(){
 				threadForSpeedSet();
-			})	
-		})
+			}
+		});
 		thread.start();
 	}
 
