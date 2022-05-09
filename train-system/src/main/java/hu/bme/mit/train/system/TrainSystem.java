@@ -25,4 +25,13 @@ public class TrainSystem {
 		return user;
 	}
 
+	public static void main(String[] args){
+		String joystick; 
+		while (joystick = System.console().readLine()) { 
+			getUser().overrideJoystickPosition(parseInt(joystick));
+			getController().followSpeed();
+			sleep (100);  
+		}	
+	}  
+
 }
