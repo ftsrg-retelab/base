@@ -8,6 +8,13 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
+	public TrainControllerImpl () {
+		while(true) {
+			Thread.sleep(5);
+			followSpeed();
+		}	
+	} 
+
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
