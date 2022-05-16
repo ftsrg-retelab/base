@@ -12,7 +12,7 @@ public class TrainControllerImpl implements TrainController {
 	private Timer timer;
 
 
-	TrainControllerImpl(){
+	public TrainControllerImpl(){
 		timer = new Timer();
 		timer.schedule(new TimerTask() {
     		@Override
