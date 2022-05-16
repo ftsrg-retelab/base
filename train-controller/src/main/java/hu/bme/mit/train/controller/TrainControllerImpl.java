@@ -13,6 +13,7 @@ public class TrainControllerImpl implements TrainController {
 	private int test= 0;
 
 
+
 	public TrainControllerImpl() {
 		super();
 
@@ -28,7 +29,6 @@ public class TrainControllerImpl implements TrainController {
 
 
 	}
-
 
 	// some other conflict in thiw file 
 	@Override
@@ -66,9 +66,9 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
+
 		this.step = joystickPosition;
 		setSpeedLimit(joystickPosition);
-		
 	}
 
 }
