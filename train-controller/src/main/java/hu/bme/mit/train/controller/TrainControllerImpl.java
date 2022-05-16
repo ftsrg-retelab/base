@@ -1,12 +1,14 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainSensor;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private TrainSensor sensor;
 
 	@Override
 	public void followSpeed() {
@@ -19,9 +21,14 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-
 		enforceSpeedLimit();
+		sensor.overrideSpeedLimit(speedLimit);
 	}
+
+	@Override	
+	public void setSensor(TrainSensor sensor){
+		this.sensor = sensor; 
+	} 
 
 	@Override
 	public int getReferenceSpeed() {
