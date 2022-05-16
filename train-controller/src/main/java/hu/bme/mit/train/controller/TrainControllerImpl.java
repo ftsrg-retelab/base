@@ -8,6 +8,21 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private int test= 0;
+
+	public TrainControllerImpl()
+	{
+		TimerTask task = new TimerTask() {
+        public void run() {
+            followSpeed();
+        }
+    };
+    Timer timer = new Timer("Timer");
+    
+    long delay = 1000L;
+    timer.schedule(task, delay);
+
+	}
+
 	// some other conflict in thiw file 
 	@Override
 	public void followSpeed() {
@@ -44,7 +59,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;	
 	}
 
 }
