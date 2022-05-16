@@ -9,10 +9,7 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 
 	public TrainControllerImpl () {
-		while(true) {
-			Thread.sleep(5);
-			followSpeed();
-		}	
+		followSpeed();
 	} 
 
 	@Override
