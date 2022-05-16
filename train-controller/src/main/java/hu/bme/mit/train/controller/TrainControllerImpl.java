@@ -8,6 +8,19 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
+	public TrainControllerImpl(){
+		this.super();
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+		@Override
+		public void run() {
+			this.followSpeed();
+		}
+		}, 0, 1000);//wait 0 ms before doing the action and do it evry 1000ms (1second)
+
+		timer.cancel();s
+	} 
+
 	public void emergencyBreak() {
 		speedLimit = 0;
 		referenceSpeed = 0; 
@@ -48,7 +61,12 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;
+		if(joystickPosition > 0 ){ this.referenceSpeed++;}
+		else if (joystickPosition < 0){
+			this.referenceSpeed--;
+		}
+
 	}
 
 	@Override
