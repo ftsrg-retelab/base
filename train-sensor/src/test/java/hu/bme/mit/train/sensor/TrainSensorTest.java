@@ -1,8 +1,10 @@
 package hu.bme.mit.train.sensor;
 
+import hu.bme.mit.train.controller.TrainControllerImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import hu.bme.mit.train.interfaces.TrainController;
@@ -19,12 +21,12 @@ public class TrainSensorTest {
     private TrainController controller;
 	private TrainUser user;
     private TrainSensorImpl trainSensor;
-	private int speedLimit = 5;
 
     //JUnit testek
     @Before
     public void before() {
-        
+        controller = new TrainControllerImpl();
+        user = new TrainUserImpl(controller);
         user.setAlarmState(false);
         trainSensor = new TrainSensorImpl(controller, user);
     }
@@ -47,22 +49,14 @@ public class TrainSensorTest {
     }  
 
     @Test
-    public void moreThan50Percent(){
-       trainSensor.overrideSpeedLimit(speedLimit / 2 - 1);
+    public void underHalf(){
+       trainSensor.overrideSpeedLimit(trainSensor.getSpeedLimit() / 2 - 1);
        assertTrue("Alarm", user.getAlarmState());
     }
 
-    //Mock tesztek
-    @Before
-    public void before2() {
-        
-        user.setAlarmState(false);
-        trainSensor = new TrainSensorImpl(controller, user);
-    }
     private TrainController mockTC;
 	private TrainUser mockTU;
     private TrainSensorImpl mockTS;
-	private int mockSpeedLimit = 5;
     
     @Before 
     public void init() {
@@ -73,7 +67,25 @@ public class TrainSensorTest {
 
     @Test 
     public void under0Mock() {
-        mockTS.overrideSpeedLimit(10);
+        mockTS.overrideSpeedLimit(-1);
         Mockito.verify(mockTU).setAlarmState(true);    
-    }  
+    }
+
+    @Test
+    public void over500Mock() {
+        mockTS.overrideSpeedLimit(501);
+        Mockito.verify(mockTU).setAlarmState(true);
+    }
+
+    @Test
+    public void underHalfMock() {
+        mockTS.overrideSpeedLimit(mockTS.getSpeedLimit() / 2 - 1);
+        Mockito.verify(mockTU).setAlarmState(true);
+    }
+
+    @Test
+    public void correctSpeedLimitMock() {
+        mockTS.overrideSpeedLimit(mockTS.getSpeedLimit() - 1);
+        Mockito.verify(mockTU, Mockito.times(0)).setAlarmState(true);
+    }
 }
