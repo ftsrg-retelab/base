@@ -11,14 +11,15 @@ public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
 	private TrainUser user = new TrainUserImpl(controller);
-	private TrainSensor sensor = new TrainSensorImpl(controller, user);
+	private TrainSensor trainSensor = new TrainSensorImpl(controller, user);
 
 	public TrainController getController() {
 		return controller;
 	}
 
 	public TrainSensor getSensor() {
-		return sensor;
+		//Pipeline test
+		return trainSensor;
 	}
 
 	public TrainUser getUser() {
