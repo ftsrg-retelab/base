@@ -9,12 +9,16 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        throw new RuntimeException();
         // TODO Add initializations
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
         // TODO Delete this and add test cases based on the issues
+    }
+
+    @Test
+    public void ThisIsAnotherExampleTestStub() {
+        System.out.println("doing test...");
     }
 }
