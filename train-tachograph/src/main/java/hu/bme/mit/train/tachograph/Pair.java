@@ -12,7 +12,7 @@ public class Pair implements Comparable<Pair> {
 
 	@Override
 	public boolean equals(Object obj) {
-		var other = (Pair) obj;
+		Pair other = (Pair) obj;
 		return val1.equals(other.val1) && val2.equals(other.val2);
 	}
 
