@@ -9,6 +9,7 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
+        throw new RuntimeException();
         // TODO Add initializations
     }
 
