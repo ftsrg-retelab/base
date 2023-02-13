@@ -11,13 +11,13 @@ public class Tachograph {
 		joystick position
 		reference speed
 	*/
-	private Table<LocalDateTime, Double, Double[]> datas = HashBasedTable.create();
+	private Table<LocalDateTime, Integer, Integer> datas = HashBasedTable.create();
 
-	void add(LocalDateTime currentTime, Double positionX, Double positionY, Double speed) {
-		datas.put(currentTime, speed, new Double[] {positionX, positionY});
+	void add(LocalDateTime currentTime, Integer position, Integer speed) {
+		datas.put(currentTime, position, speed);
 	}
 
-	Double[] get(LocalDateTime time, Double speed) {
-		return datas.get(time, speed);
+	Integer get(LocalDateTime time, Integer position) {
+		return datas.get(time, position);
 	}
 }

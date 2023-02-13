@@ -10,9 +10,8 @@ public class TachographTest {
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
 		Tachograph x = new Tachograph();
 		LocalDateTime time = LocalDateTime.now();
-		x.add(time, 1.0, 2.0, 3.0);
-		Double[] c = x.get(time, 3.0);
-		Assert.assertEquals(1.0, (double)c[0], 0.00);
-		Assert.assertEquals(2.0, (double)c[1], 0.00);
+		x.add(time, 1, 2);
+		Integer speed = x.get(time, 1);
+		Assert.assertEquals(2, speed);
 	}
 }
