@@ -1,6 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import java.util.Timer;
+import java.util.TimerTask;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
@@ -12,10 +13,15 @@ public class TrainControllerImpl implements TrainController {
 
 	Timer t;
 
-	TimerControllerImpl()
+	public TrainControllerImpl()
 	{
 		t = new Timer();
-		t.schedule(followSpeed(), 1000);
+		t.schedule(new TimerTask() {
+			public void run()
+			{
+				followSpeed();
+			}
+		}, 1000);
 	}
 
 	@Override
