@@ -12,6 +12,6 @@ public class TachographTest {
 		LocalDateTime time = LocalDateTime.now();
 		x.add(time, 1, 2);
 		Integer speed = x.get(time, 1);
-		Assert.assertEquals(2, speed);
+		Assert.assertEquals(2, (int)speed);
 	}
 }
