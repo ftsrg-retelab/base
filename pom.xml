@@ -17,6 +17,7 @@
         <module>train-sensor</module>
         <module>train-system</module>
         <module>train-user</module>
+        <module>train-tachograph</module>
     </modules>
 
 	<dependencies>
@@ -39,6 +40,13 @@
 			<version>0.8.7</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>31.1-jre</version>
+	</dependency>
+
 	</dependencies>
 
 	<build>
