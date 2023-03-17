@@ -7,10 +7,18 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private boolean alarm = false;
+
+	public void setAlarm(boolean value){
+		alarm = value;
+	}
 
 	@Override
 	public void followSpeed() {
-		if (referenceSpeed < 0) {
+		if (alarm){
+			referenceSpeed = 0;
+		}
+		else if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
 		    if(referenceSpeed+step > 0) {
