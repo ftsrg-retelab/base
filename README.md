@@ -67,3 +67,8 @@ The figure below illustrates this behavior using an example.
 2. *Dőltbetűs mondat!*
 2. **Kiemelt mondat!**
 2. ~~Áthúzott mondat~~
+
+## Vészfék implementálása
+3. The Emergency Brake System needs to be installed on the train.
+3. The User is able to activate said System and it sends a signal to the controller reducing the speed to 0.
+3. Upon activation the system needs to disregard the position of the joystick and needs to apply the breaks as well as reducing the reference speed to 0.
