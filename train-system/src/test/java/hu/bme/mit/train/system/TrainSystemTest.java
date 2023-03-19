@@ -22,6 +22,7 @@ public class TrainSystemTest {
 		sensor = system.getSensor();
 		user = system.getUser();
 
+		
 		sensor.overrideSpeedLimit(50);
 	}
 	

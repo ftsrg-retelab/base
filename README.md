@@ -1,5 +1,5 @@
 # Train Speed Controller
-
+Szeretnék ide egy helyesebb szöveget felvenni.
 This is a sample application for the verification laboratory.
 
 ## Getting started
@@ -62,3 +62,18 @@ The figure below illustrates this behavior using an example.
 1. As the joystick remains at a positive value, the reference speed is incremented again.
 1. However, it reaches the speed limit so in the next step it is not incremented even though the joystick still has a positive value.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
+
+#Formatting the text:
+
+##Format 1
+**Important project innit?**
+
+##Format 3
+*Well, if formatting so good, why isn't there format 2?*
+
+>Look I do not know
+>>I am just making blocks here.
+>>>>>Ok.
+
+
+
