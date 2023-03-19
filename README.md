@@ -64,11 +64,11 @@ The figure below illustrates this behavior using an example.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
 
 # Saját változtatások!
-2. *Dőltbetűs mondat!*
-2. **Kiemelt mondat!**
-2. ~~Áthúzott mondat~~
+1. *Dőltbetűs mondat!*
+1. **Kiemelt mondat!**
+1. ~~Áthúzott mondat~~
 
 ## Vészfék implementálása
-3. The Emergency Brake System needs to be installed on the train.
-3. The User is able to activate said System and it sends a signal to the controller reducing the speed to 0.
-3. Upon activation the system needs to disregard the position of the joystick and needs to apply the breaks as well as reducing the reference speed to 0.
+1. The Emergency Brake System needs to be installed on the train.
+1. The User is able to activate said System and it sends a signal to the controller reducing the speed to 0.
+1. Upon activation the system needs to disregard the position of the joystick and needs to apply the breaks as well as reducing the reference speed to 0.
