@@ -66,5 +66,5 @@ The figure below illustrates this behavior using an example.
 # Új megjegyzések
 MIT 2
 =========
-*MIT 2
-*MIT 3 majd
+* MIT 2
+* MIT 3 majd
