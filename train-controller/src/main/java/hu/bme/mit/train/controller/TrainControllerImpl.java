@@ -48,7 +48,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void emergencyBrake(){
-		setSpeedLimit(0)
+		setSpeedLimit(0)---
 	}
 
 }
