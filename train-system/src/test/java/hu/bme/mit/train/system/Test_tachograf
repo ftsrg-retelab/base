@@ -1,0 +1,27 @@
+package hu.bme.mit.train.controller;
+
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+
+import com.google.guava.Table;
+import static org.junit.Assert.assertThat;
+
+
+import org.junit.Assert;
+import org.junit.Test;
+
+
+@Test
+public void tachograf_table_test () {
+    Table<Integer, Integer, Integer> Test_table = HashBasedTable.create();
+    Test_table.put(2, 2, 3);
+    Test_table.put(1, 1, 8);
+    Test_table.put(4, 4, 22);
+    Test_table.put(6, 6, 10);
+    Test_table.put(8, 8, 12);
+    Test_table.put(20, 20, 34);
+
+    int data = szam.get(2, 2);
+
+    Assert.assertThat(data).isEqualTo(3);
+}
