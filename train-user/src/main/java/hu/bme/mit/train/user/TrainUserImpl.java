@@ -28,4 +28,8 @@ public class TrainUserImpl implements TrainUser {
 		controller.setJoystickPosition(joystickPosition);
 	}
 
+	public void setSpeedLimit(int speedLimit){
+		controller.setSpeedLimit(speedLimit);
+	}
+
 }
