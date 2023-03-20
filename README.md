@@ -71,6 +71,4 @@ The figure below illustrates this behavior using an example.
 1. Lista elem egy
 2. Lisatelem ketto
 
-branch-A módosítás
-
-branch-B 
+branch-A módosítás és branch_B
