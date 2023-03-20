@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import hu.bme.mit.train.controller.Tachograph;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
@@ -14,6 +15,7 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+	Tachograph tachograph;
 	
 	@Before
 	public void before() {
@@ -21,6 +23,7 @@ public class TrainSystemTest {
 		controller = system.getController();
 		sensor = system.getSensor();
 		user = system.getUser();
+		tachograph = system.getTachograph();
 
 		sensor.overrideSpeedLimit(50);
 	}
@@ -50,5 +53,10 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void TachographAddedData() {
+		//Assert.assertEquals(tachograph.getLength(), 4);
+		Assert.assertEquals(tachograph.isEmpty(),false);
+	}
 	
 }
