@@ -50,5 +50,10 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void CheckDate(){
+		controller.tachoGrafTable.put("date", 5, 5);
+		Assert.assertEquals("date", controller.getDate);
+	}
 	
 }
