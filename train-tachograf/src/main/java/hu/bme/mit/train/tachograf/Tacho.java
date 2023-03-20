@@ -1,8 +1,10 @@
 package hu.bme.mit.train.tachograf;
 
-import hu.bme.mit.train.user;
-import hu.bme.mit.train.controller;
-import com.google.guava.collect;
+import hu.bme.mit.train.interfaces.TrainUser;
+import hu.bme.mit.train.interfaces.TrainController;
+import com.google.common.collect.Table;
+import com.google.common.collect.HashBasedTable;
+import java.time.LocalTime;
 
 public class Tacho {
     
