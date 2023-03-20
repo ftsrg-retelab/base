@@ -72,3 +72,5 @@ The figure below illustrates this behavior using an example.
 2. Lisatelem ketto
 
 branch-A módosítás
+
+branch-B 
