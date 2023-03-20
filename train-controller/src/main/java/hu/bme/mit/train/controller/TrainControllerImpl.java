@@ -46,4 +46,8 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	@Override
+	public void emergencyBrake(){
+		this.referenceSpeed=0;
+	}
 }
