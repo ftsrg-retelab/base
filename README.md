@@ -1,3 +1,7 @@
+# RETELAB_MIT2
+**Arbel Dániel**
+* Markdown feladatok
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
