@@ -32,7 +32,8 @@ public class TrainControllerImpl implements TrainController {
 		emergencyBreak(referenceSpeed);
 		enforceSpeedLimit();
 		date = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
-		tachoGrafTable.put("date", step, referenceSpeed);
+		tachoGrafTable.put(date, 1, step);
+		tachoGrafTable.put(date, 2, referenceSpeed);
 		
 	}
 
