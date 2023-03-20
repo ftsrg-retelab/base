@@ -20,7 +20,7 @@ public class TrainControllerImpl implements TrainController {
             }
 		}
 		
-		hiba();
+		//hiba();
 		emergencyBreak(referenceSpeed);
 		enforceSpeedLimit();
 	}
