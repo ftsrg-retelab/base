@@ -19,6 +19,8 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
+		
+		hiba();
 		emergencyBreak(referenceSpeed);
 		enforceSpeedLimit();
 	}
@@ -52,4 +54,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 	}
 
+	public void hiba(){
+		throw new Exception("6.10-es feladat");
+	}
 }
