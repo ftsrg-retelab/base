@@ -16,6 +16,6 @@ public class TrainSensorTest {
 
     @Test
     public void TestSpeedLimit() {
-        AssertEquals(tsi.getSpeedLimit(),3+2);
+        AssertEquals(tsi.getSpeedLimit(),4+1);
     }
 }
