@@ -2,6 +2,6 @@ package hu.bme.mit.train.interfaces;
 
 public interface TrainButton {
 
-	void enableForceStopMode();
+	void enableForceStopMode(boolean mode);
 
 }
