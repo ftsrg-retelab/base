@@ -8,6 +8,12 @@ This is a sample application for the verification laboratory.
 * The project can be built using [Gradle](https://gradle.org/) or [Maven](https://maven.apache.org/) (currently **Maven** is preferred).
 * [JUnit](https://junit.org/junit5/) is used for tests.
 
+## This is a H2 header
+
+### `This` is a H3 header
+
+
+
 ### Maven
 Clone the repository and execute Maven to build the application:
 
@@ -62,3 +68,6 @@ The figure below illustrates this behavior using an example.
 1. As the joystick remains at a positive value, the reference speed is incremented again.
 1. However, it reaches the speed limit so in the next step it is not incremented even though the joystick still has a positive value.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
+
+
+Here is a simple footnote[^1].
