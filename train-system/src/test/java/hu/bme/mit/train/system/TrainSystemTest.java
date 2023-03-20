@@ -52,8 +52,10 @@ public class TrainSystemTest {
 
 	@Test
 	public void CheckDate(){
-		controller.tachoGrafTable.put("date", 5, 5);
-		Assert.assertEquals("date", controller.getDate);
+
+		controller.followSpeed();
+		SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(new java.util.Date());
+		Assert.assertEquals(0, controller.getReferenceSpeed);
 	}
 	
 }
