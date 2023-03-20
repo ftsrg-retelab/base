@@ -18,6 +18,7 @@
         <module>train-system</module>
         <module>train-user</module>
 		<module>train-button</module>
+		<module>train-tacho</module>
     </modules>
 
 	<dependencies>
