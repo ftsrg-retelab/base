@@ -2,7 +2,6 @@ package hu.bme.mit.train.user;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
-import hu.bme.mit.train.tachograf.Tacho;
 
 public class TrainUserImpl implements TrainUser {
 
