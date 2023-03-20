@@ -56,8 +56,8 @@ public class TrainSystemTest {
 	public void CheckDate(){
 
 		controller.followSpeed();
-		SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(new java.util.Date());
-		Assert.assertEquals(0, controller.getReferenceSpeed);
+		String date = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(new java.util.Date());
+		Assert.assertEquals(0, controller.getSpeed(date));
 	}
 	
 }
