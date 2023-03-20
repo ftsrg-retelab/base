@@ -8,6 +8,6 @@ import static org.mockito.Mockito.*;
 public class TrainSensorTest {
     @Test
     public void TestSmokes() {
-        Assert.assertEquals(5,3);
+        Assert.assertEquals(5,3;
     }
 }
