@@ -68,4 +68,5 @@ The figure below illustrates this behavior using an example.
 This part is the place for additional information to other contributors
 1. You need to put code snippets like this: `mvn complie`
 2. You have to keep the markdown conventions: [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 # Now you know everything to make same changes in the repository for your taste
