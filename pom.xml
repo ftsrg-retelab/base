@@ -17,6 +17,7 @@
         <module>train-sensor</module>
         <module>train-system</module>
         <module>train-user</module>
+		<module>train-tachograph</module>
     </modules>
 
 	<dependencies>
