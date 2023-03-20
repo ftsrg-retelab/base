@@ -1,12 +1,18 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import com.google.common.collect.*;
+import com.google.common.collect.Table;
+import java.text.SimpleDateFormat;
+
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	Table<String, int, int> tachoGrafTable = TreeBasedTable.create();
+	
 
 	@Override
 	public void followSpeed() {
@@ -20,9 +26,13 @@ public class TrainControllerImpl implements TrainController {
             }
 		}
 		
-		//hiba();
+
+		
 		emergencyBreak(referenceSpeed);
 		enforceSpeedLimit();
+		String date = new SimpleDateFormat(pattern:"yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		tachoGrafTable.put("date", step, referenceSpeed);
+		
 	}
 
 	@Override
@@ -54,11 +64,6 @@ public class TrainControllerImpl implements TrainController {
 		}
 	}
 
-	/*public void hiba(){
-		throw new Exception("6.10-es feladat");
-	}*/
-
-	public void tachoGraf(){
-		Table<String, int, int> tachoGrafTable = TreeBasedTable.create();
-	}
+	
+	
 }
