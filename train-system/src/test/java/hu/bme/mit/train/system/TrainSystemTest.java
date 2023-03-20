@@ -1,5 +1,8 @@
 package hu.bme.mit.train.system;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -59,7 +62,8 @@ public class TrainSystemTest {
 
 	@Test
 	public void tablaTest() {
-		system.putTable();
-		Assert.assertEquals(null, system.getTable());
+		LocalDateTime time = LocalDateTime.now();
+		system.putTable(time);
+		Assert.assertEquals(true, system.getTable().containsRow(time));
 	}
 }
