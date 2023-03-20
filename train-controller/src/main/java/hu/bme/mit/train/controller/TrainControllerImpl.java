@@ -2,7 +2,7 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
-public class TrainControllerImpl implements TrainButton {
+public class TrainControllerImpl implements Tr {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
