@@ -18,12 +18,20 @@ public class TrainSensorImpl implements TrainSensor {
 	@Override
 	public int getSpeedLimit() {
 		return speedLimit;
+
 	}
+
+
+
 
 	@Override
 	public void overrideSpeedLimit(int speedLimit) {
+		int temp=0;
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
+
+
+
 	}
 
 }

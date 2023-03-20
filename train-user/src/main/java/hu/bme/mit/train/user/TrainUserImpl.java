@@ -27,5 +27,11 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 	}
+	
+	
+	public void userOverwriteSpeedLimit(int joystickPosition){
+		this.joystickPosition=joystickPosition;
+		this.controller.setSpeedLimit(joystickPosition);
+	}
 
 }
