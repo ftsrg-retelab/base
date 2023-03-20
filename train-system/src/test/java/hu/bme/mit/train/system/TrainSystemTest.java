@@ -8,6 +8,8 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 
 public class TrainSystemTest {
 
@@ -53,6 +55,14 @@ public class TrainSystemTest {
 	@Test
 	public void Test_Test(){
 		Assert.assertEquals(4, 2 + 2);
+	}
+
+	@Test
+	public void TestTachograph(){
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		controller.saveTachographData();
+		Assert.assertNotEquals(0, controller.getTachographData().size());
 	}
 	
 }

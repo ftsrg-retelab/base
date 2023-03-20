@@ -1,4 +1,5 @@
 package hu.bme.mit.train.interfaces;
+import com.google.common.collect.Table;
 
 public interface TrainController {
 
@@ -12,4 +13,7 @@ public interface TrainController {
 
 	void emergencyBrake();
 
+	void saveTachographData();
+
+	public Table<Integer, Integer, Integer> getTachographData();
 }

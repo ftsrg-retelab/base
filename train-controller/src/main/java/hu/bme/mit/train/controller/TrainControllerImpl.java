@@ -1,12 +1,15 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	Table<Integer, Integer, Integer> tacographData = HashBasedTable.create();
 
 	@Override
 	public void followSpeed() {
@@ -49,6 +52,17 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void emergencyBrake(){
 		setSpeedLimit(0);
+	}
+
+	@Override
+	public void saveTachographData(){
+		// save data using google guava table
+		tacographData.put(referenceSpeed, speedLimit, step);
+	}
+
+	@Override
+	public Table<Integer, Integer, Integer> getTachographData(){
+		return tacographData;
 	}
 
 }
