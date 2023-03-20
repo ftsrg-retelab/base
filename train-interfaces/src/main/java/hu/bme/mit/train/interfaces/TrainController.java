@@ -12,5 +12,5 @@ public interface TrainController {
 
 	void setSpeedToNull();
 
-	void emergencyBreaking()
+	void emergencyBreaking();
 }
