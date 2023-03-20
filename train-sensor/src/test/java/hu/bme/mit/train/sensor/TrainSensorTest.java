@@ -16,6 +16,6 @@ public class TrainSensorTest {
     public void ThisIsAnExampleTestStub() {
         var a = 4;
         var b = 4;
-        assertEquals(a,b);
+        Assert.assertEquals(a,b);
     }
 }
