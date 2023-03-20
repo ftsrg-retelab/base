@@ -14,7 +14,7 @@ public class TrainUserImpl implements TrainUser {
 
 	@Override
 	public boolean getAlarmFlag() {
-		return false; // TODO use variable here
+		return false; // Should use variable instead of hard coded literal.
 	}
 
 	@Override
