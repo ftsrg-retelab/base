@@ -73,3 +73,4 @@ My favourite fruits are:
   * Apples
   * Bananas
   * Pineapples
+  * Pears
