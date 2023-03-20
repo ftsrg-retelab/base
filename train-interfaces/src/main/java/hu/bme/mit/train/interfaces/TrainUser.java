@@ -8,4 +8,6 @@ public interface TrainUser {
 
 	void overrideJoystickPosition(int joystickPosition);
 
+	void overrideEmergenyButtonState(int emergencyButtonState);
+
 }
