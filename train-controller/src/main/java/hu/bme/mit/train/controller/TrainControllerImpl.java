@@ -18,7 +18,7 @@ public class TrainControllerImpl implements TrainController {
             } else {
 				//This was modified for the previous task
 				//Was set to correct value for passing test
-		        referenceSpeed = 0
+		        referenceSpeed = 0;
             }
 		}
 
