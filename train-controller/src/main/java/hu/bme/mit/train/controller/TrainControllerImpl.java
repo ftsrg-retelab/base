@@ -54,7 +54,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 	}
 
-	public void hiba(){
+	/*public void hiba(){
 		throw new Exception("6.10-es feladat");
-	}
+	}*/
 }
