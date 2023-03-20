@@ -72,4 +72,4 @@ I can use [links](https://youtu.be/DdakKw70BfU) as well, this link is definitely
 My favourite fruits are:
   * Apples
   * Bananas
-  * Strawberries
+  * Pineapples
