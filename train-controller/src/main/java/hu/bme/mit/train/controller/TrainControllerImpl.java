@@ -19,7 +19,7 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-
+		emergencyBreak(referenceSpeed);
 		enforceSpeedLimit();
 	}
 
@@ -44,6 +44,12 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+	public void emergencyBreak(int referenceSpeed){
+		if(referenceSpeed>speedLimit){
+			referenceSpeed = 0;
+		}
 	}
 
 }
