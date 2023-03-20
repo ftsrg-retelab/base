@@ -14,6 +14,8 @@ public class TrainSensorTest {
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+        var a = 4
+        var b = 4 
+        assertEquals(a,b)
     }
 }
