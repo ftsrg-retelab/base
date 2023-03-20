@@ -79,5 +79,21 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertNotEquals(10, controller.getReferenceSpeed());
 	}
+
+	@Test
+	public void DeactivatingSpeedBoostActive_AllowsReferenceSpeedToDecreaseAgain() {
+		user.overrideJoystickPosition(0);
+		sensor.overrideSpeedLimit(10);
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+
+		user.overrideSpeedBoostActive(true);
+		controller.followSpeed();
+		Assert.assertEquals(10, controller.getReferenceSpeed());
+
+		user.overrideSpeedBoostActive(false);
+		user.overrideJoystickPosition(-5);
+		controller.followSpeed();
+		Assert.assertNotEquals(10, controller.getReferenceSpeed());
+	}
 	
 }
