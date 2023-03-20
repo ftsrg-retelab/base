@@ -69,3 +69,5 @@ The figure below illustrates this behavior using an example.
 - **harmadik fajta módosítás**
 
 ### branch A
+
+### branch B
