@@ -1,22 +1,28 @@
-package hu.bme.mit.train.sensor;
+package hu.bme.mit.train.tahograf;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.time.LocalDate;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
-import guava.Table;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+
 
 public class TrainTahografImpl{
-
-	Table<Date, Double, Integer> tahoGrafTable; 
-
+	private TrainController trainController;
+	private TrainUser trainUser;
+	private Table<LocalDate, Integer, Integer> tahoGrafTable; 
 
 	public TrainTahografImpl() {
 		tahoGrafTable = HashBasedTable.create();
 	}
 
 	public Table getTable(){
-		return tahoGrafTable();
+		return tahoGrafTable;
 	}
-
-
+	public void sampleData() {
+		tahoGrafTable.put(LocalDate.now(),
+		trainUser.getJoystickPosition(),
+		trainController.getReferenceSpeed());
+	}
 }
