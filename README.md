@@ -1,10 +1,6 @@
 # Train Speed Controller
 
-<<<<<<< HEAD
-This is a sample application for the verification laboratory. Merge conflict change 1.
-=======
 This is a sample application for the verification laboratory. Merge conflict change 2.
->>>>>>> branch-B2
 
 ## Getting started
 
