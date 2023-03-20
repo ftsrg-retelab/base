@@ -1,5 +1,10 @@
 package hu.bme.mit.train.controller;
 
+import java.time.LocalDate;
+
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+
 import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
@@ -55,5 +60,12 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void emergencyBreaking() {
 		setSpeedToNull();
+	}
+
+	@Override
+	public Table<Date, Integer, Integer> getTable() {
+		Table<Date, Integer, Integer> tabla = new HashBasedTable().create();
+		tabla.put((LocalDate).now(), user.getJoystickPosition(), controller.getReferenceSpeed());
+		return tabla;
 	}
 }
