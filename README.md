@@ -4,6 +4,10 @@ This is a sample application for the verification laboratory.
 
 ## Getting started
 
+# Rete
+'''lab
+**1**
+
 * The application is implemented in Java.
 * The project can be built using [Gradle](https://gradle.org/) or [Maven](https://maven.apache.org/) (currently **Maven** is preferred).
 * [JUnit](https://junit.org/junit5/) is used for tests.
