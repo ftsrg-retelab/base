@@ -2,6 +2,7 @@
 
 This is a sample application for the verification laboratory.
 
+Changes D
 ## Getting started
 
 # Rete
