@@ -14,8 +14,8 @@ public class TrainSensorTest {
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        var a = 4
-        var b = 4 
-        assertEquals(a,b)
+        var a = 4;
+        var b = 4;
+        assertEquals(a,b);
     }
 }
