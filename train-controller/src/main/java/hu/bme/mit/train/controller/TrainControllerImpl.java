@@ -21,7 +21,8 @@ public class TrainControllerImpl implements TrainController {
 			}
 		}
 
-		if (speedBoostActive) {
+		// this breaks a test
+		if (!speedBoostActive) {
 			referenceSpeed = speedLimit;
 		} else {
 			enforceSpeedLimit();
