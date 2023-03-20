@@ -47,21 +47,4 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
-	@Override
-	public void em_brake() {
-		if (emergency == true) {
-			referenceSpeed = 0;
-		} else {
-		    if(referenceSpeed+step > 0) {
-                referenceSpeed += step;
-            } else {
-		        referenceSpeed = 0;
-
-				
-            }
-		}
-
-		enforceSpeedLimit();
-	}
-
 }

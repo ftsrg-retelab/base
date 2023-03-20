@@ -70,5 +70,3 @@ The figure below illustrates this behavior using an example.
 # Masodik cimsor
 1. Lista elem egy
 2. Lisatelem ketto
-
-branch-A módosítás és branch_B
