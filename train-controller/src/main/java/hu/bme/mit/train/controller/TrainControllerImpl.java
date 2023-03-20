@@ -1,8 +1,10 @@
 package hu.bme.mit.train.controller;
 
+import javax.sound.midi.Transmitter;
+
 import hu.bme.mit.train.interfaces.TrainController;
 
-public class TrainControllerImpl implements Tr {
+public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
