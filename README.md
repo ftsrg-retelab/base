@@ -66,4 +66,5 @@ The figure below illustrates this behavior using an example.
 ### További megjegyzések
 
 1. Ez az első
-[X] Ez a második
+
+* Ez a második
