@@ -57,4 +57,8 @@ public class TrainControllerImpl implements TrainController {
 	/*public void hiba(){
 		throw new Exception("6.10-es feladat");
 	}*/
+
+	public void tachoGraf(){
+		Table<String, int, int> tachoGrafTable = TreeBasedTable.create();
+	}
 }
