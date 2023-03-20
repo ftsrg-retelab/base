@@ -76,9 +76,5 @@ The figure below illustrates this behavior using an example.
 
  * [JUnit](valami) 3. Új
 
-<<<<<<< HEAD
 ## Módosítás branch-A
 
-=======
-## Módosítottam branch-B
->>>>>>> branch-B
