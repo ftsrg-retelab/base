@@ -8,7 +8,7 @@ public interface TrainUser {
 
 	void overrideJoystickPosition(int joystickPosition);
 
-	// új funkció
+	// method added to set the alarm flag
 	void setAlarmFlag(boolean alarmFlag);
 
 }
