@@ -64,9 +64,14 @@ The figure below illustrates this behavior using an example.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
 
 
-###Ez az 1. Új 
+### Ez az 1. Új 
+
 
 ```
-Ez a 2. Új 
+
+ Ez a 2. Új 
+ 
 ```
-**Ez a 3. Új
+
+
+** Ez a 3. Új
