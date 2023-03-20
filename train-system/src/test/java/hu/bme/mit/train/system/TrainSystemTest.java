@@ -1,5 +1,7 @@
 package hu.bme.mit.train.system;
 
+import java.lang.Thread;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -94,6 +96,31 @@ public class TrainSystemTest {
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
 		Assert.assertNotEquals(10, controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void LogTable_ItemsAdded() {
+		Assert.assertEquals(0, controller.getLogTable().size());
+		user.overrideJoystickPosition(3);
+		sensor.overrideSpeedLimit(10);
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+
+		controller.followSpeed();
+		Assert.assertEquals(1, controller.getLogTable().size());
+        	
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+
+		controller.followSpeed();
+		Assert.assertEquals(2, controller.getLogTable().size());
 	}
 	
 }

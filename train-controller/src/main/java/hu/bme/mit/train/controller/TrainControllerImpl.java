@@ -1,9 +1,13 @@
 package hu.bme.mit.train.controller;
 
+import com.google.common.collect.HashBasedTable; 
+import com.google.common.collect.Table; 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.Date;
 
 public class TrainControllerImpl implements TrainController {
 
+	Table<Date, Integer, Integer> logTable = HashBasedTable.create();
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
@@ -26,6 +30,8 @@ public class TrainControllerImpl implements TrainController {
 		} else {
 			enforceSpeedLimit();
 		}
+
+		logTable.put(new Date(), this.step, referenceSpeed);
 	}
 
 	@Override
@@ -54,6 +60,11 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setSpeedBoostActive(boolean speedBoostActive ) {
 		this.speedBoostActive = speedBoostActive ;		
+	}
+
+	@Override
+	public Table<Date, Integer, Integer> getLogTable() {
+		return logTable;
 	}
 
 }
