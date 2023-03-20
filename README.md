@@ -6,7 +6,7 @@
 | col 2 is      | centered      |   $12  |
 | zebra stripes | are neat      |    $1  |
 
-This is a sample application for the verification laboratory.
+This is a sample app for the verification laboratory.
 
 ## Getting started
 
