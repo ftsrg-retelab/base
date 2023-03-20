@@ -11,7 +11,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-	Table<String, int, int> tachoGrafTable = TreeBasedTable.create();
+	Table<String, Integer, Integer> tachoGrafTable = TreeBasedTable.create();
 	
 
 	@Override
@@ -30,7 +30,7 @@ public class TrainControllerImpl implements TrainController {
 		
 		emergencyBreak(referenceSpeed);
 		enforceSpeedLimit();
-		String date = new SimpleDateFormat(pattern:"yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		String date = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		tachoGrafTable.put("date", step, referenceSpeed);
 		
 	}
@@ -64,6 +64,4 @@ public class TrainControllerImpl implements TrainController {
 		}
 	}
 
-	
-	
 }
