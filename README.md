@@ -21,6 +21,21 @@ To compile and run tests also execute:
 mvn test
 ```
 
+#### More useful Maven commands
+
+`mvn package` Take the **compiled** code and package it in its distributable format, such as a JAR.
+`mvn install` Install the package into the _local_ repository, for use as a dependency in other projects locally
+
+Read more at [maven link]
+
+[maven link] https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+
+
+
+
+
+
 (That will be enough to know for the current exercises. If you are more interested, see [this](https://github.com/ftsrg-edu/swsv-labs/wiki/0b-Build-tools) short guide about Maven.)
 
 ### Gradle
@@ -54,6 +69,9 @@ Setting the reference speed of the train works in the following way.
 * After each change, the speed limit is checked and enforced.
 
 The figure below illustrates this behavior using an example.
+
+
+
 
 ![speed example](doc/speed_example.png)
 
