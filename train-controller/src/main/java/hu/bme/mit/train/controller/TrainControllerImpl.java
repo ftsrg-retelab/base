@@ -7,6 +7,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private boolean isEmergencyBreak = false;
 
 	@Override
 	public void followSpeed() {
@@ -19,6 +20,8 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
+		if(isEmergencyBreak)
+			speedLimit=0;
 
 		enforceSpeedLimit();
 	}
@@ -34,6 +37,15 @@ public class TrainControllerImpl implements TrainController {
 		enforceSpeedLimit();
 		
 	}
+
+	@Override
+	public void setEmergencyBreak(boolean emergency) {
+		this.isEmergencyBreak = emergency;
+		enforceSpeedLimit();
+
+	}
+
+
 
 	private void enforceSpeedLimit() {
 		if (referenceSpeed > speedLimit) {
