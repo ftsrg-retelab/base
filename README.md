@@ -1,3 +1,7 @@
+#3. feladat 2. részfeladat
+__ez egy aláhúzott komment__
+**ez pedig egy vastag betűs komment**
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
