@@ -45,7 +45,7 @@ public class TrainControllerImpl implements TrainController {
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
 	}
-
+	:tf:
 	@Override
 	public void setReferenceSpeed(int referenceSpeed) {
 		if (referenceSpeed < 0) {
