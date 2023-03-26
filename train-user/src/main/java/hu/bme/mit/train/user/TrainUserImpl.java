@@ -28,4 +28,8 @@ public class TrainUserImpl implements TrainUser {
 		controller.setJoystickPosition(joystickPosition);
 	}
 
+	public void breakEmergency() {
+		overrideJoystickPosition(-1);
+	}
+
 }
