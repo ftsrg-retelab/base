@@ -62,5 +62,11 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void setReferenceSpeed_SetsReferenceSpeed() {
+		controller.setReferenceSpeed(20);
+		Assert.assertEquals(20, controller.getReferenceSpeed());
+	}
+
 	
 }
