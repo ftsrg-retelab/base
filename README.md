@@ -1,3 +1,10 @@
+#Rete lab MIT2
+| Name                | Date         | lab      |
+|---------------------|--------------|----------|
+ | **Horváth Szilárd** | *2023.03.27* | **MIT2** |
+
+
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
