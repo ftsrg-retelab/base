@@ -74,7 +74,7 @@ The figure below illustrates this behavior using an example.
 - \~\~~~striked~~\~\~
 
 ```
-code block
+code block - merge conflict >:(
 ```
 
 
