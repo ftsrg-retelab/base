@@ -1,6 +1,6 @@
 # 3. feladat 2. részfeladat
-__ ez egy aláhúzott komment__
-** ez pedig egy vastag betűs komment**
+__ez egy aláhúzott komment__
+**ez pedig egy vastag betűs komment**
 
 # Train Speed Controller
 
