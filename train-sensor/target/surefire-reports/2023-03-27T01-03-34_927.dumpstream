@@ -1,0 +1,5 @@
+# Created at 2023-03-27T01:04:48.573
+Boot Manifest-JAR contains absolute paths in classpath 'D:\0Egyetem\6felev\ReteLab\base\train-sensor\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
