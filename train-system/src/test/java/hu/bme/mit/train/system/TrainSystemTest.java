@@ -50,5 +50,11 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void TestA() {
+		boolean valami = user.getAlarmFlag();
+		Assert.assertEquals(!valami, user.getAlarmFlag());
+	}
+
 	
 }
