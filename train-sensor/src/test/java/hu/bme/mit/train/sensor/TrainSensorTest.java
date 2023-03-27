@@ -5,15 +5,22 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
+import hu.bme.mit.train.interfaces.TrainSensor;
+import hu.bme.mit.train.user.TrainUserImpl;
+import hu.bme.mit.train.controller.TrainControllerImpl;
+
 public class TrainSensorTest {
+
+    TrainSensor sensor = new TrainSensorImpl(new TrainControllerImpl(), new TrainUserImpl());
 
     @Before
     public void before() {
-        // TODO Add initializations
+
+		sensor.overrideSpeedLimit(50);
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+        Assert.assertEquals(true, true);
     }
 }
