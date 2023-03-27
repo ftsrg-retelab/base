@@ -18,6 +18,17 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	@Override
+	public void turnEmergencyBreakOn() {
+		this.controller.setEmergencyBreak(true);
+
+	}
+
+	@Override
+	public void turnEmergencyBreakOff() {
+		this.controller.setEmergencyBreak(false);
+	}
+
+	@Override
 	public int getJoystickPosition() {
 		return joystickPosition;
 	}
