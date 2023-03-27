@@ -23,6 +23,15 @@ mvn test
 
 (That will be enough to know for the current exercises. If you are more interested, see [this](https://github.com/ftsrg-edu/swsv-labs/wiki/0b-Build-tools) short guide about Maven.)
 
+## Own Section
+### Here
+This is my own section
+[I'm an inline-style link](https://www.google.com)
+
+```
+code here
+```
+
 ### Gradle
 Clone the repository and execute Gradle to build the application:
 
