@@ -7,7 +7,6 @@ import org.junit.Test;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
-import hu.bme.mit.train.system.TrainSystem;
 
 public class TrainSystemTest {
 
@@ -47,6 +46,15 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void ReferenceSpeedTest() {
+		user.overrideJoystickPosition(0);
+		controller.setJoystickPosition(0);
+		controller.setSpeedLimit(0);
+
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
