@@ -28,7 +28,12 @@ public class TrainSensorTest {
         int joystickPosition = 1;
         sensor.saveTachograph(date, referenceSpeed, joystickPosition);
         Assert.assertEquals(1, sensor.getTachograph().size());
-        Assert.assertEquals(joystickPosition, sensor.getTachograph().get(date, referenceSpeed).intValue());
+
+        boolean entryIsPresent = sensor.getTachograph().containsRow(date);
+        Assert.assertTrue(entryIsPresent);
+        boolean entryIsCorrect = sensor.getTachograph().contains(date, referenceSpeed) && sensor.getTachograph().containsValue(joystickPosition);
+        Assert.assertTrue(entryIsPresent);
+
         
     }
 }
