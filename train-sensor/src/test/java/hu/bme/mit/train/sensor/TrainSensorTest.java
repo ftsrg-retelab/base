@@ -1,26 +1,32 @@
 package hu.bme.mit.train.sensor;
 
+import hu.bme.mit.train.controller.TrainControllerImpl;
+import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainSensor;
+import hu.bme.mit.train.user.TrainUserImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
-
-import hu.bme.mit.train.interfaces.TrainSensor;
-import hu.bme.mit.train.user.TrainUserImpl;
-import hu.bme.mit.train.controller.TrainControllerImpl;
 
 public class TrainSensorTest {
 
-    TrainSensor sensor = new TrainSensorImpl(new TrainControllerImpl(), new TrainUserImpl());
+    TrainController controller;
+
+    TrainSensor sensor;
 
     @Before
     public void before() {
+        controller = new TrainControllerImpl();
+        sensor = new TrainSensorImpl(controller, new TrainUserImpl(controller));
 
 		sensor.overrideSpeedLimit(50);
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        Assert.assertEquals(true, true);
+        sensor.saveCurrentState();
+        Assert.assertFalse(sensor.getTachograf().isEmpty());
+        Assert.assertTrue(sensor.getTachograf().containsValue(0));
+        Assert.assertFalse(sensor.getTachograf().containsValue(1));
     }
 }
