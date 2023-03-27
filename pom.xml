@@ -39,6 +39,11 @@
 			<version>0.8.7</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.netbeans.external</groupId>
+			<artifactId>com-google-guava</artifactId>
+			<version>RELEASE113</version>
+		</dependency>
 	</dependencies>
 
 	<build>
