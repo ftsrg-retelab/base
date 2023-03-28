@@ -1,12 +1,14 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.user.TrainUserImpl;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private int timer = 0;
 
 	@Override
 	public void followSpeed() {
@@ -19,7 +21,8 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-
+		incrementTimer();
+		emergencyStop();
 		enforceSpeedLimit();
 	}
 
@@ -44,6 +47,22 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+	@Override
+	public void incrementTimer() {
+		timer++;
+	}
+
+	@Override
+	public void cleanTimer() {
+		timer = 0;
+	}
+	@Override
+	public void emergencyStop(){
+		if(timer == 10){
+			System.out.println("The Train Must Be Stopped");
+		}
 	}
 
 }

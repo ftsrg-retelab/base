@@ -10,4 +10,9 @@ public interface TrainController {
 
 	void setJoystickPosition(int joystickPosition);
 
+	void incrementTimer();
+
+	void cleanTimer();
+
+	void emergencyStop();
 }
