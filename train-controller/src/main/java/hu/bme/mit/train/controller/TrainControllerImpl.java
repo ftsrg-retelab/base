@@ -7,6 +7,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private boolean overrideSpeed = false;
 
 	@Override
 	public void followSpeed() {
@@ -36,9 +37,13 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void enforceSpeedLimit() {
-		if (referenceSpeed > speedLimit) {
+		if (!overrideSpeed && referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
+	}
+
+	private void setOverrideSpeed(boolean var){
+		overrideSpeed = var;
 	}
 
 	@Override
