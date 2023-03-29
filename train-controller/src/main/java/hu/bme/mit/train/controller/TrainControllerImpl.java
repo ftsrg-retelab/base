@@ -2,6 +2,9 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+/**
+ * Primary controller implementation
+ */
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
@@ -42,7 +45,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 	}
 
-	private void setOverrideSpeed(boolean var){
+	public void setOverrideSpeed(boolean var){
 		overrideSpeed = var;
 	}
 
