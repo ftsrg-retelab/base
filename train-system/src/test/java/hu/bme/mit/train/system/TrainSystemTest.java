@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import com.google.common.collect.Table;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,6 +9,8 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+
+import java.util.Date;
 
 public class TrainSystemTest {
 
@@ -66,5 +69,15 @@ public class TrainSystemTest {
 		Assert.assertEquals(5,controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void TachographTest() {
+		user.overrideJoystickPosition(10);
+		sensor.saveValues();
+		Assert.assertEquals(1,sensor.getTachograph().size());
+
+		sensor.saveValues();
+		Assert.assertEquals(2,sensor.getTachograph().size());
+
+	}
 	
 }
