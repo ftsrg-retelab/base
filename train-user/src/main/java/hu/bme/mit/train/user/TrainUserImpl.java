@@ -7,6 +7,7 @@ public class TrainUserImpl implements TrainUser {
 
 	private TrainController controller;
 	private int joystickPosition;
+	private boolean lock = false;
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
@@ -24,8 +25,19 @@ public class TrainUserImpl implements TrainUser {
 
 	@Override
 	public void overrideJoystickPosition(int joystickPosition) {
-		this.joystickPosition = joystickPosition;
-		controller.setJoystickPosition(joystickPosition);
+		if(!lock){
+			this.joystickPosition = joystickPosition;
+			controller.setJoystickPosition(joystickPosition);
+		}
 	}
 
+	@Override
+	public void lockSpeed() {
+		lock = true;
+	}
+
+	@Override
+	public void releaseSpeed() {
+		lock = false;
+	}
 }
