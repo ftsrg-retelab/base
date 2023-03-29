@@ -27,10 +27,10 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 	}
-
-	@Override
+	
+  @Override
 	public void overrideSpeed(boolean var){
 		controller.setOverrideSpeed(var);
 	}
-
+  
 }
