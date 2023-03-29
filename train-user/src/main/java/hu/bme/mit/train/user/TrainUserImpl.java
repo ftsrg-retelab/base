@@ -27,5 +27,9 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 	}
+	@Override
+	public void overrideSpeedLimit(boolean val){
+		controller.setOverrideLimit(val);
+	}
 
 }
