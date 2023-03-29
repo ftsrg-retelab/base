@@ -18,7 +18,7 @@ public class TrainControllerImpl implements TrainController {
 			referenceSpeed = 0;
 		} else {
 		    if(referenceSpeed+step > 0) {
-                referenceSpeed += step;
+                referenceSpeed += 2*step;
             } else {
 		        referenceSpeed = 0;
             }
