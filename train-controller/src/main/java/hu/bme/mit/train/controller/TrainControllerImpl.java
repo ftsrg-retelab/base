@@ -2,6 +2,9 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+/**
+ * Secondary Controller Implementation
+ */
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
