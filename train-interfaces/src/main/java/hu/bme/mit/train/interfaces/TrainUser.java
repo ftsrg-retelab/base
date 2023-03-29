@@ -8,6 +8,4 @@ public interface TrainUser {
 
 	void overrideJoystickPosition(int joystickPosition);
 
-	void overrideSpeedLimit(boolean val);
-
 }
