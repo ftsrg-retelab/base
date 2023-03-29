@@ -2,7 +2,7 @@
 
 This is a sample application for the verification laboratory.
 
-* Unordered sub-list. 
+* lista elem test. 
 
 ## Ez is egy test `paragraph`
 **Ez egy kiemelt test**
