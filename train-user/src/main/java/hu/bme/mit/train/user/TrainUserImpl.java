@@ -28,4 +28,9 @@ public class TrainUserImpl implements TrainUser {
 		controller.setJoystickPosition(joystickPosition);
 	}
 
+	@Override
+	public void overrideSpeed(boolean var){
+		controller.setOverrideSpeed(var);
+	}
+
 }
