@@ -1,6 +1,7 @@
 # Train Speed Controller
+## Overview
 
-This is a sample application for the verification laboratory.
+This is a sample application for the verification laboratory. *Home edition*. **The laboratory must be finished before the _2nd of April_**
 
 ## Getting started
 
