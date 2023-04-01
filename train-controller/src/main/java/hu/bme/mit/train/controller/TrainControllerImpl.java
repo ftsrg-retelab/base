@@ -7,6 +7,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private boolean winterOperation = false;
 
 	@Override
 	public void followSpeed() {
@@ -43,7 +44,18 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		if (winterOperation) {
+			joystickPosition = joystickPosition/2;
+		}
+		else {
+			//do nothing
+		}
+
+		this.step = joystickPosition;
+	}
+
+	public void setWinterOperation (boolean _winterOperation) {
+		winterOperation = _winterOperation;
 	}
 
 }
