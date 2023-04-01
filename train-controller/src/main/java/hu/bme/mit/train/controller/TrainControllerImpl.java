@@ -55,7 +55,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	public void setWinterOperation (boolean _winterOperation) {
-		winterOperation = _winterOperation;
+		winterOperation = _winterOperation
 	}
 
 }
