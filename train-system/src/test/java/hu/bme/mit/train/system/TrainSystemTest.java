@@ -50,5 +50,12 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void WinterOperationJoystickSensitivity() {
+		controller.setWinterOperation(true);
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		Assert.assertEquals(2, controller.getReferenceSpeed());
+	}
 	
 }
