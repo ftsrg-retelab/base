@@ -3,5 +3,10 @@ subprojects {
 
   repositories {
     jcenter()
+    maven { url "http://search.maven.org/" }
   }
+    
+  dependencies {
+    compile "com.google.guava:guava-gwt:31.0.1-jre"
+  } 
 }

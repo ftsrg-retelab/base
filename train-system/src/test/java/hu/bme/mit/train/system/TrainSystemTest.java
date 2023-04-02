@@ -26,6 +26,13 @@ public class TrainSystemTest {
 	}
 	
 	@Test
+	public void Sihuhu() {
+		user.overrideJoystickPosition(1); 
+		controller.followSpeed();
+		Assert.assertEquals(1, controller.getReferenceSpeed()); 
+	} 
+	
+	@Test
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
 		sensor.overrideSpeedLimit(10);
 
