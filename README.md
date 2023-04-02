@@ -1,6 +1,10 @@
 # Train Speed Controller
 
+<<<<<<< HEAD
 A változat - This is a sample application for the verification laboratory.
+=======
+B valtozat - This is a sample application for the verification laboratory.
+>>>>>>> branch-B
 
 ## Getting started
 
