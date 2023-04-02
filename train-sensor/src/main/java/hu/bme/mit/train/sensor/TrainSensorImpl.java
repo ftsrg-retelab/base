@@ -29,8 +29,10 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public void dangerDetection(boolean hazard) {
-		if (hazard == true)
+		if (hazard == true) {
 			danger = true;
+			overrideSpeedLimit(0);
+		}
 	}
 
 }
