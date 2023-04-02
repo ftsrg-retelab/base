@@ -26,4 +26,8 @@ public class TrainSensorImpl implements TrainSensor {
 		controller.setSpeedLimit(speedLimit);
 	}
 
+	public void EmergencyBreak(int distance){
+		if (distance < 5) controller.setSpeedLimit(2);
+	}
+
 }
