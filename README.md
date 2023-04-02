@@ -1,6 +1,6 @@
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
+A változat - This is a sample application for the verification laboratory.
 
 ## Getting started
 
