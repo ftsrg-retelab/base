@@ -50,5 +50,19 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test	
+	public void brakeTest(){
+		controller.emergencyBrake();
+		Assert.assertEquals(0, controller.getSpeedLimit());
+	} 
+
+	@Test	
+	public void tachoChecker(){
+		user.overrideJoystickPosition(11);
+		controller.followSpeed();
+		controller.saveTachograph();
+		Assert.assertNotEquals(0,controller.getTachograph().size()); 
+	} 
+
 	
 }
