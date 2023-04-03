@@ -4,7 +4,16 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 
+import java.time.LocalDateTime;
+import java.util.Map;
+import java.util.Set;
+
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+
 public class TrainSensorImpl implements TrainSensor {
+
+	Table<LocalDateTime, Integer, Integer> tachograph = HashBasedTable.create();
 
 	private TrainController controller;
 	private TrainUser user;
@@ -33,6 +42,15 @@ public class TrainSensorImpl implements TrainSensor {
 			danger = true;
 			overrideSpeedLimit(0);
 		}
+	}
+
+	@Override
+	public void logTachograph() {
+		tachograph.put(LocalDateTime.now(), user.getJoystickPosition(), controller.getReferenceSpeed());
+	}
+
+	public int getLogSize() {
+		return tachograph.size();
 	}
 
 }
