@@ -41,8 +41,6 @@ public class TrainControllerImpl implements TrainController {
 		return referenceSpeed;
 	}
 
-	
-
 	@Override
 	public int getSpeed(String date) {
 		return tachoGrafTable.get(date, 2);
@@ -63,7 +61,13 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		if(this.step>joystickPosition){
+			this.step = joystickPosition;
+			referenceSpeed = referenceSpeed-step;
+		}else{
+			this.step = joystickPosition;
+			referenceSpeed = referenceSpeed+step;
+		}
 	}
 
 	public void emergencyBreak(int referenceSpeed){
