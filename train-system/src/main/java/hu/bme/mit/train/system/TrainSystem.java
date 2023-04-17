@@ -17,7 +17,12 @@ public class TrainSystem {
 
 	public TrainController getController() {
 		return controller;
-		timer.scheduleAtFixedRate(() -> followSpeed(), 2*60*1000, 2*60*1000);
+		timer.scheduleAtFixedRate(new TimerTask() {
+ 		 @Override
+  		public void run() {
+   			 followSpeed();
+  			}
+			}, 2*60*1000, 2*60*1000);
 	}
 
 	public TrainSensor getSensor() {
