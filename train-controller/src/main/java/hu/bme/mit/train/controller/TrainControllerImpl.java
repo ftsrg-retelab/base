@@ -4,12 +4,21 @@ import javax.sound.midi.Transmitter;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private boolean forceStopMode = false;
+
+	static Timer timer = new Timer();
+
+	public TrainControllerImpl(){
+		MyTimer();
+	}
 
 	@Override
 	public void followSpeed() {
@@ -33,6 +42,21 @@ public class TrainControllerImpl implements TrainController {
 
 			enforceSpeedLimit();
 		}
+	}
+
+	public static void MyTimer() {
+
+		TimerTask task;
+
+
+		task = new TimerTask() {
+			@Override
+			public void run() {
+				followSpeed();
+			}
+		};
+		timer.schedule(task, 0, 1000);
+
 	}
 
 	public void setForceStopMode(boolean forceStopMode) {
@@ -60,6 +84,7 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;
+
 	}
 
 }
