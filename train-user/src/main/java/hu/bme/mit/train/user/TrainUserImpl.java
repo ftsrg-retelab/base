@@ -29,7 +29,7 @@ public class TrainUserImpl implements TrainUser {
 		
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
-		timer.schedule(controller.followSpeed(), 2000, 5000);
+		timer.schedule(controller.followSpeed(), 2000, 4000);
 	}
 
 }
