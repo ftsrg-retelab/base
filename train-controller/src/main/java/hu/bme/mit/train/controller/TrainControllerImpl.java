@@ -44,8 +44,12 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;
+		//kiskacsa
+
 	}
+
+
 
 	public void enableEmergBrake() {
 		if (brake_on == true) {speedLimit =0;}
