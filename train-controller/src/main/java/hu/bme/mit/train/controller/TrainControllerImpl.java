@@ -45,9 +45,9 @@ public class TrainControllerImpl implements TrainController, Runnable {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;
 		try {
-			Thread.sleep(100);	
+			this.step = joystickPosition;
+			Thread.sleep(200);	
 		} catch (Exception e) {
 			System.out.println("thread exception");
 		}
