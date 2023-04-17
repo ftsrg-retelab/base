@@ -4,6 +4,8 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table; 
 import hu.bme.mit.train.interfaces.TrainController;
 import java.util.Date;
+import java.util.TimerTask;
+import java.util.Timer;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -12,6 +14,16 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private boolean speedBoostActive;
+
+	public TrainControllerImpl() {
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+    	@Override
+    	public void run() {
+        	followSpeed();
+    	}
+		}, 2400, 2000);
+	}
 
 	@Override
 	public void followSpeed() {
@@ -31,7 +43,7 @@ public class TrainControllerImpl implements TrainController {
 			enforceSpeedLimit();
 		}
 
-		logTable.put(new Date(), this.step, referenceSpeed);
+		logTable.put(new Date(), step, referenceSpeed);
 	}
 
 	@Override
