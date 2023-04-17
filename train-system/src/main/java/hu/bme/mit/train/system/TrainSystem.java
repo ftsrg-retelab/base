@@ -8,6 +8,8 @@ import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 import hu.bme.mit.train.tachograf.Tacho;
 
+import static java.lang.Thread.sleep;
+
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
@@ -17,6 +19,18 @@ public class TrainSystem {
 
 	public TrainSystem() {
 		tacho = new Tacho(controller, user);
+
+		MovingTrainThread mTT = new MovingTrainThread(controller);
+		Thread trainThread = new Thread(mTT);
+		trainThread.start();
+
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+
+		mTT.stop();
 	}
 
 	public TrainController getController() {
