@@ -25,4 +25,8 @@ public class TrainSystem {
 		return user;
 	}
 
+	public void run(){
+		Thread th = new WorkerThread(controller);
+		th.start();
+	}
 }
