@@ -9,6 +9,23 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	private boolean alarm = false;
 
+	private Thread joySpeedPoller = new Thread(()->{
+		try {
+			while(true){
+				followSpeed();
+				Thread.sleep(200);
+	            throw new Exception("Ez egy indokolatlan exception");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	});
+
+	public TrainControllerImpl(){
+		joySpeedPoller.start();
+	}
+	
 	public void setAlarm(boolean value){
 		alarm = value;
 	}
