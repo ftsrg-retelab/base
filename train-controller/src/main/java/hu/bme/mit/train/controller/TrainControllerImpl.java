@@ -24,7 +24,7 @@ public class TrainControllerImpl implements TrainController {
 	public TrainControllerImpl() {
 		timer.schedule(wrap(() -> {
 			followSpeed();
-		}), 200);
+		}), 200, 200);
 	}
 
 	public void setAlarm(boolean value) {
