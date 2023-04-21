@@ -1,4 +1,13 @@
-# Train Speed Controller
+<<<<<<< HEAD
+# TrainB  Speed Controller
+=======
+# TrainB  Speed Controller
+>>>>>>> branch-B
+
+## A labor keszitoi
++ Livi
++ Barbi
+***2022.02.18***
 
 This is a sample application for the verification laboratory.
 
