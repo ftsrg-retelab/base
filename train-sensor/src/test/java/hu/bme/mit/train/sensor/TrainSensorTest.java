@@ -20,6 +20,8 @@ public class TrainSensorTest {
         mockTrainUser = mock(TrainUser.class);
         trainSensor = new TrainSensorImpl(mockTrainController, mockTrainUser);
 
+        when(mockTrainController.getReferenceSpeed()).thenReturn(100);
+
         trainSensor.overrideSpeedLimit(100);
         mockTrainUser.setAlarmState(false);
     }
@@ -32,7 +34,6 @@ public class TrainSensorTest {
     @Test
     public void TestNegativeSpeedLimit() {
         trainSensor.overrideSpeedLimit(-1);
-        Assert.assertTrue(mockTrainUser.getAlarmState());
 
         verify(mockTrainUser, times(1)).setAlarmState(true);
         verify(mockTrainController, times(0)).setSpeedLimit(-1);
@@ -46,7 +47,6 @@ public class TrainSensorTest {
     @Test
     public void TestSpeedLimitNotSetOnInvalidNewValue() {
         trainSensor.overrideSpeedLimit(690);
-        Assert.assertEquals(100, mockTrainController.getReferenceSpeed());
 
         verify(mockTrainUser, times(1)).setAlarmState(true);
         verify(mockTrainController, times(0)).setSpeedLimit(690);
@@ -61,8 +61,6 @@ public class TrainSensorTest {
     @Test
     public void TestSpeedLimitTooSmall() {
         trainSensor.overrideSpeedLimit(42);
-        Assert.assertTrue(mockTrainUser.getAlarmState());
-        Assert.assertEquals(100, mockTrainController.getReferenceSpeed());
 
         verify(mockTrainUser, times(1)).setAlarmState(true);
         verify(mockTrainController, times(0)).setSpeedLimit(42);
@@ -77,8 +75,6 @@ public class TrainSensorTest {
     @Test
     public void TestSpeedLimitInCorrectRange() {
         trainSensor.overrideSpeedLimit(69);
-        Assert.assertFalse(mockTrainUser.getAlarmState());
-        Assert.assertEquals(69, mockTrainController.getReferenceSpeed());
 
         verify(mockTrainUser, times(0)).setAlarmState(true);
         verify(mockTrainController, times(1)).setSpeedLimit(69);
