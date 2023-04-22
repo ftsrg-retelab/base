@@ -2,7 +2,14 @@
 
 This is a sample application for the verification laboratory.
 
+Changes D
 ## Getting started
+
+Changes C
+
+# Rete
+'''lab
+**1**
 
 * The application is implemented in Java.
 * The project can be built using [Gradle](https://gradle.org/) or [Maven](https://maven.apache.org/) (currently **Maven** is preferred).
