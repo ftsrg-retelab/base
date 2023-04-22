@@ -12,6 +12,17 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	private boolean overrideSpeed = false;
 
+	private boolean isChanging = true;
+
+	@Override
+	public void periodic_reference_speedChange(){
+
+
+		while(isChanging){
+			followSpeed();Thread.sleep(100000);
+		}
+	}
+
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
