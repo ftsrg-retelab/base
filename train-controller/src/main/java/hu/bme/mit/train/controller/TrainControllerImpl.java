@@ -9,7 +9,21 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 
 	public void TrainControllerImpl() {
-		
+		FollowThread followThread = new FollowThread();
+		followThread.start();
+	}
+
+	class FollowThread extends Thread {
+		public void run() {
+			while(true) {
+				followSpeed();
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 
