@@ -13,19 +13,9 @@ public class TrainSystem {
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
-	public TrainSensorImpl(){
-		Thread t1 = new Thread(new Runnable() {
-			@Override 
-			public void run(){
-				try{
-					Thread.sleep(500);
-				}catch(InterruptedException e){
-					
-				}
-				
-				controller.followSpeed();
-			}
-		});
+	public TrainSystem(){
+		RunnableImpl r = new RunnableImpl(controller);
+		Thread t1 = new Thread(r);
 		t1.start();
 	}
 	
