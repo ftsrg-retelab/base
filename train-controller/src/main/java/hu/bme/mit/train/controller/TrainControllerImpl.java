@@ -14,6 +14,7 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void followSpeed() {
 		Thread.sleep(20000);
+
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
