@@ -1,5 +1,7 @@
 package hu.bme.mit.train.controller;
 
+import javax.crypto.SecretKeyFactory;
+
 import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
@@ -14,7 +16,11 @@ public class TrainControllerImpl implements TrainController {
 			referenceSpeed = 0;
 		} else {
 		    if(referenceSpeed+step > 0) {
-                referenceSpeed += step;
+				synchronized (this) {
+					referenceSpeed += step;
+				}
+				setChanged();
+				notifyObservers();
             } else {
 		        referenceSpeed = 0;
             }
@@ -27,6 +33,7 @@ public class TrainControllerImpl implements TrainController {
 	public int getReferenceSpeed() {
 		return referenceSpeed;
 	}
+
 
 	@Override
 	public void setSpeedLimit(int speedLimit) {
