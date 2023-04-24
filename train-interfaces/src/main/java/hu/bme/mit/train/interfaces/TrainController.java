@@ -11,4 +11,6 @@ public interface TrainController {
 	void setJoystickPosition(int joystickPosition);
 
     void setWinterOperation(boolean winterOperation);
+
+	void tick();
 }

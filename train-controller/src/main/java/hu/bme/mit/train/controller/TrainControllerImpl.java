@@ -58,4 +58,8 @@ public class TrainControllerImpl implements TrainController {
 		winterOperation = _winterOperation;
 	}
 
+	@Override
+	public void tick() {
+		followSpeed();
+	}
 }
