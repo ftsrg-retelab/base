@@ -6,7 +6,9 @@ public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
-	private int speedLimit = 0;
+	private int speedLimit = 200;
+	private long lastUpdateTime;
+    private long updateInterval = 1000;
 
 	@Override
 	public void followSpeed() {
@@ -43,7 +45,22 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;
+		updateReferenceSpeed();		
 	}
+
+	private void emergency_break() {
+		if (referenceSpeed > 0) {
+			referenceSpeed = 0;
+		}
+	}
+	
+	private void updateReferenceSpeed() {
+        long currentTime = System.currentTimeMillis();
+        if (currentTime - lastUpdateTime >= updateInterval) {
+            followSpeed();
+            lastUpdateTime = currentTime;
+        }
+    }
 
 }
