@@ -35,6 +35,13 @@ To compile and run tests also execute:
 ```
 ./gradlew test
 ```
+## | Tables        | Are           | Cool  |
+## | ------------- |:-------------:| -----:|
+## | col 3 is      | right-aligned | $1600 |
+## | col 2 is      | centered      |   $12 |
+## | zebra stripes | are neat      |    $1 |
+
+## [I'm an inline-style link](https://www.google.com)
 
 ## Overview
 
@@ -50,7 +57,8 @@ The application represents a simple train controller system with the following t
 
 Setting the reference speed of the train works in the following way.
 * The user can set the position of a joystick, which can be zero or a positive/negative number.
-* In each time unit, the controller adds the position of the joystick to the current reference speed. Therefore the reference speed does not change if the position is zero, it is incremented if the position is positive and it is decremented if the position is negative.
+* In each time unit, the controller adds the position of the joystick to the current reference speed.
+ Therefore the reference speed does not change if the position is zero, it is incremented if the position is positive and it is decremented if the position is negative.
 * After each change, the speed limit is checked and enforced.
 
 The figure below illustrates this behavior using an example.
