@@ -62,3 +62,11 @@ The figure below illustrates this behavior using an example.
 1. As the joystick remains at a positive value, the reference speed is incremented again.
 1. However, it reaches the speed limit so in the next step it is not incremented even though the joystick still has a positive value.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
+
+### Additional contrubiton information
+
+This part is the place for additional information to other contributors
+1. You need to put code snippets like this: `mvn complie`
+2. You have to keep the markdown conventions: [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+# Now you know everything to make same changes in the repository for your taste
