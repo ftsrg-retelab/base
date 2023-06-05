@@ -19,11 +19,10 @@ public class TrainSensorImpl implements TrainSensor {
 	}
 
 	public int EmergencyBrake(boolean IsBrakeOn,int CurrentSpeed, int speedLimit){
-		if (CurrentSpeed > speedLimit ){
-			IsBrakeOn = true;
-		}
-		return 0;
-	}
+		if (CurrentSpeed > speedLimit )
+			{IsBrakeOn = true;}
+		return 0;}
+
 
 	@Override
 	public int getSpeedLimit() {
