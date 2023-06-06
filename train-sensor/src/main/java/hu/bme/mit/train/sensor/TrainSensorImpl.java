@@ -24,6 +24,15 @@ public class TrainSensorImpl implements TrainSensor {
 	public void overrideSpeedLimit(int speedLimit) {
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
+
+		if(isDoorOpen()) {
+			controller.setSpeedLimit(5);
+		}
 	}
 
+	@Override
+	public boolean isDoorOpen() {
+		if(controller.getReferenceSpeed() > speedLimit) return true;
+		else return false;
+	}
 }
