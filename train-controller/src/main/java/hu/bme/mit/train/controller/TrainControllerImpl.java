@@ -4,9 +4,28 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 
+	private final Thread joystickControl;
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+
+
+	public TrainControllerImpl() {
+		joystickControl = new Thread()
+		{
+			@Override
+			public void run(){
+				followSpeed();
+				try {
+					joystickControl.sleep(200);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		joystickControl.start();
+	}
+
 
 	@Override
 	public void followSpeed() {
