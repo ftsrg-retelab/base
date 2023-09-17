@@ -2,6 +2,15 @@
 
 This is a sample application for the verification laboratory.
 
+## Hallgatok
+* Liska Janos Tamas
+* Jakab Janos Istvan
+
+[Moodle](https://edu.vik.bme.hu/) honlapja.
+
+```
+vim README.md
+```
 ## Getting started
 
 * The application is implemented in Java.

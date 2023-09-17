@@ -6,6 +6,8 @@ import hu.bme.mit.train.interfaces.TrainUser;
 
 public class TrainSensorImpl implements TrainSensor {
 
+	private int ReteLab = 20;
+
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
@@ -17,7 +19,10 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public int getSpeedLimit() {
-		return speedLimit;
+		if(ReteLab > 0){
+			ReteLab = 20; 
+		}
+		return speedLimit;	
 	}
 
 	@Override
