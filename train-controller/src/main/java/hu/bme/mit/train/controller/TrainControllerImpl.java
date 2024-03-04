@@ -46,4 +46,10 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	public void emergencyBreak(){
+		if(speedLimit == 0 && referenceSpeed >= 200){
+			//If there is no speed limit and the current speed is too fast, the system makes an emergency breaking
+			referenceSpeed = 0;
+		}
+	}
 }
