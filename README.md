@@ -62,3 +62,13 @@ The figure below illustrates this behavior using an example.
 1. As the joystick remains at a positive value, the reference speed is incremented again.
 1. However, it reaches the speed limit so in the next step it is not incremented even though the joystick still has a positive value.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
+
+# This is our extra lines
+## This is how we achived it
+First, we open the README.md in Nano editor.
+```
+nano README.md
+```
+Then, we add our lines to the end of the file.
+Done.
+
