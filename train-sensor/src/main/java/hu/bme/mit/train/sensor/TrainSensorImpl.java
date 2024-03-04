@@ -5,6 +5,8 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import java.time.LocalDateTime;
 import com.google.guava.*;
+import java.util.Map;
+import java.util.Set;
 
 public class TrainSensorImpl implements TrainSensor {
 

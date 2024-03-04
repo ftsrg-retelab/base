@@ -8,6 +8,9 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+import com.google.guava.*;
+import java.util.Map;
+import java.util.Set;
 
 public class TrainSystemTest {
 
