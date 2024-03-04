@@ -5,15 +5,19 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
+import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainSensor;
+import hu.bme.mit.train.interfaces.TrainUser;
+
+
 public class TrainSensorTest {
+
+	TrainController controller;
+	TrainSensor sensor;
+	TrainUser user;
 
     @Before
     public void before() {
-        // TODO Add initializations
-    }
-
-    @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+        sensor = new TrainSensorImpl(controller, user);
     }
 }

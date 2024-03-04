@@ -61,5 +61,11 @@ public class TrainSystemTest {
 		Assert.assertTrue(true);
 	}
 
+	@Test
+	public void TestTachograph() {
+		sensor.TachographEntry();
+		Assert.assertFalse(sensor.IsTachographEmpty());
+	}
+
 	
 }
