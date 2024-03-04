@@ -70,5 +70,5 @@ First, we open the README.md in Nano editor.
 nano README.md
 ```
 Then, we add our lines to the end of the file.
-Done.
+Done and cool.
 
