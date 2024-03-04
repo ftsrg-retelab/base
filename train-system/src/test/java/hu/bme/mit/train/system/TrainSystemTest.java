@@ -2,9 +2,13 @@ package hu.bme.mit.train.system;
 
 import static org.mockito.ArgumentMatchers.contains;
 
+import java.text.CollationElementIterator;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 
+import org.jacoco.agent.rt.internal_3570298.core.internal.ContentTypeDetector;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -73,12 +77,13 @@ public class TrainSystemTest {
 		String date = Calendar.getInstance().getTime().toString();
 		sensor.setTachograph(date, user.getJoystickPosition(), controller.getReferenceSpeed());
 		HashBasedTable table = sensor.getTachograph();
-		HashBasedTable test = HashBasedTable.create();
-		String time = (String) table.get(5,5);
-		Integer yp = (Integer) table.get(time, controller.getReferenceSpeed());
-		Integer rs = (Integer) table.get(time, user.getJoystickPosition());
-		test.put(time, yp, rs);
-		Assert.assertEquals(table, test);
+		Collection c = table.values();
+		String t = (String)new ArrayList(c).get(0);
+		int jp = (int)new ArrayList(c).get(1);
+		int rs = (int)new ArrayList(c).get(2);
+		Assert.assertEquals(t, date);
+		Assert.assertEquals(jp, user.getJoystickPosition());
+		Assert.assertEquals(rs, controller.getReferenceSpeed());
 	}
 
 	
