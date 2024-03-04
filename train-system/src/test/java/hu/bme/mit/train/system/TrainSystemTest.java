@@ -63,5 +63,26 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void TachographTest() {
+        sensor.logStatus();
+
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+        sensor.logStatus();
+
+        controller.followSpeed();
+        sensor.logStatus();
+
+		Assert.assertEquals(10, controller.getReferenceSpeed());
+
+		user.emergencyBreak();
+        sensor.logStatus();
+
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+
+        Assert.assertFalse(sensor.getStatusHistory().isEmpty());
+	}
+
 	
 }
