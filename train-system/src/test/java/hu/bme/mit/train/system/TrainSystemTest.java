@@ -8,7 +8,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
-import java.util.Map;
+import java.util.Map.*;
 import java.util.Set;
 import java.time.LocalDateTime;
 import com.google.common.collect.HashBasedTable;
@@ -83,11 +83,9 @@ public class TrainSystemTest {
 
 		int cnt = 0;
 
-		for(Map.Entry<LocalDateTime ,Integer, Integer> entry : sensor.getTachografRecordings().entrySet()) {
-			cnt++;
-		 }
+		Set<LocalDateTime> tmp = sensor.getTachografRecordings().rowKeySet();
 
-		Assert.assertNotEquals(0, cnt);
+		Assert.assertNotEquals(0, tmp.size());
 	}
 
 	
