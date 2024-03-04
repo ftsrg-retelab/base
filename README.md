@@ -1,9 +1,9 @@
 # First exercise
 * Readme modification
 
-´´´
+```
 printf("Hello world");
-´´´
+```
 
 
 # Train Speed Controller
