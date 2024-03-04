@@ -55,6 +55,5 @@ public class TrainControllerImpl implements TrainController {
 	}
 	public void setEm_Break(boolean em_break){
 		this.em_break = em_break;
-		return this;
 	}
 }
