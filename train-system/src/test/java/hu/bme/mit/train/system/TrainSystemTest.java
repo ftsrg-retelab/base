@@ -52,7 +52,7 @@ public class TrainSystemTest {
 
 	@Test
     public void speedLimitTest(){
-        assertEquals(1, 1);
+        Assert.assertEquals(1, 1);
     }
 
 	
