@@ -11,7 +11,7 @@ public class TrainSensorImpl implements TrainSensor {
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
-	private Table<int, int, int> tachograph  =  HashBasedTable.create();
+	private Table<Integer, Integer, Integer> tachograph  =  HashBasedTable.create();
 
 
 
