@@ -19,7 +19,8 @@ public class TrainSensorTest {
 
     @Test
     public void tachographTest(){
-        addToTachograph(1, 1, 1);
-        Assert.assertEquals(tachograph.size(), 1);
+        sensor TrainSensorImpl = new TrainSensorImpl(null, null);
+        sensor.addToTachograph(1, 1, 1);
+        Assert.assertEquals(sensor.tachograph.size(), 1);
     }
 }
