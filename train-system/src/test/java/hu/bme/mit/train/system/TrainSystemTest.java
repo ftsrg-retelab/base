@@ -50,5 +50,14 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void EngageEmergencyBreak() {
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		controller.emergencyBreak();
+		controller.followSpeed();
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
 	
 }
