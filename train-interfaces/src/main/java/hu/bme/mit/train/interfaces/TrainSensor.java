@@ -6,4 +6,8 @@ public interface TrainSensor {
 
 	void overrideSpeedLimit(int speedLimit);
 
+	void addToTachograph(int currentTime, int joystickPosition, int speed);
+
+	Table<Integer, Integer, Integer> getTacho();
+
 }
