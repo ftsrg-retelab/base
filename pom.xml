@@ -20,6 +20,12 @@
     </modules>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava-->
+		<dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.0.0-jre</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
