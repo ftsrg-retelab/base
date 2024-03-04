@@ -50,5 +50,18 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void EmergencyBreakingAtSpeedLimit_SetsReferenceSpeedToZero() {
+		sensor.overrideSpeedLimit(10);
+		user.overrideJoystickPosition(10);
+		controller.followSpeed();
+
+		Assert.assertEquals(10, controller.getReferenceSpeed());
+
+		user.emergencyBreak();
+
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
 	
 }
