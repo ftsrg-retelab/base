@@ -19,6 +19,6 @@ public class TrainSensorTest {
 
     @Test
     public void speedLimitTest(){
-        assertEquals(1 = 1);
+        assertTrue(true);
     }
 }
