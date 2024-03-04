@@ -73,12 +73,12 @@ public class TrainSystemTest {
 		String date = Calendar.getInstance().getTime().toString();
 		sensor.setTachograph(date, user.getJoystickPosition(), controller.getReferenceSpeed());
 		HashBasedTable table = sensor.getTachograph();
+		HashBasedTable test = HashBasedTable.create();
 		String time = (String) table.get(5,5);
 		Integer yp = (Integer) table.get(time, controller.getReferenceSpeed());
 		Integer rs = (Integer) table.get(time, user.getJoystickPosition());
-		Assert.assertEquals(date, time);
-		Assert.assertEquals((int)yp, ((int)user.getJoystickPosition()));
-		Assert.assertEquals((int)rs, ((int)controller.getReferenceSpeed()));
+		test.put(time, yp, rs);
+		Assert.assertEquals(table, test);
 	}
 
 	
