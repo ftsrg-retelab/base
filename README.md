@@ -65,6 +65,6 @@ The figure below illustrates this behavior using an example.
 
 ### This is H3 title
 
-## This is an unordered sub-list (hey)
+1. This is an unordered sub-list (heyho)
 
 [Heyyy this is an inline-style link](https://www.google.com)
