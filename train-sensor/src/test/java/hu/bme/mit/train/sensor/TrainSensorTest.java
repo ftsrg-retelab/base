@@ -1,7 +1,6 @@
 package hu.bme.mit.train.sensor;
 
 import org.junit.Assert;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
@@ -20,6 +19,6 @@ public class TrainSensorTest {
 
     @Test
     public void speedLimitTest(){
-        assertTrue(true);
+        assertEquals(1, 1);
     }
 }
