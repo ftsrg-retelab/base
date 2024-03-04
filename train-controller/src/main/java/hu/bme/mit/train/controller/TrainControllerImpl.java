@@ -1,6 +1,14 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.time.LocalDateTime;
+
+import java.time.LocalDate;
+
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+
+
 
 public class TrainControllerImpl implements TrainController {
 
@@ -51,6 +59,13 @@ public class TrainControllerImpl implements TrainController {
 	public void emergencyBreak() {
 		setSpeedLimit(0);
 		enforceSpeedLimit();	
+	}
+
+	@Override
+	public Table<Date, Integer, Integer> getTable() {
+		Table<Date, Integer, Integer> tabla = new HashBasedTable().create();
+		tabla.put((LocalDate).now(), user.getJoystickPosition(), controller.getReferenceSpeed());
+		return tabla;
 	}
 
 }

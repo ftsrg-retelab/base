@@ -9,14 +9,20 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class TrainSystemTest {
 
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
-	
+	TrainSystem system = new TrainSystem();
+
+
 	@Before
 	public void before() {
+
 		TrainSystem system = new TrainSystem();
 		controller = system.getController();
 		sensor = system.getSensor();
@@ -55,6 +61,13 @@ public class TrainSystemTest {
 	public void overrideSpeedLimit(){
 		controller.emergencyBreak();
 		Assert.assertEquals(0,controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void tablaTest() {
+		LocalDateTime time = LocalDateTime.now();
+		system.putTable(time);
+		Assert.assertEquals(true, system.getTable().containsRow(time));
 	}
 	
 }

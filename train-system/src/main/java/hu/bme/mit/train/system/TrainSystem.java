@@ -7,6 +7,11 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
+import java.time.LocalDateTime;
+
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
@@ -23,6 +28,16 @@ public class TrainSystem {
 
 	public TrainUser getUser() {
 		return user;
+	}
+
+	Table<LocalDateTime, Integer, Integer> tabla =  HashBasedTable.create();
+
+	public Table<LocalDateTime, Integer, Integer> getTable() {
+		return tabla;
+	}
+
+	public void  putTable(LocalDateTime time) {
+		tabla.put(time, user.getJoystickPosition(), controller.getReferenceSpeed());
 	}
 
 }
