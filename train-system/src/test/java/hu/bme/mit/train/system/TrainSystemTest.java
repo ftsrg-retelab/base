@@ -38,7 +38,7 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 		controller.followSpeed();
-		Assert.assertEquals(10, controllaaer.getReferenceSpeed());
+		Assert.assertEquals(10, controller.getReferenceSpeed());
 	}
 
 	@Test
@@ -53,6 +53,11 @@ public class TrainSystemTest {
 	@Test
 	public void EmergencyBreaking() {
 		controller.EmergencyBreaking();
+		Assert.assertTrue(true);
+	}
+
+	@Test
+	public void SixthThing() {
 		Assert.assertTrue(true);
 	}
 
