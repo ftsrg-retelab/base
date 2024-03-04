@@ -24,7 +24,16 @@ public class TrainUserImpl implements TrainUser {
 
 	@Override
 	public void overrideJoystickPosition(int joystickPosition) {
-		this.joystickPosition = joystickPosition;
+		int min = 0;
+		int zero = 90;
+		int max = 180;
+
+		if (joystickPosition > (zero -max/16) && joystickPosition < (zero+max / 16)) {
+			this.joystickPosition = min;
+		} else {
+			this.joystickPosition = joystickPosition;
+		}
+		
 		controller.setJoystickPosition(joystickPosition);
 	}
 
