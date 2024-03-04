@@ -3,7 +3,8 @@ package hu.bme.mit.train.sensor;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
-import com.google.common.collect;
+import com.google.common.collect.Table;
+import com.google.common.collect.HashBasedTable;
 
 public class TrainSensorImpl implements TrainSensor {
 
