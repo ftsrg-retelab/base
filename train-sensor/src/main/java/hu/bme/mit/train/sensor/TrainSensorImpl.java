@@ -29,7 +29,7 @@ public class TrainSensorImpl implements TrainSensor {
 		controller.setSpeedLimit(speedLimit);
 	}
 
-	public addToTachograph(int currentTime, int joystickPosition, int speed){
+	public void addToTachograph(int currentTime, int joystickPosition, int speed){
 		tachograph.put(currentTime, joystickPosition, speed);
 	}
 
