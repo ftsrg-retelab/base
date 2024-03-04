@@ -9,8 +9,10 @@ public class TrainSensorImpl implements TrainSensor {
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
+	private Table<int, int, int> tachograph  =  HashBasedTable.create();;
 
-	
+
+
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
 		this.user = user;
@@ -26,5 +28,11 @@ public class TrainSensorImpl implements TrainSensor {
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
 	}
+
+	public addToTachograph(int currentTime, int joystickPosition, int speed){
+		tachograph.put(currentTime, joystickPosition, speed);
+	}
+
+	
 
 }
