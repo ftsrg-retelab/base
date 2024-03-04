@@ -59,7 +59,7 @@ public class TrainSystemTest {
 
 	@Test
 	public void overrideSpeedLimit(){
-		controller.emergencyBreak();
+		controller.emergencyBreaking();
 		Assert.assertEquals(0,controller.getReferenceSpeed());
 	}
 
