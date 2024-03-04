@@ -35,6 +35,10 @@ public class TrainSensorImpl implements TrainSensor {
 		tachograph.put(currentTime, joystickPosition, speed);
 	}
 
+	public Table<Integer, Integer, Integer> getTacho(){
+		return tachograph;
+	}
+
 	
 
 }
