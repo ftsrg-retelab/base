@@ -2,6 +2,19 @@
 
 This is a sample application for the verification laboratory.
 
+## MD Excercise
+
+1. We create an ordered list.
+2. Then add a table
+3. Then finish the section with a horizontal separator.
+
+| A | B |
+|---|---|
+| C | D |
+(IIT would appriciate this...)
+
+---
+
 ## Getting started
 
 * The application is implemented in Java.
