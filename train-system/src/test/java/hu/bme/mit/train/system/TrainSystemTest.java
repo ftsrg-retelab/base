@@ -50,5 +50,12 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
+		user.pullEmergencyBreak();
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+
 	
 }

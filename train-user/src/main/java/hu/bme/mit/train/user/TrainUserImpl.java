@@ -29,7 +29,7 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	public void pullEmergencyBreak() {
-		controller.emergencyBreak()
+		controller.emergencyBreak();
 	}
 
 }
