@@ -58,5 +58,32 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void TachografEntries() {
+		sensor.overrideSpeedLimit(10);
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+		controller.followSpeed();
+		controller.followSpeed();
+		sensor.overrideSpeedLimit(10);
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+		controller.followSpeed();
+		controller.followSpeed();
+		sensor.overrideSpeedLimit(10);
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+		controller.followSpeed();
+		controller.followSpeed();
+
+		int cnt = 0;
+
+		for(Map.Entry<LocalDateTime ,int, int> entry : sensor.getTachografRecording().entrySet()) {
+			cnt++;
+		 }
+
+		Assert.assertNotEquals(0, cnt);
+	}
+
 	
 }

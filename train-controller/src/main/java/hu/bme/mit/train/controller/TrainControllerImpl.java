@@ -51,5 +51,10 @@ public class TrainControllerImpl implements TrainController {
 	public void emergencyBreak() {
 		referenceSpeed = 0;
 	}
+
+	@Override
+	int getJoystickPosition() {
+		return step;
+	}
 	
 }
