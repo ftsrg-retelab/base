@@ -83,7 +83,7 @@ public class TrainSystemTest {
 
 		int cnt = 0;
 
-		for(Map.Entry<LocalDateTime ,Integer, Integer> entry : sensor.getTachografRecording().entrySet()) {
+		for(Map.Entry<LocalDateTime ,Integer, Integer> entry : sensor.getTachografRecordings().entrySet()) {
 			cnt++;
 		 }
 
