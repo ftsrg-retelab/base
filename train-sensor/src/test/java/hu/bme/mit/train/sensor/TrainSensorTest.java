@@ -16,11 +16,4 @@ public class TrainSensorTest {
     public void ThisIsAnExampleTestStub() {
         // TODO Delete this and add test cases based on the issues
     }
-
-    @Test
-    public void tachographTest(){
-        sensor TrainSensorImpl = new TrainSensorImpl(null, null);
-        sensor.addToTachograph(1, 1, 1);
-        Assert.assertEquals(sensor.tachograph.size(), 1);
-    }
 }
