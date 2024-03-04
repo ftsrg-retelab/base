@@ -46,4 +46,11 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+
+	@Override
+	public void emergencyBreak() {
+		setSpeedLimit(0);
+		enforceSpeedLimit();	
+	}
+
 }
