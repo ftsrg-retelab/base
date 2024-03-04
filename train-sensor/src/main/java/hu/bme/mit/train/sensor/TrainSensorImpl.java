@@ -4,21 +4,22 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import java.time.LocalDateTime;
-import com.google.guava.*;
 import java.util.Map;
 import java.util.Set;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 
 public class TrainSensorImpl implements TrainSensor {
 
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
-	Table<LocalDateTime, int, int> tachografDisc = null;
+	Table<LocalDateTime, Integer, Integer> tachografDisc = null;
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
 		this.user = user;
-		this.tachografDisc = = HashBasedTable.create()
+		this.tachografDisc = HashBasedTable.create();
 	}
 
 	@Override
@@ -34,11 +35,11 @@ public class TrainSensorImpl implements TrainSensor {
 	}
 
 	private void tachograf() {
-		tachografDisc.put(LocalDateTime.now(), controller.getJoystickPosition, controller.getReferenceSpeed);
+		this.tachografDisc.put(LocalDateTime.now(), controller.getJoystickPosition(), controller.getReferenceSpeed());
 	}
 
 	@Override
-	public Table<LocalDateTime, int, int> getTachografRecordings(){
+	public Table<LocalDateTime, Integer, Integer> getTachografRecordings(){
 		return tachografDisc;
 	}
 

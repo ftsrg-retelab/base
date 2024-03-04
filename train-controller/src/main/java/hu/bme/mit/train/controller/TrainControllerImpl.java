@@ -53,7 +53,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	@Override
-	int getJoystickPosition() {
+	public int getJoystickPosition() {
 		return step;
 	}
 	

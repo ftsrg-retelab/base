@@ -8,10 +8,11 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
-import com.google.guava.*;
 import java.util.Map;
 import java.util.Set;
 import java.time.LocalDateTime;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 
 public class TrainSystemTest {
 
@@ -82,7 +83,7 @@ public class TrainSystemTest {
 
 		int cnt = 0;
 
-		for(Map.Entry<LocalDateTime ,int, int> entry : sensor.getTachografRecording().entrySet()) {
+		for(Map.Entry<LocalDateTime ,Integer, Integer> entry : sensor.getTachografRecording().entrySet()) {
 			cnt++;
 		 }
 
