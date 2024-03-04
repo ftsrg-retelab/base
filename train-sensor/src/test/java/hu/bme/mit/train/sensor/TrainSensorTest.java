@@ -16,4 +16,9 @@ public class TrainSensorTest {
     public void ThisIsAnExampleTestStub() {
         // TODO Delete this and add test cases based on the issues
     }
+
+    @Test
+    public void speedLimitTest(){
+        assertEquals(1 = 1);
+    }
 }
