@@ -55,5 +55,11 @@ public class TrainSystemTest {
         Assert.assertEquals(1, 1);
     }
 
+	@Test
+    public void tachographTest(){
+        sensor.addToTachograph(1, 1, 1);
+        Assert.assertEquals(sensor.getTacho.size(), 1);
+    }
+
 	
 }
