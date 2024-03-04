@@ -17,4 +17,9 @@ public class TrainSensorTest {
         // TODO Delete this and add test cases based on the issues
     }
 
+    @Test
+    public void tachographTest(){
+        addToTachograph(1, 1, 1);
+        Assert.assertEquals(tachograph.size(), 1);
+    }
 }
