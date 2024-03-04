@@ -31,7 +31,9 @@ public class TrainUserImpl implements TrainUser {
 	public void pullEmergencyBreak() {
 		controller.emergencyBreak();
 
-		
+		for (i = 0; i < 10; i += 1) {
+			System.out.println(i.toString());
+		}
 		break;
 	}
 
