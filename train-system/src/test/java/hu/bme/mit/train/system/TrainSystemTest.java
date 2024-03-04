@@ -69,5 +69,13 @@ public class TrainSystemTest {
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void Tachograph(){
+		int before = sensor.getTachograph().size();
+		sensor.recordData();
+		int after = sensor.getTachograph().size();
+		Assert.assertTrue(before < after);
+	}
+
 	
 }
