@@ -11,6 +11,7 @@ import hu.bme.mit.train.system.TrainSystem;
 import com.google.guava.*;
 import java.util.Map;
 import java.util.Set;
+import java.time.LocalDateTime;
 
 public class TrainSystemTest {
 
