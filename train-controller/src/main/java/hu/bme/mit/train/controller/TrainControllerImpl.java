@@ -1,20 +1,31 @@
 package hu.bme.mit.train.controller;
 
-import hu.bme.mit.train.interfaces.TrainController;
-import java.time.LocalDateTime;
-
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 
-
+import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private final Timer refSpeedUpdateTimer_v1;
+
+	public TrainControllerImpl(){
+		refSpeedUpdateTimer_v1 = new Timer();
+		refSpeedUpdateTimer_v1.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				followSpeed();
+			}
+		} , 0, 1000);
+	}
 
 	@Override
 	public void followSpeed() {
@@ -54,18 +65,16 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
-
 	@Override
-	public void emergencyBreak() {
+	public void setSpeedToNull(){
 		setSpeedLimit(0);
-		enforceSpeedLimit();	
+		enforceSpeedLimit();
 	}
 
 	@Override
-	public Table<Date, Integer, Integer> getTable() {
-		Table<Date, Integer, Integer> tabla = new HashBasedTable().create();
-		tabla.put((LocalDate).now(), user.getJoystickPosition(), controller.getReferenceSpeed());
-		return tabla;
+	public void emergencyBreaking() {
+		setSpeedToNull();
 	}
-
+	
 }
+
