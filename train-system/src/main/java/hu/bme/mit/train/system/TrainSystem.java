@@ -35,9 +35,8 @@ public class TrainSystem {
 	public Table<LocalDateTime, Integer, Integer> getTable() {
 		return tabla;
 	}
-
+	
 	public void  putTable(LocalDateTime time) {
 		tabla.put(time, user.getJoystickPosition(), controller.getReferenceSpeed());
 	}
-
 }
