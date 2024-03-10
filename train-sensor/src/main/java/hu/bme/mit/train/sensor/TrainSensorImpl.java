@@ -31,10 +31,6 @@ public class TrainSensorImpl implements TrainSensor {
 		controller.setSpeedLimit(speedLimit);
 	}
 
-	public Table getTable(){
-		return this.tachnographTable;
-	}
-
 	public void addRecord(String date, Integer joystickPosition, Integer referenceSpeed){
 		tachnographTable.put(date, joystickPosition, referenceSpeed);
 	}
