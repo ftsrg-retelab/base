@@ -12,7 +12,7 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        trainSensor = new TrainSensorImpl(null, null); // A konstruktor paraméterei nincsenek használva ebben a tesztben
+        trainSensor = new TrainSensorImpl(null, null);
     }
 
     @Test
