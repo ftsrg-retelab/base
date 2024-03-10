@@ -9,11 +9,18 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        // TODO Add initializations
+        TrainController mockController = mock(TrainController.class);
+        TrainUser mockUser = mock(TrainUser.class);
+        trainSensor = new TrainSensorImpl(mockController, mockUser);
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+        long timestamp = System.currentTimeMillis();
+        int joystickPosition = 2;
+        int referenceSpeed = 50;
+        trainSensor.recordTachographData(timestamp, joystickPosition, referenceSpeed);
+        Integer recordedSpeed = trainSensor.tachographData.get(timestamp, joystickPosition);
+        Assert.assertEquals(referenceSpeed, recordedSpeed.intValue());
     }
-}
+    }
