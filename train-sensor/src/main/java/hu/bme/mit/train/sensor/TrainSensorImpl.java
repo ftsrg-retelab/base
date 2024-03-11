@@ -17,7 +17,6 @@ public class TrainSensorImpl implements TrainSensor {
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
 		this.user = user;
-		Table<LocalTime, Integer, Integer> courseSeatTable = HashBasedTable.create();
 	}
 
 	@Override
@@ -33,6 +32,7 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public void tachoGraf(){
+	Table<LocalTime, Integer, Integer> courseSeatTable = HashBasedTable.create();
 	courseSeatTable.put(LocalTime.now(), 10, 12);
 	}
 
