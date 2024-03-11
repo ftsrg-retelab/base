@@ -48,8 +48,10 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void emergencyBrake(){
-		referenceSpeed = 0;	
+		if(step < -10){
+			referenceSpeed = 0;	
+		}
 	}
 
 
-
+}
