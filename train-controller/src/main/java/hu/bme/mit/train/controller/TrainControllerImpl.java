@@ -66,5 +66,6 @@ public class TrainControllerImpl implements TrainController {
     @Override
     public boolean isSpeedLimitReached() {
         return speedLimitReached;
+    }
     
 }
