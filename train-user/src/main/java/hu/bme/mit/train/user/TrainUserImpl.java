@@ -35,9 +35,10 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	@Override
-	void setEmergencyBreak(boolean val)
+	public void setEmergencyBreak(boolean val)
 	{
-		
+		this.emergencyBreak = val;
+
 	}
 
 

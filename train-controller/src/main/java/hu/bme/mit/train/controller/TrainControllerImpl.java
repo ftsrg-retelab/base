@@ -8,7 +8,7 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
-	private int breaking = false;
+	private boolean breaking = false;
 
 	@Override
 	public void followSpeed() {
