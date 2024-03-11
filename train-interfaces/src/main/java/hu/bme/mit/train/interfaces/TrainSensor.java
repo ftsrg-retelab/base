@@ -1,4 +1,7 @@
 package hu.bme.mit.train.interfaces;
+import com.google.common.collect.Table;
+import java.time.LocalTime;
+import com.google.common.collect.HashBasedTable;
 
 public interface TrainSensor {
 
@@ -7,5 +10,7 @@ public interface TrainSensor {
 	void overrideSpeedLimit(int speedLimit);
 
 	void tachoGraf();
+
+	int size();
 
 }

@@ -10,7 +10,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
-import hu.bme.mit.train.interfaces.TrainSensorImpl;
+
 
 public class TrainSystemTest {
 
@@ -68,11 +68,11 @@ public class TrainSystemTest {
 
 	@Test
     public void hetesFeladatTest() {
-		int meret = TrainSensorImp.courseSeatTable.size();
+		int meret = sensor.size();
 		Assert.assertEquals(0, meret);
 
-		TrainSensorImp.tachoGraf();
-		int meret2 = TrainSensorImp.courseSeatTable.size();
+		sensor.tachoGraf();
+		int meret2 = sensor.size();
 		Assert.assertEquals(1, meret2);
 
    }
