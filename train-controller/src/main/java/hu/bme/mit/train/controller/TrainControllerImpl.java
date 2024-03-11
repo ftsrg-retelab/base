@@ -40,6 +40,10 @@ public class TrainControllerImpl implements TrainController {
 			referenceSpeed = speedLimit;
 		}
 	}
+	@Override
+	public void emergencyBrake() {
+		referenceSpeed=0;
+	}
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
