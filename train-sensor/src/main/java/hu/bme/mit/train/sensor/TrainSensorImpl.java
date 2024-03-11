@@ -31,6 +31,7 @@ public class TrainSensorImpl implements TrainSensor {
 		controller.setSpeedLimit(speedLimit);
 	}
 
+	@Override
 	public void tachoGraf(){
 	courseSeatTable.put(LocalTime.now(), 10, 12);
 	}
