@@ -52,19 +52,19 @@ public class TrainSystemTest {
 
 	@Test
 	public void OverridingJoystickPosition_ReachesSpeedLimit() {
-    // Set initial conditions
+		
     sensor.overrideSpeedLimit(50);
     user.overrideJoystickPosition(45);
 
-    // Check the reference speed before following speed
+    // Reference speed check
     Assert.assertEquals(0, controller.getReferenceSpeed());
 
-    // Follow speed until the train reaches the speed limit
-    for (int i = 0; i < 6; i++) {
+    // Follow speed amig a vonat el nem eri a speed limitet
+    for (int i = 0; i <= 5; i++) {
         controller.followSpeed();
     }
 
-    // Verify that the reference speed does not exceed the speed limit
+    // Nem lepi-e tul a speed limitet
     Assert.assertEquals(50, controller.getReferenceSpeed());
 }
 
