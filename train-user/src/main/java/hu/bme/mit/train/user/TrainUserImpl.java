@@ -26,9 +26,9 @@ public class TrainUserImpl implements TrainUser {
 	public void overrideJoystickPosition(int joystickPosition) {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
-		if (joystickPosition == 0){
+		/*if (joystickPosition == 0){
 			emergencyBrake();
-		}
+		}*/
 	}
 
 
