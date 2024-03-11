@@ -50,5 +50,10 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void emergencyBrakeTest() {
+		user.overrideJoystickPosition(0);
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
 	
 }
