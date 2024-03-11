@@ -31,7 +31,7 @@ public class TrainUserImpl implements TrainUser {
         if (controller.isSpeedLimitReached()) {
             // Provide feedback to the user here
             System.out.println("Warning: Speed limit reached!");
-            System.out.println("You can't speed up more!");
+            System.out.println("You will not be able to make the train faster.");
         }
     }
 }
