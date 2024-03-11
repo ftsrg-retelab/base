@@ -66,7 +66,6 @@ The figure below illustrates this behavior using an example.
 # Rete labor feladat
 1. Környezet kialakítása
 2. Inicializálás
-..* GitHUb hozzáférés beállítása
 3. Markdown feladatok
 4. *Github Flow* feladatok
 5. Konfliktus **merge**  esetén
