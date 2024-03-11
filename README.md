@@ -1,3 +1,12 @@
+# cimsor
+
+- lista elem 1
+- lista elem 2
+
+1. szamozott elem 1
+2. szamozott elem 2
+
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
