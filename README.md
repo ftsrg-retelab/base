@@ -64,7 +64,7 @@ The figure below illustrates this behavior using an example.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
 
 
-# WE ARE ON BRANCH-A
+# CONFLICT RESOLVED
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tristique nibh. Aenean sagittis semper nisi quis dapibus. Proin metus felis, sollicitudin id diam ut, mattis scelerisque nibh. Mauris a nisl vel quam mattis malesuada sed vel augue. Praesent eu orci justo. Phasellus volutpat ligula sed leo lobortis, ac interdum ligula finibus.
 
