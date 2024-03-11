@@ -4,6 +4,7 @@ This is a sample application for the verification laboratory.
 
 ## Getting started
 
+* ~~underlined comment~~
 * The application is implemented in Java.
 * The project can be built using [Gradle](https://gradle.org/) or [Maven](https://maven.apache.org/) (currently **Maven** is preferred).
 * [JUnit](https://junit.org/junit5/) is used for tests.
@@ -12,15 +13,15 @@ This is a sample application for the verification laboratory.
 Clone the repository and execute Maven to build the application:
 
 ```
-mvn compile
+mvn compile     
 ```
-
+*Compile the project with Maven*
 To compile and run tests also execute:
 
 ```
-mvn test
+mvn test        
 ```
-
+**Run the test with Maven**
 (That will be enough to know for the current exercises. If you are more interested, see [this](https://github.com/ftsrg-edu/swsv-labs/wiki/0b-Build-tools) short guide about Maven.)
 
 ### Gradle
