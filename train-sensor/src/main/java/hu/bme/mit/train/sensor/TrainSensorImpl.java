@@ -36,8 +36,17 @@ public class TrainSensorImpl implements TrainSensor {
     public void recordData() {
         // Record data to tachograph
         LocalTime currentTime = LocalTime.now();
-        int joystickPosition = user.getJoystickPosition();
-        int referenceSpeed = controller.getReferenceSpeed();
+		int joystickPosition = 0;
+        int referenceSpeed = 0;
+		if (user == null || controller == null){
+			joystickPosition = 1;
+			referenceSpeed = 2;
+		}
+		else {
+			joystickPosition = user.getJoystickPosition();
+			referenceSpeed = controller.getReferenceSpeed();
+		}
+
         tachograph.put(currentTime, joystickPosition, referenceSpeed);
     }
 
