@@ -46,4 +46,7 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	public void emergencyBrake(){
+	referenceSpeed = 0;
+	}
 }
