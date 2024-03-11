@@ -1,3 +1,9 @@
+# Rendszertervezés laboratórium első feladat
+## Ezt fogjuk csinálni:*
+*Sok mindent*
+
+
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
