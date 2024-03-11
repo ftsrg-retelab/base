@@ -1,5 +1,5 @@
 # Rendszertervezés laboratórium első feladat
-## Ezt fogjuk csinálni:*
+## Ezt fogjuk csinálni:
 *Sok mindent*
 
 
