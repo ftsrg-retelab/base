@@ -8,6 +8,8 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
+	private int breaking = false;
+
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
@@ -21,6 +23,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 
 		enforceSpeedLimit();
+		enforceBreaking();
 	}
 
 	@Override
@@ -41,9 +44,22 @@ public class TrainControllerImpl implements TrainController {
 		}
 	}
 
+	private void enforceBreaking()
+	{
+		if(breaking)
+			referenceSpeed = 0;
+	}
+
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+	@Override
+	public void setEmergencyBreak(boolean val)
+	{
+		breaking = val;
+		enforceBreaking();
 	}
 
 }

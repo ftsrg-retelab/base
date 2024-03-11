@@ -7,6 +7,7 @@ public class TrainUserImpl implements TrainUser {
 
 	private TrainController controller;
 	private int joystickPosition;
+	private boolean emergencyBreak;
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
@@ -27,5 +28,17 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 	}
+
+	@Override
+	public boolean getEmergencyBreak() {
+		return emergencyBreak;
+	}
+
+	@Override
+	void setEmergencyBreak(boolean val)
+	{
+		
+	}
+
 
 }
