@@ -10,4 +10,8 @@ public interface TrainController {
 
 	void setJoystickPosition(int joystickPosition);
 
+	void setEmergencySignal(boolean newEmergencySignalOn);
+
+	void emergencyBreak();
+
 }

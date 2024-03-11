@@ -28,4 +28,10 @@ public class TrainUserImpl implements TrainUser {
 		controller.setJoystickPosition(joystickPosition);
 	}
 
+	public void signalEmergency()
+	{
+		this.controller.setEmergencySignal(true);
+		this.controller.emergencyBreak();
+	}
+
 }
