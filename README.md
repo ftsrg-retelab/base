@@ -1,11 +1,11 @@
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
+***This is a sample application for the verification laboratory.***
 
 ## Getting started
 
-* The application is implemented in Java.
-* The project can be built using [Gradle](https://gradle.org/) or [Maven](https://maven.apache.org/) (currently **Maven** is preferred).
+* The application is implemented in __Java__.
+* The _project_ can be built using [Gradle](https://gradle.org/) or [Maven](https://maven.apache.org/) (currently **Maven** is preferred).
 * [JUnit](https://junit.org/junit5/) is used for tests.
 
 ### Maven
