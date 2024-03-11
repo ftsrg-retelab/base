@@ -66,6 +66,7 @@ The figure below illustrates this behavior using an example.
 
 ### Change readme
 1. Line one
+2. Branch-B supremacy
 2. Line not the one you need
 3. Line three
 [where does it lead to](www.imgur.com/a/G6rU8)
