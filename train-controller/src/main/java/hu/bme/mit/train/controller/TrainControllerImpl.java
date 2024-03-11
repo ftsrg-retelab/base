@@ -35,6 +35,11 @@ public class TrainControllerImpl implements TrainController {
 		
 	}
 
+	public int getSpeedLimit()
+	{
+		return speedLimit;
+	}
+
 	private void enforceSpeedLimit() {
 		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;

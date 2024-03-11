@@ -13,4 +13,11 @@ public class TrainControllerTest {
         trainController.setJoystickPosition(-10); 
         assertEquals(0, trainController.getReferenceSpeed());
     }
+
+    public void TesztSetSpeedlimit()
+    {
+        TrainControllerImpl trainController = new TrainControllerImpl();
+        trainController.setSpeedLimit(15);
+        assertEquals(15,trainController.getSpeedLimit());
+    }
 }
