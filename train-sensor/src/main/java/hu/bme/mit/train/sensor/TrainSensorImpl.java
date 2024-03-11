@@ -16,7 +16,7 @@ public class TrainSensorImpl implements TrainSensor {
 	}
 
 	@Override
-	public int getSpeedLimit() {
+	publi int getSpeedLimit() {
 		return speedLimit;
 	}
 
