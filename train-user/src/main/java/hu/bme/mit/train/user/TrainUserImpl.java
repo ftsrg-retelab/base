@@ -29,8 +29,9 @@ public class TrainUserImpl implements TrainUser {
 
         // Check if speed limit has been reached after setting joystick position
         if (controller.isSpeedLimitReached()) {
-            // Provide feedback to the user here, e.g., display a warning message or emit a sound
+            // Provide feedback to the user here
             System.out.println("Warning: Speed limit reached!");
+            System.out.println("You can't speed up more!");
         }
     }
 }
