@@ -71,5 +71,12 @@ public class TrainSystemTest {
 		
 	}
 
+	@Test
+	public void TachogrpahTest(){
+		Assert.assertEquals(sensor.getLogSize(), 0);
+		sensor.addLog();
+		Assert.assertEquals(sensor.getLogSize(), 1);
+	}
+
 	
 }
