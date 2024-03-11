@@ -51,6 +51,16 @@ public class TrainSystemTest {
 	}
 
 	@Test
+	public void MaintainSpeed() {
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		Assert.assertEquals(4, controller.getReferenceSpeed());
+		user.overrideJoystickPosition(0);
+		controller.followSpeed();
+		Assert.assertEquals(4, controller.getReferenceSpeed());
+	}
+
+	@Test
 	public void EmergencyBreakPressed(){
 		user.overrideJoystickPosition(5);
 		controller.followSpeed();
