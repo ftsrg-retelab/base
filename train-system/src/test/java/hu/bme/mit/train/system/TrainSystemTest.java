@@ -57,5 +57,11 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
-	
+	@Test
+    public void TableRowAddedTest() {
+        sensor.addToTable();
+        Assert.assertEquals(1, sensor.getTableSize());
+        sensor.addToTable();
+        Assert.assertEquals(2, sensor.getTableSize());
+    }
 }

@@ -1,4 +1,6 @@
 package hu.bme.mit.train.interfaces;
+import com.google.common.collect.Table;
+import java.time.LocalTime;
 
 public interface TrainSensor {
 
@@ -6,4 +8,13 @@ public interface TrainSensor {
 
 	void overrideSpeedLimit(int speedLimit);
 
+	LocalTime getCurrentTime();
+
+	int getJoystickPosition();
+
+	int getReferenceSpeed();
+
+	void addToTable();
+	
+	int getTableSize();
 }
