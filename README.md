@@ -2,6 +2,12 @@
 
 This is a sample application for the verification laboratory.
 
+## Labor information
+
+* Labor: **_MIT-2_**
+* Name: **_Vörös Gergely_**
+* Neptun: **_Y78UTN_**
+
 ## Getting started
 
 * The application is implemented in Java.
