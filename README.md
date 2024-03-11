@@ -2,7 +2,8 @@
 ## Ezt fogjuk csinálni:
 *Sok mindent*
 
-5-ös feladat módosítás a branch-a-ról, mielőtt b-ről módosítanánk.
+5-ös feladat módosítás a branch-B-ről, B-ről mást írtunk ebbe a sorba.
+
 
 # Train Speed Controller
 
