@@ -7,11 +7,34 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
-public class TrainSystem {
+public class TrainSystem extends Thread{
 
 	private TrainController controller = new TrainControllerImpl();
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
+
+	public TrainSystem(){
+		Thread t1 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+			
+				while(true){
+					try{
+						controller.followSpeed();
+					Thread.sleep(1000);
+					} catch(java.lang.InterruptedException e){
+
+					}
+					
+				}
+				
+			}
+		}); 
+		
+		t1.start();
+		
+		
+	}
 
 	public TrainController getController() {
 		return controller;

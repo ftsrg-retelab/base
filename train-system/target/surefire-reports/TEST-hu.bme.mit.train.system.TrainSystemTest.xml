@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="hu.bme.mit.train.system.TrainSystemTest" time="0.104" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="hu.bme.mit.train.system.TrainSystemTest" time="0.065" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.18+10-post-Ubuntu-0ubuntu118.04.1"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/cloud/Desktop/lab2/RETELAB_KSZI"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/cloud/Desktop/RETELAB_KSZI"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
     <property name="path.separator" value=":"/>
@@ -13,7 +13,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
-    <property name="user.dir" value="/home/cloud/Desktop/lab2/RETELAB_KSZI"/>
+    <property name="user.dir" value="/home/cloud/Desktop/RETELAB_KSZI"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.runtime.version" value="11.0.18+10-post-Ubuntu-0ubuntu118.04.1"/>
@@ -60,8 +60,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="hu.bme.mit.train.system.TrainSystemTest" name="OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero" time="0.097"/>
+  <testcase classname="hu.bme.mit.train.system.TrainSystemTest" name="OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero" time="0.06"/>
   <testcase classname="hu.bme.mit.train.system.TrainSystemTest" name="OverridingJoystickPosition_IncreasesReferenceSpeed" time="0.001"/>
-  <testcase classname="hu.bme.mit.train.system.TrainSystemTest" name="TachografEntries" time="0.005"/>
-  <testcase classname="hu.bme.mit.train.system.TrainSystemTest" name="EngageEmergencyBreak" time="0.001"/>
+  <testcase classname="hu.bme.mit.train.system.TrainSystemTest" name="TachografEntries" time="0.004"/>
+  <testcase classname="hu.bme.mit.train.system.TrainSystemTest" name="EngageEmergencyBreak" time="0"/>
 </testsuite>
