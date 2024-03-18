@@ -35,7 +35,7 @@ public class TrainSystem {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                controller.getController.followSpeed();
+                controller.getController().followSpeed();
             }
         }, 0, 1000);
     }
