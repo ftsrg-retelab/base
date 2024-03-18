@@ -1,12 +1,31 @@
 package hu.bme.mit.train.controller;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 import hu.bme.mit.train.interfaces.TrainController;
-
 public class TrainControllerImpl implements TrainController {
-
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private Timer time = new Timer();
+
+	public TrainControllerImpl (){
+		
+	time.schedule(new TimerTask() {
+	   @Override
+		public void run() {
+			ActivityName.this.runOnUiThread(new Runnable(){
+				@Override
+				  public void run() {
+				   this.followSpeed();
+				  }        
+			});
+		}
+	}, 2000);
+	}
 
 	@Override
 	public void followSpeed() {
@@ -19,31 +38,35 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-
 		enforceSpeedLimit();
 	}
-
 	@Override
 	public int getReferenceSpeed() {
 		return referenceSpeed;
 	}
-
 	@Override
 	public void setSpeedLimit(int speedLimit) {
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 		
 	}
-
 	private void enforceSpeedLimit() {
 		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
 	}
-
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;
+	}
+	@Override
+	public void setSpeedToNull(){
+		setSpeedLimit(0);
+		enforceSpeedLimit();
+	}
+	@Override
+	public void emergencyBreaking() {
+		setSpeedToNull();
 	}
 
 }
