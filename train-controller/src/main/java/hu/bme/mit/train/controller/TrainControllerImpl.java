@@ -10,11 +10,7 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 
 	public TrainControllerImpl(){
-		Random r = new Random();
-		if(r.nextInt(1, 10) == 4)
-		{
 			followSpeed();
-		}
 	}
 
 	@Override
