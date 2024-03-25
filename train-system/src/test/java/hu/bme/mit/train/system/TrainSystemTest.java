@@ -1,5 +1,7 @@
 package hu.bme.mit.train.system;
 
+import java.time.LocalDate;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,6 +10,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+
 
 public class TrainSystemTest {
 
@@ -50,5 +53,28 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void emergencyBrakeTest() {
+		user.overrideJoystickPosition(0);
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void Test() {
+		sensor.overrideSpeedLimit(10);
+
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+	@Test
+    public void hetesFeladatTest() {
+		int meret = sensor.size();
+		Assert.assertEquals(0, meret);
+
+		sensor.tachoGraf();
+		int meret2 = sensor.size();
+		Assert.assertEquals(1, meret2);
+
+   }
 	
 }

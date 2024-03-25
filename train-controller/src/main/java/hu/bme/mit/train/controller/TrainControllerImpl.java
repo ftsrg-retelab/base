@@ -1,12 +1,17 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.Random;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+
+	public TrainControllerImpl(){
+			followSpeed();
+	}
 
 	@Override
 	public void followSpeed() {
@@ -46,4 +51,8 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	@Override
+	public void emergencyBrake(){
+	referenceSpeed = 0;
+	}
 }
