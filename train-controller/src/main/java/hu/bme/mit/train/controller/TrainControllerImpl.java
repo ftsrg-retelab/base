@@ -1,5 +1,9 @@
 package hu.bme.mit.train.controller;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
@@ -7,6 +11,16 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	
+	public TrainControllerImpl() {
+		ExecutorService executor = Executors.newFixedThreadPool(1);
+		executor.submit(() -> {
+			while(true) {
+				Thread.sleep(1000);
+				followSpeed();
+			}
+		});
+	}
 
 	@Override
 	public void followSpeed() {
@@ -49,6 +63,7 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+
 	}
 
 }
