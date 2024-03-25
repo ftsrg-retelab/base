@@ -1,8 +1,9 @@
 package hu.bme.mit.train.sensor;
 
-import TrainController;
-import TrainSensorImpl;
-import TrainUser;
+import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.sensor.TrainSensorImpl;
+import hu.bme.mit.train.interfaces.TrainUser;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +13,7 @@ public class TrainSensorTest {
 
     TrainController mockTC;
     TrainUser mockTU;
-    TrainsSensorImpl trainSensor;
+    TrainSensorImpl trainSensor;
 
     @Before
     public void before() {
