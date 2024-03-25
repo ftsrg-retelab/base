@@ -6,4 +6,8 @@ public interface TrainSensor {
 
 	void overrideSpeedLimit(int speedLimit);
 
+	public void addLog();
+
+	public int getLogSize();
+
 }

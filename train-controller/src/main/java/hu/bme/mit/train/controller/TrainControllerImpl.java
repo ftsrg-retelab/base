@@ -2,6 +2,9 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+import java.util.concurrent.TimeUnit;
+import java.lang.Thread;
+
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
@@ -46,4 +49,25 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	@Override
+	public void emergencyBreak() {
+		this.referenceSpeed = 0;
+	}
+
+	@Override
+	public void setReferenceSpeed(){
+		Thread t = new Thread(() -> {
+			while(true){
+				try {
+					followSpeed();
+					TimeUnit.SECONDS.sleep(1);
+				} catch (Exception e) {
+	
+				}
+	
+			}
+		});
+		t.start();
+		
+	}
 }
