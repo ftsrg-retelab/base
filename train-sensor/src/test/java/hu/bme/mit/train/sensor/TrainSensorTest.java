@@ -6,19 +6,15 @@ import org.junit.Test;
 import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
-
+    
+    TrainController mockC;
+    TrainUser mockU;
+    
     @Before
     public void before() {
-        // TODO Add initializations
+        mockC = mock(TrainController.class);
+        mockU = mock(TrainUser.class);
     }
 
-    @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
-    }
 
-    @Test
-    public void ThisIsNotAnExampleTestSub(){
-        //Assert(true);
-    }
 }
