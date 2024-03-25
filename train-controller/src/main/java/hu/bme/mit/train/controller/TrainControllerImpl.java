@@ -1,6 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.concurrent.TimeUnit;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -8,7 +9,8 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
-	public startSimulation(){
+	@Override
+	public void startSimulation(){
 		while(true){
 			TimeUnit.SECONDS.sleep(1);
 			this.followSpeed();
