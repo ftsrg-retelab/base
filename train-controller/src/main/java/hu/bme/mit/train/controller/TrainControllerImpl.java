@@ -16,7 +16,7 @@ public class TrainControllerImpl implements TrainController {
 				TimeUnit.SECONDS.sleep(1);
 				this.followSpeed();
 			} catch (InterruptedException e) {
-				// meo
+				// meow daddy
 			}
 		}
 	}
