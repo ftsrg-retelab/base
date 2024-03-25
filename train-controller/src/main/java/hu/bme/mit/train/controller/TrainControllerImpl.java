@@ -12,8 +12,12 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void startSimulation(){
 		while(true){
-			TimeUnit.SECONDS.sleep(1);
-			this.followSpeed();
+			try {
+				TimeUnit.SECONDS.sleep(1);
+				this.followSpeed();
+			} catch (InterruptedException e) {
+				// meo
+			}
 		}
 	}
 
