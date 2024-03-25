@@ -50,4 +50,15 @@ public class TrainControllerImpl implements TrainController {
 		referenceSpeed = 0;
 	}
 
+	public void followJoystick(){
+		if(step == -1){
+			referenceSpeed -= 10;
+		}
+		else if(step == 1){
+			referenceSpeed += 10;
+		}
+		enforceSpeedLimit();
+	}
+
+
 }
