@@ -1,12 +1,21 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.Random;
 
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+
+	public TrainControllerImpl(){
+		Random r = new Random();
+		if(r.nextInt(1, 10) == 4)
+		{
+			followSpeed();
+		}
+	}
 
 	@Override
 	public void followSpeed() {
