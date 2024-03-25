@@ -30,4 +30,15 @@ public class TrainUserImpl implements TrainUser {
 		controller.followSpeed();
 	}
 
+	@Override
+	public boolean getAlarmState() {
+		return alarmState;
+	}
+
+	public void setAlarmState(boolean alarmState) {
+		alarmState = alarmState;
+	}
+
+
+
 }
