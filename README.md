@@ -62,3 +62,14 @@ The figure below illustrates this behavior using an example.
 1. As the joystick remains at a positive value, the reference speed is incremented again.
 1. However, it reaches the speed limit so in the next step it is not incremented even though the joystick still has a positive value.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
+
+
+# Rete labor feladat A branch
+
+1. Környezet kialakítása
+2. Inicializálás
+3. Markdown feladatok
+4. *Github Flow* feladatok
+5. Konfliktus **merge**  esetén
+6. CI feladatok
+7. Külső függőségek hozzáadaása
