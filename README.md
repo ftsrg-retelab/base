@@ -1,7 +1,9 @@
 # Train Speed Controller
+# I hope This laboratory is gonna be fun :smiling_face_with_three_hearts:
+This is a sample application for the verification laboratory. <br/>
+My *name* is **Komenda Mate**, my *neptun* code is **G6987T**
 
-This is a sample application for the verification laboratory.
-
+ 
 ## Getting started
 
 * The application is implemented in Java.

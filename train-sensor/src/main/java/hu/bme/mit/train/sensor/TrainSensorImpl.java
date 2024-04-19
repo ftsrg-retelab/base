@@ -9,7 +9,8 @@ public class TrainSensorImpl implements TrainSensor {
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
-
+	private int mph = 0;
+	
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
 		this.user = user;
@@ -24,6 +25,15 @@ public class TrainSensorImpl implements TrainSensor {
 	public void overrideSpeedLimit(int speedLimit) {
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
+	}
+
+	/*
+	* @acces public
+	* @desc get int mph
+	* */
+	public int getMph(){
+		System.out.println("This is the speed in mph: " + mph);
+		return mph;
 	}
 
 }
