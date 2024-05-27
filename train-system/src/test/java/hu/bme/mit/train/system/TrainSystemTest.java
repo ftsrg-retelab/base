@@ -50,5 +50,21 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void OverridingJoystickPositionToNegative() {
+		user.overrideJoystickPosition(5);
+		controller.followSpeed();
+		user.overrideJoystickPosition(-6);
+		controller.followSpeed();
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void Tachograph() {
+		sensor.addToTapograf();
+
+		Assert.assertEquals(1, sensor.getTapografSize());
+	}
+
 	
 }
