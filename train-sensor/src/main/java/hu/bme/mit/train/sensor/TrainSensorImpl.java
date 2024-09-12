@@ -12,12 +12,12 @@ public class TrainSensorImpl implements TrainSensor {
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
-		this.user = user;
+		this.user = user;	
 	}
-
+	//some bugfixing
 	@Override
 	public int getSpeedLimit() {
-		return speedLimit;
+		return speedLimit; 
 	}
 
 	@Override
