@@ -25,6 +25,7 @@ public class TrainUserImpl implements TrainUser {
 	@Override
 	public void overrideJoystickPosition(int joystickPosition) {
 		this.joystickPosition = joystickPosition;
+		System.out.print(this.joystickPosition);
 		controller.setJoystickPosition(joystickPosition);
 	}
 

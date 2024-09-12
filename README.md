@@ -1,3 +1,8 @@
+# About this repository
+The goals of forking this repo:
+* completing the required ReTeLab at BME
+* getting to know **Git** and other tools 
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
