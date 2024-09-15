@@ -25,4 +25,15 @@ public class TrainSystem {
 		return user;
 	}
 
+	public void setController(TrainControllerImpl a) {
+		this.controller = a;
+	}
+
+	public void setSensor(TrainSensorImpl b) {
+		this.sensor = b;
+	}
+
+	public void setUser(TrainUserImpl c) {
+		this.user = c;
+	}
 }
