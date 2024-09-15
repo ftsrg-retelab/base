@@ -1,3 +1,8 @@
+**This is a bold syntax that I added later**
+*This is italic sytax*
+<!-- This will not appear-->
+And this is a normal text for the fourth line
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
