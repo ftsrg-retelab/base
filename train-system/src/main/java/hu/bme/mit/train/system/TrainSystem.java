@@ -14,14 +14,17 @@ public class TrainSystem {
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
 	public TrainController getController() {
+		System.out.println("github.com/Bence56/base");
 		return controller;
 	}
 
 	public TrainSensor getSensor() {
+		System.out.println("github.com/Bence56/base");
 		return sensor;
 	}
 
 	public TrainUser getUser() {
+		System.out.println("github.com/Bence56/base");
 		return user;
 	}
 
