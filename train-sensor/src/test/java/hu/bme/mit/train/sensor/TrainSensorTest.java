@@ -1,19 +1,27 @@
 package hu.bme.mit.train.sensor;
 
+import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainUser;
+import hu.bme.mit.train.user.TrainUserImpl;
+import hu.bme.mit.train.controller.TrainControllerImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
 
+    TrainSensorImpl trainSensor;
+
     @Before
     public void before() {
-        // TODO Add initializations
+        TrainController controller = new TrainControllerImpl();
+        TrainUser user = new TrainUserImpl(controller);
+        trainSensor = new TrainSensorImpl(controller, user);
     }
 
     @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+    public void OverrideSpeedLimit_SetSpeedLimitToNegative() {
+        trainSensor.overrideSpeedLimit(-1);
+        Assert.assertEquals(-1, trainSensor.getSpeedLimit());
     }
 }
