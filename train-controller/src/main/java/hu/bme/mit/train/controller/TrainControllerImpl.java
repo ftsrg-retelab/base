@@ -7,6 +7,11 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private boolean lights = false;
+
+	public boolean toggleLights() { return this.lights = !this.lights; }
+
+	public boolean getLights() { return lights; }
 
 	@Override
 	public void followSpeed() {
