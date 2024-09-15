@@ -21,7 +21,7 @@ public class TrainSystemTest {
 		controller = system.getController();
 		sensor = system.getSensor();
 		user = system.getUser();
-
+		controller.setSensor(sensor);
 		sensor.overrideSpeedLimit(50);
 	}
 	
@@ -48,6 +48,10 @@ public class TrainSystemTest {
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+	@Test
+	public void DummyTest() {
+		Assert.assertEquals(0,0);
 	}
 
 	
