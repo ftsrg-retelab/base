@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':train-interfaces')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.google.guava:guava:29.0-jre'
+}
+
+test {
+    useJUnitPlatform()
+}

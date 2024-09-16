@@ -4,4 +4,6 @@ include ':train-controller'
 include ':train-interfaces'
 include ':train-sensor'
 include ':train-system'
+include ':train-tachograph'
 include ':train-user'
+
