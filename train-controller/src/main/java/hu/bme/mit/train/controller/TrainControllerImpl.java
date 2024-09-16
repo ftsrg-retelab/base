@@ -7,6 +7,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private static int absSpeedLimit = 90;
 
 	@Override
 	public void followSpeed() {
@@ -30,7 +31,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setSpeedLimit(int speedLimit) {
-		this.speedLimit = speedLimit;
+		this.speedLimit = Math.min(speedLimit, absSpeedLimit);
 		enforceSpeedLimit();
 		
 	}
