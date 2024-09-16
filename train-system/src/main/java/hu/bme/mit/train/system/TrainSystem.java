@@ -6,12 +6,17 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
+import hu.bme.mit.train.system.SpeedThread;
 
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
+
+	public TrainSystem() {
+		changeSpeed(); 
+	}
 
 	public TrainController getController() {
 		return controller;
@@ -23,6 +28,11 @@ public class TrainSystem {
 
 	public TrainUser getUser() {
 		return user;
+	}
+
+	public void changeSpeed() {
+		SpeedThread t = new SpeedThread(controller);
+		t.start();
 	}
 
 }
