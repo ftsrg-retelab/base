@@ -1,3 +1,5 @@
+# This is a *test line* for **ReteLab1** conflict edit 1
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
