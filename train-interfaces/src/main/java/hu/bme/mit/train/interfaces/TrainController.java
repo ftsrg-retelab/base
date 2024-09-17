@@ -1,6 +1,8 @@
 package hu.bme.mit.train.interfaces;
 
-public interface TrainController {
+import java.util.TimerTask;
+
+public interface TrainController  {
 
 	void followSpeed();
 
