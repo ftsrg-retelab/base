@@ -7,6 +7,10 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	
+	public TrainControllerImpl(){
+		System.Out.Println("conflict here");
+	}
 
 	@Override
 	public void followSpeed() {
