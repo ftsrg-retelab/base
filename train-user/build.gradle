@@ -1,3 +1,4 @@
 dependencies {
     compile project(':train-interfaces')
+    testImplementation 'junit:junit:4.12'
 }
