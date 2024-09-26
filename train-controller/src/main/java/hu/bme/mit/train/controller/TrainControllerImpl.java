@@ -46,4 +46,8 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+	public void writeSpeed(){
+		System.out.println("The reference speed is: " +  referenceSpeed);
+		System.out.println("The speed limit is: " + speedLimit);
+	}
 }
