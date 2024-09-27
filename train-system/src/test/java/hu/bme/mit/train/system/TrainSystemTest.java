@@ -50,5 +50,18 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
-	
+	@Test
+	public void OverridingJoystickPosition_DecreasesReferenceSpeed() {
+		sensor.overrideSpeedLimit(5);
+
+		user.overrideJoystickPosition(10);
+
+		controller.followSpeed();
+		Assert.assertEquals(5, controller.getReferenceSpeed());
+
+		sensor.overrideSpeedLimit(0);
+
+		controller.followSpeed();
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
 }
