@@ -50,5 +50,27 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void OverridingBreakPositionSetsSpeedToZero()
+	{
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		Assert.assertEquals(4, controller.getReferenceSpeed());
+
+		user.overrideBreakPosition(true);
+		controller.followSpeed();
+		Assert.assertEquals(0, controller.getReferenceSpeed());
+
+	}
+
+	@Test
+	public void RecordingWithTachoTable()
+	{
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		sensor.recordTacho(controller.getTime(), user.getJoystickPosition(), controller.getReferenceSpeed());
+		Assert.assertEquals(1, sensor.getTachoSize());
+	}
+
 	
 }

@@ -1,3 +1,9 @@
+branch-b es branch-A elso sora
+# új bejegyzés
+*ez egy új bejegyzés*
+~~ez át van húzva~~
+
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
