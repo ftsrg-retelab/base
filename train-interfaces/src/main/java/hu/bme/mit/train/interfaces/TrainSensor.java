@@ -6,4 +6,13 @@ public interface TrainSensor {
 
 	void overrideSpeedLimit(int speedLimit);
 
+	long getCurrentTime();
+
+	int getReferenceSpeed();
+
+	int getJoystickPosition();
+
+	void updateTable();
+
+	int getTableSize();
 }
