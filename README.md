@@ -1,6 +1,10 @@
 # Train Speed Controller
 
-This is a sample application for the verification laboratory.
+<<<<<<< .merge_file_t8znIW
+Branch-A
+=======
+Branch-B
+>>>>>>> .merge_file_SpelA0
 
 ## Getting started
 
