@@ -7,6 +7,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonar.projectKey>GSA53_base</sonar.projectKey>
+    	<sonar.organization>gsa53</sonar.organization>
+    	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
     <packaging>pom</packaging>
@@ -42,15 +45,25 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version>
+    	<plugins>
+        	<plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+            	<artifactId>maven-compiler-plugin</artifactId>
+            	<version>3.10.1</version>
+            	<configuration>
+                	<release>11</release>
+            	</configuration>
+        	</plugin>
+        	<plugin>
+            	<groupId>org.sonarsource.scanner.maven</groupId>
+            	<artifactId>sonar-maven-plugin</artifactId>
+            	<version>4.0.0.4121</version>
 				<configuration>
-					<release>11</release>
-				</configuration>
-			</plugin>
-		</plugins>
+                	<sonar.projectKey>GSA53_base</sonar.projectKey>
+                	<sonar.organization>gsa53</sonar.organization>
+                	<sonar.login>${env.SONAR_TOKEN}</sonar.login>
+            	</configuration>
+        	</plugin>
+    	</plugins>
 	</build>
 </project>
